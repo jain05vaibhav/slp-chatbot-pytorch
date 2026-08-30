@@ -1,0 +1,194 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "Hello",
+        "Good day",
+        "Good morning",
+        "Good evening",
+        "Howdy",
+        "Hi there",
+        "Is anyone there?",
+        "Greetings"
+      ],
+      "responses": [
+        "Hello! I am your voice-enabled AI assistant. How can I assist you today?",
+        "Hi there! How can I help you today?",
+        "Greetings! Speak to me or type your prompt.",
+        "Hey! Ready to chat. What's on your mind?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "See you later",
+        "Goodbye",
+        "Have a good day",
+        "Catch you later",
+        "Farewell",
+        "See ya",
+        "Exit",
+        "Quit"
+      ],
+      "responses": [
+        "Goodbye! Have a fantastic day ahead.",
+        "See you later! Feel free to talk to me anytime.",
+        "Farewell! Take care.",
+        "Bye! Thanks for conversing with me."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "That's helpful",
+        "Awesome, thanks",
+        "Thanks a lot",
+        "Thank you so much",
+        "Appreciate your help"
+      ],
+      "responses": [
+        "You're very welcome!",
+        "Happy to help!",
+        "Anytime! Glad I could assist.",
+        "My pleasure!"
+      ]
+    },
+    {
+      "tag": "about_bot",
+      "patterns": [
+        "Who are you?",
+        "What is your name?",
+        "Tell me about yourself",
+        "What are you?",
+        "Are you an AI?",
+        "What is your identity?"
+      ],
+      "responses": [
+        "I am a Deep Learning-powered Voice Chatbot created using PyTorch and Web Speech APIs.",
+        "I'm an AI Voice Assistant designed with a PyTorch neural network for intent classification and real-time speech recognition.",
+        "You can call me VoxAI! I'm an intelligent chatbot capable of understanding voice input and speaking responses."
+      ]
+    },
+    {
+      "tag": "capabilities",
+      "patterns": [
+        "What can you do?",
+        "What are your features?",
+        "How do you work?",
+        "Show me your capabilities",
+        "What features do you have?",
+        "Can you understand voice?"
+      ],
+      "responses": [
+        "I can recognize your speech in real-time, classify your intent using PyTorch Deep Learning, generate text responses, and speak back to you using speech synthesis!",
+        "My capabilities include real-time Speech Recognition, Neural Network Intent Classification, Text-to-Speech playback, and interactive conversation logging."
+      ]
+    },
+    {
+      "tag": "speech_help",
+      "patterns": [
+        "How do I use voice input?",
+        "How to talk to you?",
+        "Voice mode",
+        "Microphone",
+        "How does speech recognition work?"
+      ],
+      "responses": [
+        "Click the microphone button on the interface, speak clearly into your mic, and I will automatically transcribe your speech, classify your intent, and reply!",
+        "Just click the big blue microphone icon, allow microphone permission, and start speaking!"
+      ]
+    },
+    {
+      "tag": "deep_learning",
+      "patterns": [
+        "Tell me about deep learning",
+        "What model are you using?",
+        "How is the neural network built?",
+        "Explain your deep learning model",
+        "What is intent classification?"
+      ],
+      "responses": [
+        "I am driven by a Multi-Layer Perceptron (DNN) in PyTorch. It uses Bag-of-Words embeddings, Linear layers with ReLU activations, Dropout regularization, and Softmax output to predict intent probabilities.",
+        "My deep learning architecture converts text into feature vectors and processes them through a trained PyTorch Neural Network to classify intent tags with high confidence."
+      ]
+    },
+    {
+      "tag": "weather",
+      "patterns": [
+        "What's the weather like?",
+        "Is it raining today?",
+        "How is the weather?",
+        "Tell me the weather forecast",
+        "What is the temperature outside?"
+      ],
+      "responses": [
+        "It's a pleasant day with clear skies! Remember to stay hydrated.",
+        "The atmospheric conditions look great today — bright, sunny, and perfect for productive coding!",
+        "Weather update: Clear skies and mild temperatures expected throughout the day."
+      ]
+    },
+    {
+      "tag": "time",
+      "patterns": [
+        "What time is it?",
+        "Tell me the current time",
+        "Do you know what time it is?",
+        "What is the date today?",
+        "Clock check"
+      ],
+      "responses": [
+        "Time is money, but right now it's the perfect time to explore AI capabilities!",
+        "I operate in real-time! Check your system clock for exact local seconds while I process your queries."
+      ]
+    },
+    {
+      "tag": "jokes",
+      "patterns": [
+        "Tell me a joke",
+        "Make me laugh",
+        "Do you know any jokes?",
+        "Say something funny",
+        "Tell a funny story"
+      ],
+      "responses": [
+        "Why do programmers prefer dark mode? Because light attracts bugs!",
+        "Why was the computer cold? Because it left its Windows open!",
+        "There are 10 types of people in the world: those who understand binary, and those who don't!"
+      ]
+    },
+    {
+      "tag": "technology",
+      "patterns": [
+        "What tech stack is used here?",
+        "What technologies are running?",
+        "Tell me about your code",
+        "How was this app built?",
+        "Frameworks used"
+      ],
+      "responses": [
+        "This project is built using Python 3, PyTorch for Deep Learning, FastAPI for asynchronous web backend, Web Speech API for voice recognition, and modern Vanilla HTML5/CSS3/JS for glassmorphic UI.",
+        "The technology stack includes PyTorch (Neural Networks), FastAPI (Async REST Server), HTML5 Web Speech API (STT & TTS), and Localtunnel for live public hosting."
+      ]
+    },
+    {
+      "tag": "help",
+      "patterns": [
+        "Help me",
+        "I need assistance",
+        "Can you help me?",
+        "What should I do?",
+        "Support"
+      ],
+      "responses": [
+        "I am here to assist! You can ask me about AI, deep learning, weather, technology, jokes, or test voice commands.",
+        "Sure! Try asking 'What can you do?', 'Tell me a joke', 'Explain deep learning', or click the microphone to speak!"
+      ]
+    }
+  ]
+}

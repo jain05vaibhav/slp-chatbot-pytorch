@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoxAI - Voice Chatbot using Deep Learning & Groq LLM</title>
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Glow Elements -->
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+  <div class="bg-glow bg-glow-3"></div>
+
+  <div class="app-container">
+    
+    <!-- Header -->
+    <header class="app-header">
+      <div class="brand">
+        <div class="logo-icon">
+          <i class="fa-solid fa-brain"></i>
+          <span class="pulse-ring"></span>
+        </div>
+        <div class="brand-text">
+          <h1>VoxAI <span class="badge-tag">PyTorch DNN + Groq LLM</span></h1>
+          <p>Voice-Enabled Assistant & Real-Time Intent Classifier</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <div class="status-indicator online" id="statusIndicator">
+          <span class="dot"></span>
+          <span class="status-text" id="statusText">PyTorch + Groq Engine Ready</span>
+        </div>
+        <button class="btn-icon" id="ttsToggle" title="Toggle Auto-Voice Synthesis">
+          <i class="fa-solid fa-volume-high"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Workspace Grid -->
+    <main class="workspace-grid">
+
+      <!-- Left Column: Chat Conversation Container -->
+      <section class="chat-section">
+        <div class="chat-header">
+          <div class="chat-title">
+            <i class="fa-solid fa-comments"></i>
+            <span>Interactive Conversation Stream</span>
+          </div>
+          <button class="btn-text-sm" id="clearChatBtn">
+            <i class="fa-solid fa-trash-can"></i> Clear History
+          </button>
+        </div>
+
+        <!-- Scrollable Message List -->
+        <div class="messages-container" id="messagesContainer">
+          <!-- Initial Welcome Message -->
+          <div class="message bot-message">
+            <div class="avatar bot-avatar">
+              <i class="fa-solid fa-robot"></i>
+            </div>
+            <div class="message-content">
+              <div class="message-header">
+                <span class="sender-name">VoxAI Assistant</span>
+                <span class="time-stamp">Just now</span>
+              </div>
+              <div class="message-body">
+                Hello! Welcome to VoxAI. Click the microphone button to speak, or use any preset query. Powered by PyTorch Deep Learning & Groq LLM!
+              </div>
+              <div class="meta-tag">
+                <span class="tag-pill intent-greeting"><i class="fa-solid fa-tag"></i> greeting</span>
+                <span class="tag-pill conf-pill"><i class="fa-solid fa-bolt"></i> 100% confidence</span>
+                <span class="tag-pill engine-pill"><i class="fa-solid fa-microchip"></i> PyTorch + Groq</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Speech Recognition Transcript Status Bar -->
+        <div class="speech-status-bar hidden" id="speechStatusBar">
+          <div class="recording-indicator">
+            <span class="recording-dot"></span>
+            <span id="speechStateText">Listening to your voice... Speak now!</span>
+          </div>
+          <div class="transcript-preview" id="transcriptPreview">
+            "Listening..."
+          </div>
+        </div>
+
+        <!-- Audio Wave Recording Visualization -->
+        <div class="audio-wave-container hidden" id="audioWaveContainer">
+          <div class="wave-bar bar-1"></div>
+          <div class="wave-bar bar-2"></div>
+          <div class="wave-bar bar-3"></div>
+          <div class="wave-bar bar-4"></div>
+          <div class="wave-bar bar-5"></div>
+          <div class="wave-bar bar-6"></div>
+          <div class="wave-bar bar-7"></div>
+          <div class="wave-bar bar-8"></div>
+        </div>
+
+        <!-- Input Bar (Voice Mic + Text Input) -->
+        <div class="input-controls-wrapper">
+          <button class="mic-button" id="micButton" title="Click to Start Voice Input">
+            <i class="fa-solid fa-microphone" id="micIcon"></i>
+            <span class="mic-ripple"></span>
+          </button>
+          
+          <div class="text-input-container">
+            <input type="text" id="userInput" placeholder="Speak into mic or type your prompt here..." autocomplete="off">
+            <button class="send-button" id="sendBtn" title="Send Message">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right Column: Control & Model Inspection Panel -->
+      <aside class="sidebar-section">
+
+        <!-- Groq LLM Acceleration Card -->
+        <div class="card groq-card">
+          <div class="card-header">
+            <i class="fa-solid fa-bolt-lightning"></i>
+            <h3>Groq LLM Mode</h3>
+            <span class="groq-status-badge" id="groqBadge">OFF</span>
+          </div>
+          <div class="groq-toggle-row">
+            <span class="groq-label" id="groqLabelText">Groq Mode: Inactive</span>
+            <label class="switch" for="groqToggle">
+              <input type="checkbox" id="groqToggle">
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <p class="card-desc" style="margin-top: 6px; margin-bottom: 0;">
+            Toggle ON for dynamic Groq LLM responses, or OFF for fast PyTorch DNN intent responses.
+          </p>
+        </div>
+        
+        <!-- Preset Voice Test Prompts -->
+        <div class="card preset-card">
+          <div class="card-header">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <h3>Quick Sample Queries</h3>
+          </div>
+          <p class="card-desc">Click any preset prompt to test voice recognition & intent classification:</p>
+          <div class="preset-buttons">
+            <button class="preset-btn" data-text="Hello there!">
+              <i class="fa-solid fa-hand"></i> "Hello there!"
+            </button>
+            <button class="preset-btn" data-text="What can you do?">
+              <i class="fa-solid fa-gears"></i> "What can you do?"
+            </button>
+            <button class="preset-btn" data-text="How does deep learning work here?">
+              <i class="fa-solid fa-brain"></i> "Explain Deep Learning"
+            </button>
+            <button class="preset-btn" data-text="What is the weather like?">
+              <i class="fa-solid fa-cloud-sun"></i> "What's the weather?"
+            </button>
+            <button class="preset-btn" data-text="Tell me a funny joke">
+              <i class="fa-solid fa-face-laugh-beam"></i> "Tell me a joke"
+            </button>
+            <button class="preset-btn" data-text="What technologies are used?">
+              <i class="fa-solid fa-code"></i> "What tech stack is used?"
+            </button>
+          </div>
+        </div>
+
+        <!-- Deep Learning Model Inspector -->
+        <div class="card model-card">
+          <div class="card-header">
+            <i class="fa-solid fa-chart-pie"></i>
+            <h3>Model Inspector</h3>
+          </div>
+          <div class="model-metrics">
+            <div class="metric-row">
+              <span class="metric-label">Active Engine</span>
+              <span class="metric-value highlight" id="inspectEngine">PyTorch DNN</span>
+            </div>
+            <div class="metric-row">
+              <span class="metric-label">Last Intent Tag</span>
+              <span class="metric-value" id="inspectIntent">greeting</span>
+            </div>
+            <div class="metric-row">
+              <span class="metric-label">Intent Confidence</span>
+              <span class="metric-value" id="inspectConfidence">100%</span>
+            </div>
+            <div class="confidence-bar-bg">
+              <div class="confidence-bar-fill" id="inspectBar" style="width: 100%;"></div>
+            </div>
+            <div class="metric-row">
+              <span class="metric-label">Inference Latency</span>
+              <span class="metric-value" id="inspectLatency">1.2 ms</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speech Settings & Controls -->
+        <div class="card settings-card">
+          <div class="card-header">
+            <i class="fa-solid fa-sliders"></i>
+            <h3>Speech Settings</h3>
+          </div>
+          <div class="setting-item">
+            <label for="voiceSelect">Speech Voice:</label>
+            <select id="voiceSelect" class="form-select">
+              <option value="">Default System Voice</option>
+            </select>
+          </div>
+          <div class="setting-item">
+            <label for="rateRange">Speech Rate: <span id="rateVal">1.0</span>x</label>
+            <input type="range" id="rateRange" min="0.5" max="1.5" step="0.1" value="1.0">
+          </div>
+        </div>
+
+      </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <p>Voice-Enabled AI Chatbot | Powered by <strong>PyTorch Deep Learning</strong> &amp; <strong>Groq LLM</strong></p>
+    </footer>
+
+  </div>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
