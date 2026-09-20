@@ -15,6 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const rateRange = document.getElementById('rateRange');
   const rateVal = document.getElementById('rateVal');
   const groqToggle = document.getElementById('groqToggle');
+  const groqApiKeyInput = document.getElementById('groqApiKeyInput');
+  const saveGroqKeyBtn = document.getElementById('saveGroqKeyBtn');
 
   // Model Inspector DOM Elements
   const inspectEngine = document.getElementById('inspectEngine');
@@ -22,44 +24,99 @@ document.addEventListener('DOMContentLoaded', () => {
   const inspectConfidence = document.getElementById('inspectConfidence');
   const inspectBar = document.getElementById('inspectBar');
   const inspectLatency = document.getElementById('inspectLatency');
+  const statusIndicator = document.getElementById('statusIndicator');
+  const statusText = document.getElementById('statusText');
 
   // App State Variables
   let isRecording = false;
   let isTtsEnabled = true;
   let isGroqEnabled = false;
+  let customGroqApiKey = localStorage.getItem('voxai_groq_api_key') || '';
   let recognition = null;
   let synth = window.speechSynthesis;
   let voices = [];
 
+  // Initialize custom Groq key input
+  if (groqApiKeyInput && customGroqApiKey) {
+    groqApiKeyInput.value = customGroqApiKey;
+  }
+
+  if (saveGroqKeyBtn && groqApiKeyInput) {
+    saveGroqKeyBtn.addEventListener('click', () => {
+      customGroqApiKey = groqApiKeyInput.value.trim();
+      if (customGroqApiKey) {
+        localStorage.setItem('voxai_groq_api_key', customGroqApiKey);
+        saveGroqKeyBtn.innerHTML = '<i class="fa-solid fa-check" style="color: #10B981;"></i>';
+      } else {
+        localStorage.removeItem('voxai_groq_api_key');
+        saveGroqKeyBtn.innerHTML = '<i class="fa-solid fa-floppy-disk"></i>';
+      }
+      setTimeout(() => {
+        saveGroqKeyBtn.innerHTML = '<i class="fa-solid fa-floppy-disk"></i>';
+      }, 2000);
+    });
+  }
+
   // Update Groq UI Toggle state helper
   function updateGroqUI(isEnabled) {
     isGroqEnabled = isEnabled;
+    localStorage.setItem('voxai_groq_mode', isEnabled ? 'true' : 'false');
     if (groqToggle) groqToggle.checked = isEnabled;
     const groqBadge = document.getElementById('groqBadge');
     const groqLabelText = document.getElementById('groqLabelText');
     if (groqBadge) {
-      groqBadge.textContent = isEnabled ? 'ACTIVE' : 'OFF';
+      groqBadge.textContent = isEnabled ? 'ACTIVE' : 'OFFLINE';
       groqBadge.classList.toggle('active', isEnabled);
     }
     if (groqLabelText) {
-      groqLabelText.textContent = isEnabled ? 'Groq Mode: Active' : 'Groq Mode: Inactive';
+      groqLabelText.textContent = isEnabled ? 'Groq Mode: Active' : 'Groq Mode: Inactive (Offline)';
+    }
+    if (statusText) {
+      statusText.textContent = isEnabled ? 'PyTorch + Groq Engine Ready' : 'PyTorch Offline Engine Ready';
     }
     if (inspectEngine) {
-      inspectEngine.textContent = isEnabled ? 'Groq LLM (Llama 3.3)' : 'PyTorch DNN';
+      inspectEngine.textContent = isEnabled ? 'Groq LLM (High-Speed)' : 'PyTorch DNN (Offline)';
     }
   }
 
-  // Check health endpoint to see if backend has GROQ_API_KEY set
-  fetch('/api/health')
-    .then(res => res.json())
-    .then(data => {
-      if (data.groq_key_configured) {
-        updateGroqUI(true);
-      } else {
-        updateGroqUI(false);
-      }
-    })
-    .catch(err => console.warn('Health check fetch error:', err));
+  // Determine initial Groq mode from localStorage (defaults to offline false)
+  const savedGroqPref = localStorage.getItem('voxai_groq_mode');
+  if (savedGroqPref !== null) {
+    updateGroqUI(savedGroqPref === 'true');
+  } else {
+    updateGroqUI(false);
+  }
+
+  // Health check to update status indicator
+  function checkHealth() {
+    fetch('/api/health')
+      .then(res => {
+        if (!res.ok) throw new Error(`Health status: ${res.status}`);
+        return res.json();
+      })
+      .then(data => {
+        if (statusIndicator) {
+          statusIndicator.classList.add('online');
+          statusIndicator.classList.remove('offline');
+        }
+        if (statusText) {
+          statusText.textContent = isGroqEnabled ? 'PyTorch + Groq Engine Ready' : 'PyTorch Offline Engine Ready';
+        }
+      })
+      .catch(err => {
+        console.warn('Health check fetch error:', err);
+        if (statusIndicator) {
+          statusIndicator.classList.remove('online');
+          statusIndicator.classList.add('offline');
+        }
+        if (statusText) {
+          statusText.textContent = 'Server Offline / Connecting...';
+        }
+      });
+  }
+
+  checkHealth();
+  setInterval(checkHealth, 30000);
 
   // Initialize Speech Recognition API
   const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -101,7 +158,13 @@ document.addEventListener('DOMContentLoaded', () => {
     recognition.onerror = (event) => {
       console.warn('Speech Recognition Error:', event.error);
       stopRecording();
-      speechStateText.textContent = `Speech error: ${event.error}. Try typing or retry mic.`;
+      let errorMsg = `Speech error: ${event.error}.`;
+      if (event.error === 'not-allowed') {
+        errorMsg = 'Microphone permission denied. Please allow mic access in your browser.';
+      } else if (event.error === 'no-speech') {
+        errorMsg = 'No speech was detected. Please try again.';
+      }
+      speechStateText.textContent = errorMsg;
       setTimeout(() => {
         speechStatusBar.classList.add('hidden');
       }, 4000);
@@ -117,7 +180,9 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   } else {
     console.warn('Web Speech Recognition API is not supported in this browser.');
-    speechStateText.textContent = 'Speech Recognition API not supported in this browser. Use text input.';
+    if (speechStateText) {
+      speechStateText.textContent = 'Speech Recognition API not supported in this browser. Use text input.';
+    }
   }
 
   // Populate Speech Synthesis Voices
@@ -177,13 +242,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     try {
       // 3. Call Backend FastAPI /api/chat endpoint
+      const payload = {
+        text: text.trim(),
+        use_groq: isGroqEnabled
+      };
+      if (customGroqApiKey) {
+        payload.groq_api_key = customGroqApiKey;
+      }
+
       const response = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          text: text,
-          use_groq: isGroqEnabled
-        })
+        body: JSON.stringify(payload)
       });
 
       removeTypingIndicator(typingId);
@@ -193,7 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       const data = await response.json();
-      const botReply = data.response;
+      const botReply = (data.response && data.response.trim()) ? data.response : (data.pytorch_base_response || 'I understood your query.');
       const intentTag = data.intent;
       const confidence = data.confidence;
       const latency = data.latency_ms;
@@ -207,7 +277,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // 6. Speak Response via Speech Synthesis
       if (isTtsEnabled) {
-        speakText(botReply);
+        try {
+          speakText(botReply);
+        } catch (ttsErr) {
+          console.warn('TTS playback error:', ttsErr);
+        }
       }
 
     } catch (error) {
@@ -223,7 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
     msgDiv.classList.add('message', sender === 'user' ? 'user-message' : 'bot-message');
 
     let metaHtml = '';
-    let playBtnHtml = '';
+    let actionButtonsHtml = '';
 
     if (sender === 'bot') {
       metaHtml = `
@@ -233,7 +307,14 @@ document.addEventListener('DOMContentLoaded', () => {
           <span class="tag-pill engine-pill"><i class="fa-solid fa-microchip"></i> ${engine}</span>
         </div>
       `;
-      playBtnHtml = `<button class="play-speech-btn" title="Speak Response"><i class="fa-solid fa-volume-high"></i></button>`;
+      actionButtonsHtml = `
+        <button class="copy-msg-btn" title="Copy Response" style="background: none; border: none; color: var(--text-muted); cursor: pointer; margin-left: 6px; font-size: 12px;">
+          <i class="fa-solid fa-copy"></i>
+        </button>
+        <button class="play-speech-btn" title="Speak Response" style="background: none; border: none; color: var(--text-muted); cursor: pointer; margin-left: 4px; font-size: 12px;">
+          <i class="fa-solid fa-volume-high"></i>
+        </button>
+      `;
     }
 
     msgDiv.innerHTML = `
@@ -243,7 +324,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="message-content">
         <div class="message-header">
           <span class="sender-name">${sender === 'user' ? 'You (Voice Input)' : 'VoxAI Assistant'}</span>
-          <span class="time-stamp">${timestamp} ${playBtnHtml}</span>
+          <span class="time-stamp">${timestamp} ${actionButtonsHtml}</span>
         </div>
         <div class="message-body">${escapeHtml(text)}</div>
         ${metaHtml}
@@ -253,10 +334,22 @@ document.addEventListener('DOMContentLoaded', () => {
     messagesContainer.appendChild(msgDiv);
     messagesContainer.scrollTop = messagesContainer.scrollHeight;
 
-    // Attach click event for speech play button
+    // Attach click events
     const playBtn = msgDiv.querySelector('.play-speech-btn');
     if (playBtn) {
       playBtn.addEventListener('click', () => speakText(text));
+    }
+
+    const copyBtn = msgDiv.querySelector('.copy-msg-btn');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText(text).then(() => {
+          copyBtn.innerHTML = '<i class="fa-solid fa-check" style="color: #10B981;"></i>';
+          setTimeout(() => {
+            copyBtn.innerHTML = '<i class="fa-solid fa-copy"></i>';
+          }, 2000);
+        }).catch(err => console.error('Failed to copy text: ', err));
+      });
     }
   }
 
@@ -370,3 +463,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+

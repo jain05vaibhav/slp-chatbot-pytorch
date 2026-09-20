@@ -1,0 +1,20 @@
+FROM public.ecr.aws/lambda/python:3.11
+
+# Set working directory inside AWS Lambda environment
+WORKDIR ${LAMBDA_TASK_ROOT}
+
+# Install PyTorch CPU-only wheel first to keep container image small (< 1 GB)
+RUN pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu
+
+# Copy dependencies list and install
+COPY requirements.txt ${LAMBDA_TASK_ROOT}/
+RUN pip install --no-cache-dir -r ${LAMBDA_TASK_ROOT}/requirements.txt
+
+# Copy application source code, model weights, and static assets
+COPY data/ ${LAMBDA_TASK_ROOT}/data/
+COPY model/ ${LAMBDA_TASK_ROOT}/model/
+COPY static/ ${LAMBDA_TASK_ROOT}/static/
+COPY app.py ${LAMBDA_TASK_ROOT}/
+
+# Set the Lambda handler entrypoint (module: app, callable: handler)
+CMD ["app.handler"]

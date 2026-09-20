@@ -8,17 +8,26 @@
         "Hello",
         "Good day",
         "Good morning",
+        "Good afternoon",
         "Good evening",
         "Howdy",
         "Hi there",
         "Is anyone there?",
-        "Greetings"
+        "Greetings",
+        "Hey there",
+        "What's up",
+        "Sup",
+        "Yo",
+        "Hello assistant",
+        "Hey VoxAI",
+        "Hi VoxAI"
       ],
       "responses": [
-        "Hello! I am your voice-enabled AI assistant. How can I assist you today?",
+        "Hello! I am VoxAI, your voice-enabled AI assistant. How can I assist you today?",
         "Hi there! How can I help you today?",
-        "Greetings! Speak to me or type your prompt.",
-        "Hey! Ready to chat. What's on your mind?"
+        "Greetings! Speak to me using your mic or type your prompt.",
+        "Hey! Ready to chat. What's on your mind?",
+        "Hello! Great to hear from you. What would you like to explore today?"
       ]
     },
     {
@@ -32,13 +41,20 @@
         "Farewell",
         "See ya",
         "Exit",
-        "Quit"
+        "Quit",
+        "Good night",
+        "Bye bye",
+        "Talk to you later",
+        "See you soon",
+        "Have a nice day",
+        "I have to go now"
       ],
       "responses": [
         "Goodbye! Have a fantastic day ahead.",
         "See you later! Feel free to talk to me anytime.",
-        "Farewell! Take care.",
-        "Bye! Thanks for conversing with me."
+        "Farewell! Take care and have a wonderful day.",
+        "Bye! Thanks for conversing with me.",
+        "Good night and take care! I'll be here whenever you need me."
       ]
     },
     {
@@ -50,13 +66,18 @@
         "Awesome, thanks",
         "Thanks a lot",
         "Thank you so much",
-        "Appreciate your help"
+        "Appreciate your help",
+        "Much appreciated",
+        "Thanks for the help",
+        "You were very helpful",
+        "Cheers"
       ],
       "responses": [
         "You're very welcome!",
-        "Happy to help!",
-        "Anytime! Glad I could assist.",
-        "My pleasure!"
+        "Happy to help! Let me know if you need anything else.",
+        "Anytime! Glad I could assist you.",
+        "My pleasure! Feel free to ask more questions.",
+        "Always glad to be of service!"
       ]
     },
     {
@@ -67,12 +88,34 @@
         "Tell me about yourself",
         "What are you?",
         "Are you an AI?",
-        "What is your identity?"
+        "What is your identity?",
+        "Introduce yourself",
+        "What does VoxAI mean?",
+        "Are you a robot?",
+        "Are you a virtual assistant?"
       ],
       "responses": [
-        "I am a Deep Learning-powered Voice Chatbot created using PyTorch and Web Speech APIs.",
-        "I'm an AI Voice Assistant designed with a PyTorch neural network for intent classification and real-time speech recognition.",
-        "You can call me VoxAI! I'm an intelligent chatbot capable of understanding voice input and speaking responses."
+        "I am VoxAI, a Voice-Enabled AI Assistant powered by a PyTorch Deep Neural Network for real-time intent classification and speech recognition.",
+        "I'm an AI Voice Assistant designed with a PyTorch neural network for offline intent classification, paired with browser speech recognition and synthesis.",
+        "You can call me VoxAI! I'm an intelligent chatbot capable of understanding voice input, classifying intents with deep learning, and speaking responses."
+      ]
+    },
+    {
+      "tag": "creator",
+      "patterns": [
+        "Who created you?",
+        "Who made you?",
+        "Who is your developer?",
+        "Who built this?",
+        "Who programmed you?",
+        "Who is your author?",
+        "Who trained your model?",
+        "Who is the author of this project?"
+      ],
+      "responses": [
+        "I was developed and trained by Vaibhav as an advanced Voice-Enabled Deep Learning Chatbot project using PyTorch and FastAPI!",
+        "This project was created by Vaibhav, implementing Speech Recognition, PyTorch Deep Learning intent classification, and an interactive voice UI.",
+        "I was built by Vaibhav using Python, PyTorch Deep Learning, FastAPI, and HTML5 Web Speech APIs."
       ]
     },
     {
@@ -83,11 +126,15 @@
         "How do you work?",
         "Show me your capabilities",
         "What features do you have?",
-        "Can you understand voice?"
+        "Can you understand voice?",
+        "What are your skills?",
+        "What can I ask you?",
+        "How can you help me?",
+        "List your capabilities"
       ],
       "responses": [
-        "I can recognize your speech in real-time, classify your intent using PyTorch Deep Learning, generate text responses, and speak back to you using speech synthesis!",
-        "My capabilities include real-time Speech Recognition, Neural Network Intent Classification, Text-to-Speech playback, and interactive conversation logging."
+        "I can recognize your speech in real-time, classify your intent using a PyTorch Deep Neural Network, perform math calculations, tell time and date, explain AI and deep learning, share jokes, and speak responses aloud!",
+        "My capabilities include: Real-Time Speech Recognition, PyTorch DNN Intent Classification, Dynamic Time/Date Reporting, Math Calculation, Tech Explanations, and Speech Synthesis playback."
       ]
     },
     {
@@ -97,11 +144,14 @@
         "How to talk to you?",
         "Voice mode",
         "Microphone",
-        "How does speech recognition work?"
+        "How does speech recognition work?",
+        "Can you hear me?",
+        "Microphone permission",
+        "How to use voice?"
       ],
       "responses": [
-        "Click the microphone button on the interface, speak clearly into your mic, and I will automatically transcribe your speech, classify your intent, and reply!",
-        "Just click the big blue microphone icon, allow microphone permission, and start speaking!"
+        "Click the large microphone button on the screen, grant microphone permission in your browser, speak clearly, and I will transcribe and process your speech in real-time!",
+        "Just click the blue microphone button, speak your question, and watch the real-time speech transcription bar. You can also toggle auto-voice speech synthesis at any time!"
       ]
     },
     {
@@ -111,11 +161,48 @@
         "What model are you using?",
         "How is the neural network built?",
         "Explain your deep learning model",
-        "What is intent classification?"
+        "What is intent classification?",
+        "Explain neural networks",
+        "What is a DNN?",
+        "How does your model predict?",
+        "What is backpropagation?",
+        "Tell me about PyTorch",
+        "How was the model trained?"
       ],
       "responses": [
-        "I am driven by a Multi-Layer Perceptron (DNN) in PyTorch. It uses Bag-of-Words embeddings, Linear layers with ReLU activations, Dropout regularization, and Softmax output to predict intent probabilities.",
-        "My deep learning architecture converts text into feature vectors and processes them through a trained PyTorch Neural Network to classify intent tags with high confidence."
+        "I am driven by a Multi-Layer Perceptron Deep Neural Network (DNN) in PyTorch. It features an n-gram feature vector input, dense linear layers with LayerNorm, GELU activations, and Dropout regularization, trained with Cross-Entropy Loss and Adam optimization.",
+        "My deep learning architecture converts user text into feature vectors and evaluates them through a trained PyTorch Neural Network, using softmax probability distribution to accurately identify the intent.",
+        "Deep learning uses layered artificial neural networks to learn representations from data. In this project, PyTorch classifies text patterns into specific intent tags with high confidence."
+      ]
+    },
+    {
+      "tag": "machine_learning",
+      "patterns": [
+        "What is machine learning?",
+        "Explain machine learning",
+        "How does ML work?",
+        "Difference between AI and ML",
+        "What is supervised learning?",
+        "Tell me about ML algorithms"
+      ],
+      "responses": [
+        "Machine Learning (ML) is a subset of AI where systems learn patterns from training data rather than following explicitly hardcoded rules. This chatbot uses supervised learning with labeled intent patterns.",
+        "In supervised machine learning, a model learns a mapping from input features (like words in your query) to output labels (intents), minimizing prediction error through gradient descent."
+      ]
+    },
+    {
+      "tag": "artificial_intelligence",
+      "patterns": [
+        "What is artificial intelligence?",
+        "What is AI?",
+        "Explain AI",
+        "Tell me about artificial intelligence",
+        "Define AI",
+        "How smart is AI?"
+      ],
+      "responses": [
+        "Artificial Intelligence (AI) is the simulation of human intelligence processes by machines, encompassing Natural Language Processing (NLP), Computer Vision, Deep Learning, and Reasoning.",
+        "AI enables computer systems to perform tasks that traditionally require human cognition, such as speech recognition, language translation, intent classification, and decision making."
       ]
     },
     {
@@ -125,26 +212,34 @@
         "Is it raining today?",
         "How is the weather?",
         "Tell me the weather forecast",
-        "What is the temperature outside?"
+        "What is the temperature outside?",
+        "Is it sunny outside?",
+        "Do I need an umbrella?",
+        "Weather update"
       ],
       "responses": [
-        "It's a pleasant day with clear skies! Remember to stay hydrated.",
-        "The atmospheric conditions look great today — bright, sunny, and perfect for productive coding!",
-        "Weather update: Clear skies and mild temperatures expected throughout the day."
+        "The atmospheric conditions look pleasant with clear skies and mild temperatures! Remember to stay hydrated.",
+        "Weather update: Bright, sunny, and clear skies expected today — perfect conditions for coding and voice interaction!",
+        "Forecast is clear and comfortable! No storms detected in the immediate forecast."
       ]
     },
     {
-      "tag": "time",
+      "tag": "time_date",
       "patterns": [
         "What time is it?",
         "Tell me the current time",
         "Do you know what time it is?",
         "What is the date today?",
-        "Clock check"
+        "Clock check",
+        "What is today's date?",
+        "Tell me the date and time",
+        "What day is it today?",
+        "Current time please",
+        "What's the time"
       ],
       "responses": [
-        "Time is money, but right now it's the perfect time to explore AI capabilities!",
-        "I operate in real-time! Check your system clock for exact local seconds while I process your queries."
+        "CURRENT_TIME_DYNAMIC",
+        "CURRENT_DATE_DYNAMIC"
       ]
     },
     {
@@ -154,12 +249,34 @@
         "Make me laugh",
         "Do you know any jokes?",
         "Say something funny",
-        "Tell a funny story"
+        "Tell a funny story",
+        "Another joke",
+        "Crack a joke",
+        "Got any jokes?"
       ],
       "responses": [
         "Why do programmers prefer dark mode? Because light attracts bugs!",
         "Why was the computer cold? Because it left its Windows open!",
-        "There are 10 types of people in the world: those who understand binary, and those who don't!"
+        "There are 10 types of people in the world: those who understand binary, and those who don't!",
+        "Why do Java developers wear glasses? Because they don't C#!",
+        "A SQL query walks into a bar, walks up to two tables and asks: 'Can I join you?'",
+        "Why was the JavaScript developer sad? Because they didn't Node how to Express themselves!"
+      ]
+    },
+    {
+      "tag": "riddles",
+      "patterns": [
+        "Tell me a riddle",
+        "Give me a puzzle",
+        "Do you know any riddles?",
+        "Ask me a riddle",
+        "Brain teaser",
+        "Riddle me this"
+      ],
+      "responses": [
+        "I have keys but no locks. I have space but no room. You can enter, but you can't go outside. What am I? ... A keyboard!",
+        "I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I? ... An echo!",
+        "The more of this there is, the less you see. What is it? ... Darkness!"
       ]
     },
     {
@@ -169,11 +286,99 @@
         "What technologies are running?",
         "Tell me about your code",
         "How was this app built?",
-        "Frameworks used"
+        "Frameworks used",
+        "What technologies do you use?",
+        "What is your architecture?",
+        "Backend and frontend stack",
+        "Which libraries are used?"
       ],
       "responses": [
-        "This project is built using Python 3, PyTorch for Deep Learning, FastAPI for asynchronous web backend, Web Speech API for voice recognition, and modern Vanilla HTML5/CSS3/JS for glassmorphic UI.",
-        "The technology stack includes PyTorch (Neural Networks), FastAPI (Async REST Server), HTML5 Web Speech API (STT & TTS), and Localtunnel for live public hosting."
+        "This project is built using Python 3, PyTorch for Deep Learning, FastAPI for the asynchronous web backend, Web Speech API for voice recognition, and Vanilla HTML5/CSS3/JS for the glassmorphic UI.",
+        "The technology stack includes PyTorch (Deep Neural Networks), FastAPI (Async REST Server), HTML5 Web Speech API (STT & TTS), and Uvicorn for production-grade serving."
+      ]
+    },
+    {
+      "tag": "python_info",
+      "patterns": [
+        "What is Python?",
+        "Tell me about Python",
+        "Why use Python for AI?",
+        "Is Python good for machine learning?",
+        "Python programming language"
+      ],
+      "responses": [
+        "Python is a high-level, versatile programming language renowned for its readability, dynamic typing, and massive AI/ML ecosystem including PyTorch, NumPy, and FastAPI.",
+        "Python is the dominant language for Deep Learning due to powerful numerical libraries like NumPy, deep learning frameworks like PyTorch and TensorFlow, and vibrant open-source tooling."
+      ]
+    },
+    {
+      "tag": "math_calc",
+      "patterns": [
+        "Can you do math?",
+        "Calculate something for me",
+        "What is 2 + 2?",
+        "What is 10 plus 5?",
+        "What is 100 divided by 4?",
+        "What is 7 times 8?",
+        "Math calculation",
+        "Calculate 25 * 4",
+        "Solve math"
+      ],
+      "responses": [
+        "MATH_CALC_DYNAMIC"
+      ]
+    },
+    {
+      "tag": "sentiment_positive",
+      "patterns": [
+        "You are awesome",
+        "Great job",
+        "Well done",
+        "You are smart",
+        "Love this app",
+        "Amazing",
+        "Cool project",
+        "Impressive",
+        "You're the best",
+        "Good work"
+      ],
+      "responses": [
+        "Thank you so much! I really appreciate the positive feedback.",
+        "Glad you're enjoying the experience! The PyTorch neural network is always ready to assist.",
+        "Thanks a lot! Striving to provide the best voice and deep learning interaction."
+      ]
+    },
+    {
+      "tag": "sentiment_negative",
+      "patterns": [
+        "You are bad",
+        "That was wrong",
+        "You are stupid",
+        "Not helpful",
+        "Boring",
+        "Terrible answer",
+        "You made a mistake",
+        "You don't understand"
+      ],
+      "responses": [
+        "I apologize for the confusion! As an offline deep learning model, I'm continuously learning. Try rephrasing or asking about another topic.",
+        "Sorry about that! You can ask me about AI, deep learning, weather, jokes, or tech stack, and I'll do my best to give an accurate answer."
+      ]
+    },
+    {
+      "tag": "status_check",
+      "patterns": [
+        "How are you?",
+        "How are you doing?",
+        "How is it going?",
+        "Everything ok?",
+        "Are you doing well?",
+        "How's life?"
+      ],
+      "responses": [
+        "I'm operating at 100% efficiency! All PyTorch neural network weights are loaded and ready. How are you doing today?",
+        "Doing fantastic! My speech recognition and deep learning pipelines are running smoothly. How can I help you?",
+        "All systems operational! Ready to classify your voice queries."
       ]
     },
     {
@@ -183,11 +388,71 @@
         "I need assistance",
         "Can you help me?",
         "What should I do?",
-        "Support"
+        "Support",
+        "Help options",
+        "Commands list",
+        "What can I say?"
       ],
       "responses": [
-        "I am here to assist! You can ask me about AI, deep learning, weather, technology, jokes, or test voice commands.",
-        "Sure! Try asking 'What can you do?', 'Tell me a joke', 'Explain deep learning', or click the microphone to speak!"
+        "I am here to assist! You can ask me about AI, deep learning, tech stack, weather, time/date, math calculations, jokes, or click the mic to speak!",
+        "Try asking: 'What is artificial intelligence?', 'Who created you?', 'What time is it?', 'Tell me a joke', or click the microphone to test voice input!"
+      ]
+    },
+    {
+      "tag": "location",
+      "patterns": [
+        "Where do you live?",
+        "Where are you from?",
+        "Where are you located?",
+        "Where is your server?",
+        "Where do you reside?"
+      ],
+      "responses": [
+        "I reside in the digital realm, running locally on your machine via FastAPI and PyTorch!",
+        "I am hosted on your local system, powered by Python and PyTorch Deep Learning."
+      ]
+    },
+    {
+      "tag": "music_audio",
+      "patterns": [
+        "Can you sing a song?",
+        "Can you play music?",
+        "Do you like music?",
+        "Sing something",
+        "Play a song"
+      ],
+      "responses": [
+        "While I don't have a singing voice, my speech synthesis engine can read out lyrics or speak any prompt with clear articulation!",
+        "I love synthetic sound waves and speech audio, but I leave the actual singing to human musicians!"
+      ]
+    },
+    {
+      "tag": "hobbies_interests",
+      "patterns": [
+        "What do you like to do?",
+        "What are your hobbies?",
+        "What do you do in your free time?",
+        "What interests you?",
+        "What is your passion?"
+      ],
+      "responses": [
+        "My favorite hobby is classifying text vectors, calculating softmax probabilities, and synthesizing voice responses!",
+        "I enjoy processing natural language queries, learning feature representations, and conversing with curious minds like yours!"
+      ]
+    },
+    {
+      "tag": "clear_reset",
+      "patterns": [
+        "Clear chat",
+        "Reset conversation",
+        "Clear screen",
+        "Start over",
+        "Delete messages",
+        "Clear history"
+      ],
+      "responses": [
+        "You can click the 'Clear History' button at the top right of the conversation window to reset the chat at any time!",
+        "To start fresh, click the 'Clear History' button or refresh the page."
       ]
     }
   ]

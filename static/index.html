@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/style.css?v=2.0">
 </head>
 <body>
 
@@ -72,12 +72,12 @@
                 <span class="time-stamp">Just now</span>
               </div>
               <div class="message-body">
-                Hello! Welcome to VoxAI. Click the microphone button to speak, or use any preset query. Powered by PyTorch Deep Learning & Groq LLM!
+                Hello! Welcome to VoxAI. Click the microphone button to speak, or use any preset query. Powered by an offline PyTorch Deep Learning Intent Classifier!
               </div>
               <div class="meta-tag">
                 <span class="tag-pill intent-greeting"><i class="fa-solid fa-tag"></i> greeting</span>
                 <span class="tag-pill conf-pill"><i class="fa-solid fa-bolt"></i> 100% confidence</span>
-                <span class="tag-pill engine-pill"><i class="fa-solid fa-microchip"></i> PyTorch + Groq</span>
+                <span class="tag-pill engine-pill"><i class="fa-solid fa-microchip"></i> PyTorch DNN (Offline)</span>
               </div>
             </div>
           </div>
@@ -130,18 +130,29 @@
           <div class="card-header">
             <i class="fa-solid fa-bolt-lightning"></i>
             <h3>Groq LLM Mode</h3>
-            <span class="groq-status-badge" id="groqBadge">OFF</span>
+            <span class="groq-status-badge" id="groqBadge">OFFLINE</span>
           </div>
           <div class="groq-toggle-row">
-            <span class="groq-label" id="groqLabelText">Groq Mode: Inactive</span>
+            <span class="groq-label" id="groqLabelText">Groq Mode: Inactive (Offline)</span>
             <label class="switch" for="groqToggle">
               <input type="checkbox" id="groqToggle">
               <span class="slider round"></span>
             </label>
           </div>
-          <p class="card-desc" style="margin-top: 6px; margin-bottom: 0;">
+          <p class="card-desc" style="margin-top: 6px; margin-bottom: 8px;">
             Toggle ON for dynamic Groq LLM responses, or OFF for fast PyTorch DNN intent responses.
           </p>
+          <div class="groq-key-container">
+            <label for="groqApiKeyInput" style="font-size: 11px; color: var(--text-muted); display: block; margin-bottom: 4px;">
+              Custom Groq API Key (Optional):
+            </label>
+            <div style="display: flex; gap: 6px;">
+              <input type="password" id="groqApiKeyInput" placeholder="gsk_... (stored locally)" style="flex: 1; padding: 6px 10px; font-size: 11px; border-radius: 6px; background: rgba(0,0,0,0.3); border: 1px solid var(--border-color); color: var(--text-main);" autocomplete="off">
+              <button type="button" id="saveGroqKeyBtn" class="btn-text-sm" style="padding: 6px 10px; font-size: 11px;" title="Save Custom Key">
+                <i class="fa-solid fa-floppy-disk"></i>
+              </button>
+            </div>
+          </div>
         </div>
         
         <!-- Preset Voice Test Prompts -->
@@ -155,20 +166,26 @@
             <button class="preset-btn" data-text="Hello there!">
               <i class="fa-solid fa-hand"></i> "Hello there!"
             </button>
-            <button class="preset-btn" data-text="What can you do?">
-              <i class="fa-solid fa-gears"></i> "What can you do?"
+            <button class="preset-btn" data-text="What is artificial intelligence?">
+              <i class="fa-solid fa-microchip"></i> "What is AI?"
+            </button>
+            <button class="preset-btn" data-text="Who created you?">
+              <i class="fa-solid fa-user-astronaut"></i> "Who created you?"
+            </button>
+            <button class="preset-btn" data-text="What time is it?">
+              <i class="fa-solid fa-clock"></i> "What time is it?"
+            </button>
+            <button class="preset-btn" data-text="What is 25 * 4?">
+              <i class="fa-solid fa-calculator"></i> "Calculate 25 * 4"
             </button>
             <button class="preset-btn" data-text="How does deep learning work here?">
               <i class="fa-solid fa-brain"></i> "Explain Deep Learning"
             </button>
-            <button class="preset-btn" data-text="What is the weather like?">
-              <i class="fa-solid fa-cloud-sun"></i> "What's the weather?"
+            <button class="preset-btn" data-text="What technologies do you use?">
+              <i class="fa-solid fa-code"></i> "Tech Stack"
             </button>
             <button class="preset-btn" data-text="Tell me a funny joke">
               <i class="fa-solid fa-face-laugh-beam"></i> "Tell me a joke"
-            </button>
-            <button class="preset-btn" data-text="What technologies are used?">
-              <i class="fa-solid fa-code"></i> "What tech stack is used?"
             </button>
           </div>
         </div>
@@ -230,6 +247,6 @@
 
   </div>
 
-  <script src="/static/js/app.js"></script>
+  <script src="/static/js/app.js?v=2.0"></script>
 </body>
 </html>

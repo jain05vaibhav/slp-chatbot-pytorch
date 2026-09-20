@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.git/
+.gitignore
+scratch/
+.pytest_cache/
+.vscode/
+.idea/
+README.md
+REPORT.md
+train.py
