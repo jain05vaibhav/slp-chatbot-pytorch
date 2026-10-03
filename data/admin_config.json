@@ -1,0 +1,623 @@
+{
+  "password_hash": "85e770aadff9475c34a9a1c00d0ab9dc5475d8d80fc67f59f642e024e8b68a948daf0032726e07148a0d288951fc67e32bce4c01e8e94304e3bb6425370f6070",
+  "password_salt": "49101156ed6f527369c0b6ba8265b8cbd80df8dfc6c5058f8df1a24399ee9241",
+  "iterations": 120000,
+  "algorithm": "PBKDF2-HMAC-SHA256",
+  "confidence_threshold": 0.5,
+  "maintenance_mode": false,
+  "custom_system_prompt": null,
+  "default_engine": "groq",
+  "security_logs": [
+    {
+      "event": "sessions_revoked",
+      "timestamp": "2026-09-26T19:04:45.742654+00:00",
+      "client_ip": "internal",
+      "details": "All active admin sessions revoked"
+    },
+    {
+      "event": "password_changed",
+      "timestamp": "2026-09-26T19:04:45.756828+00:00",
+      "client_ip": "127.0.0.1",
+      "details": "Master admin password changed successfully"
+    },
+    {
+      "event": "login_failed",
+      "timestamp": "2026-09-26T19:12:17.209052+00:00",
+      "client_ip": "127.0.0.1",
+      "details": "Failed login attempt 1/5"
+    },
+    {
+      "event": "login_success",
+      "timestamp": "2026-09-26T19:12:24.705400+00:00",
+      "client_ip": "127.0.0.1",
+      "details": "Admin authentication successful"
+    },
+    {
+      "event": "login_success",
+      "timestamp": "2026-09-26T19:46:30.591109+00:00",
+      "client_ip": "127.0.0.1",
+      "details": "Admin authentication successful"
+    },
+    {
+      "event": "login_success",
+      "timestamp": "2026-09-26T19:53:45.790038+00:00",
+      "client_ip": "127.0.0.1",
+      "details": "Admin authentication successful"
+    },
+    {
+      "event": "login_success",
+      "timestamp": "2026-09-26T19:55:56.690294+00:00",
+      "client_ip": "127.0.0.1",
+      "details": "Admin authentication successful"
+    },
+    {
+      "event": "login_success",
+      "timestamp": "2026-10-02T15:03:23.763053+00:00",
+      "client_ip": "162.158.170.111",
+      "details": "Admin authentication successful"
+    },
+    {
+      "event": "config_updated",
+      "timestamp": "2026-10-02T15:03:43.534651+00:00",
+      "client_ip": "internal",
+      "details": "System configuration and thresholds updated"
+    },
+    {
+      "event": "config_updated",
+      "timestamp": "2026-10-02T15:04:13.964332+00:00",
+      "client_ip": "internal",
+      "details": "System configuration and thresholds updated"
+    },
+    {
+      "event": "config_updated",
+      "timestamp": "2026-10-02T15:04:26.367536+00:00",
+      "client_ip": "internal",
+      "details": "System configuration and thresholds updated"
+    },
+    {
+      "event": "config_updated",
+      "timestamp": "2026-10-02T15:06:27.186707+00:00",
+      "client_ip": "internal",
+      "details": "System configuration and thresholds updated"
+    },
+    {
+      "event": "config_updated",
+      "timestamp": "2026-10-02T15:08:19.213361+00:00",
+      "client_ip": "internal",
+      "details": "System configuration and thresholds updated"
+    },
+    {
+      "event": "config_updated",
+      "timestamp": "2026-10-02T15:08:26.500233+00:00",
+      "client_ip": "internal",
+      "details": "System configuration and thresholds updated"
+    },
+    {
+      "event": "config_updated",
+      "timestamp": "2026-10-02T15:08:29.899833+00:00",
+      "client_ip": "internal",
+      "details": "System configuration and thresholds updated"
+    },
+    {
+      "event": "login_success",
+      "timestamp": "2026-10-02T15:09:28.681425+00:00",
+      "client_ip": "162.158.108.157",
+      "details": "Admin authentication successful"
+    },
+    {
+      "event": "sessions_revoked",
+      "timestamp": "2026-10-02T15:09:35.061216+00:00",
+      "client_ip": "internal",
+      "details": "All active admin sessions revoked"
+    },
+    {
+      "event": "emergency_lock",
+      "timestamp": "2026-10-02T15:09:35.089011+00:00",
+      "client_ip": "internal",
+      "details": "Emergency lockout invoked: all active sessions invalidated."
+    },
+    {
+      "event": "login_success",
+      "timestamp": "2026-10-02T15:12:22.823720+00:00",
+      "client_ip": "162.158.163.84",
+      "details": "Admin authentication successful"
+    },
+    {
+      "event": "broadcast_updated",
+      "timestamp": "2026-10-03T16:57:46.124970+00:00",
+      "client_ip": "internal",
+      "details": "Broadcast banner updated (active: True, theme: info, message: 'System Upgrade Complete!')"
+    },
+    {
+      "event": "config_updated",
+      "timestamp": "2026-10-03T16:57:47.154562+00:00",
+      "client_ip": "internal",
+      "details": "System configuration and thresholds updated"
+    },
+    {
+      "event": "login_success",
+      "timestamp": "2026-10-03T17:15:36.585854+00:00",
+      "client_ip": "172.68.164.88",
+      "details": "Admin authentication successful"
+    },
+    {
+      "event": "config_updated",
+      "timestamp": "2026-10-03T17:16:10.250850+00:00",
+      "client_ip": "internal",
+      "details": "System configuration and thresholds updated"
+    },
+    {
+      "event": "config_updated",
+      "timestamp": "2026-10-03T17:17:13.554814+00:00",
+      "client_ip": "internal",
+      "details": "System configuration and thresholds updated"
+    },
+    {
+      "event": "config_updated",
+      "timestamp": "2026-10-03T17:17:30.813468+00:00",
+      "client_ip": "internal",
+      "details": "System configuration and thresholds updated"
+    },
+    {
+      "event": "config_updated",
+      "timestamp": "2026-10-03T17:17:32.955608+00:00",
+      "client_ip": "internal",
+      "details": "System configuration and thresholds updated"
+    },
+    {
+      "event": "config_updated",
+      "timestamp": "2026-10-03T17:17:34.640484+00:00",
+      "client_ip": "internal",
+      "details": "System configuration and thresholds updated"
+    },
+    {
+      "event": "config_updated",
+      "timestamp": "2026-10-03T17:17:35.876815+00:00",
+      "client_ip": "internal",
+      "details": "System configuration and thresholds updated"
+    },
+    {
+      "event": "login_success",
+      "timestamp": "2026-10-03T17:17:49.844359+00:00",
+      "client_ip": "testclient",
+      "details": "Admin authentication successful"
+    },
+    {
+      "event": "login_success",
+      "timestamp": "2026-10-03T17:18:16.770497+00:00",
+      "client_ip": "testclient",
+      "details": "Admin authentication successful"
+    },
+    {
+      "event": "config_updated",
+      "timestamp": "2026-10-03T17:22:14.308460+00:00",
+      "client_ip": "internal",
+      "details": "System configuration and thresholds updated"
+    },
+    {
+      "event": "retrain_failed",
+      "timestamp": "2026-10-03T17:23:13.112305+00:00",
+      "client_ip": "internal",
+      "details": "Retraining failed: No module named 'train'"
+    },
+    {
+      "event": "model_hot_reloaded",
+      "timestamp": "2026-10-03T17:26:37.048833+00:00",
+      "client_ip": "internal",
+      "details": "Model reloaded from disk into memory"
+    },
+    {
+      "event": "login_success",
+      "timestamp": "2026-10-03T17:43:54.706459+00:00",
+      "client_ip": "testclient",
+      "details": "Admin authentication successful"
+    },
+    {
+      "event": "login_success",
+      "timestamp": "2026-10-03T17:44:43.140606+00:00",
+      "client_ip": "testclient",
+      "details": "Admin authentication successful"
+    },
+    {
+      "event": "login_success",
+      "timestamp": "2026-10-03T17:45:40.437487+00:00",
+      "client_ip": "testclient",
+      "details": "Admin authentication successful"
+    },
+    {
+      "event": "user_permanently_banned",
+      "timestamp": "2026-10-03T18:09:39.134547+00:00",
+      "client_ip": "198.51.100.77",
+      "details": "Device banned (ID: test_admin_device, FP: FP-ADMIN-DEV-111, IP: 198.51.100.77). Reason: Accidental self ban"
+    },
+    {
+      "event": "user_permanently_banned",
+      "timestamp": "2026-10-03T18:09:40.463900+00:00",
+      "client_ip": "198.51.100.55",
+      "details": "Device banned (ID: test_user_alpha, FP: FP-HARDWARE-TEST-999, IP: 198.51.100.55). Reason: Security policy violation test"
+    },
+    {
+      "event": "ban_cross_infected",
+      "timestamp": "2026-10-03T18:09:40.959528+00:00",
+      "client_ip": "203.0.113.10",
+      "details": "Banned device cross-infected with new vector. Trigger: device_fingerprint (FP-HARDWARE-TEST...)"
+    },
+    {
+      "event": "user_unbanned",
+      "timestamp": "2026-10-03T18:09:41.459944+00:00",
+      "client_ip": "internal",
+      "details": "Unbanned target matching identifier 'FP-HARDWARE-TEST-999'"
+    },
+    {
+      "event": "user_permanently_banned",
+      "timestamp": "2026-10-03T18:10:23.708602+00:00",
+      "client_ip": "198.51.100.77",
+      "details": "Device banned (ID: test_admin_device, FP: FP-ADMIN-DEV-111, IP: 198.51.100.77). Reason: Accidental self ban"
+    },
+    {
+      "event": "user_unbanned",
+      "timestamp": "2026-10-03T18:10:25.030378+00:00",
+      "client_ip": "internal",
+      "details": "Unbanned target matching identifier 'test_admin_device'"
+    },
+    {
+      "event": "admin_emergency_unban_self",
+      "timestamp": "2026-10-03T18:10:25.262788+00:00",
+      "client_ip": "internal",
+      "details": "Admin authenticated master unlock to lift local device ban."
+    },
+    {
+      "event": "user_permanently_banned",
+      "timestamp": "2026-10-03T18:10:25.865825+00:00",
+      "client_ip": "198.51.100.55",
+      "details": "Device banned (ID: test_user_alpha, FP: FP-HARDWARE-TEST-999, IP: 198.51.100.55). Reason: Security policy violation test"
+    },
+    {
+      "event": "ban_cross_infected",
+      "timestamp": "2026-10-03T18:10:26.688414+00:00",
+      "client_ip": "203.0.113.10",
+      "details": "Banned device cross-infected with new vector. Trigger: device_fingerprint (FP-HARDWARE-TEST...)"
+    },
+    {
+      "event": "user_unbanned",
+      "timestamp": "2026-10-03T18:10:27.189149+00:00",
+      "client_ip": "internal",
+      "details": "Unbanned target matching identifier 'FP-HARDWARE-TEST-999'"
+    },
+    {
+      "event": "user_permanently_banned",
+      "timestamp": "2026-10-03T18:11:01.055045+00:00",
+      "client_ip": "internal",
+      "details": "Device banned (ID: http_test_cid, FP: FP-HTTP-TEST-XYZ, IP: None). Reason: Violation of chatbot terms"
+    },
+    {
+      "event": "ban_cross_infected",
+      "timestamp": "2026-10-03T18:11:01.724644+00:00",
+      "client_ip": "testclient",
+      "details": "Banned device cross-infected with new vector. Trigger: device_fingerprint (FP-HTTP-TEST-XYZ...)"
+    },
+    {
+      "event": "ban_cross_infected",
+      "timestamp": "2026-10-03T18:11:02.387506+00:00",
+      "client_ip": "testclient",
+      "details": "Banned device cross-infected with new vector. Trigger: device_fingerprint (FP-HTTP-TEST-XYZ...)"
+    },
+    {
+      "event": "user_unbanned",
+      "timestamp": "2026-10-03T18:11:03.382726+00:00",
+      "client_ip": "internal",
+      "details": "Unbanned target matching identifier 'http_test_cid'"
+    },
+    {
+      "event": "admin_emergency_unban_self",
+      "timestamp": "2026-10-03T18:11:03.886674+00:00",
+      "client_ip": "internal",
+      "details": "Admin authenticated master unlock to lift local device ban."
+    },
+    {
+      "event": "login_success",
+      "timestamp": "2026-10-03T18:26:54.422412+00:00",
+      "client_ip": "127.0.0.1",
+      "details": "Admin authentication successful"
+    },
+    {
+      "event": "admin_intercom_sent",
+      "timestamp": "2026-10-03T18:27:15.116363+00:00",
+      "client_ip": "internal",
+      "details": "Admin intercom note dispatched to user test_client_alpha"
+    },
+    {
+      "event": "config_updated",
+      "timestamp": "2026-10-03T18:27:53.476774+00:00",
+      "client_ip": "internal",
+      "details": "System configuration and thresholds updated"
+    },
+    {
+      "event": "login_success",
+      "timestamp": "2026-10-03T18:39:02.082985+00:00",
+      "client_ip": "127.0.0.1",
+      "details": "Admin authentication successful"
+    },
+    {
+      "event": "user_permanently_banned",
+      "timestamp": "2026-10-03T18:39:33.061519+00:00",
+      "client_ip": "127.0.0.1",
+      "details": "Device banned (ID: client_n5yxl40fl9, FP: FP-5D2C55868F197194FA8B3A4692E0B166, IP: 127.0.0.1). Reason: Administrative policy violation: Permanent device blacklist"
+    },
+    {
+      "event": "ban_cross_infected",
+      "timestamp": "2026-10-03T18:41:23.166375+00:00",
+      "client_ip": "127.0.0.1",
+      "details": "Banned device cross-infected with new vector. Trigger: device_fingerprint (FP-5D2C55868F197...)"
+    },
+    {
+      "event": "user_unbanned",
+      "timestamp": "2026-10-03T18:43:34.099049+00:00",
+      "client_ip": "internal",
+      "details": "Unbanned target matching identifier 'client_n5yxl40fl9'"
+    },
+    {
+      "event": "login_success",
+      "timestamp": "2026-10-03T18:53:07.608330+00:00",
+      "client_ip": "127.0.0.1",
+      "details": "Admin authentication successful"
+    },
+    {
+      "event": "public_lockout_started",
+      "timestamp": "2026-10-03T18:53:23.080948+00:00",
+      "client_ip": "internal",
+      "details": "Public access suspended for 10m until 2026-10-03T19:03:22.892073+00:00"
+    },
+    {
+      "event": "public_lockout_lifted",
+      "timestamp": "2026-10-03T18:54:50.398494+00:00",
+      "client_ip": "internal",
+      "details": "Public access suspension lifted early by administrator."
+    },
+    {
+      "event": "config_updated",
+      "timestamp": "2026-10-03T18:55:16.510607+00:00",
+      "client_ip": "internal",
+      "details": "System configuration and governance updated"
+    },
+    {
+      "event": "config_updated",
+      "timestamp": "2026-10-03T18:55:17.290985+00:00",
+      "client_ip": "internal",
+      "details": "System configuration and governance updated"
+    },
+    {
+      "event": "login_success",
+      "timestamp": "2026-10-03T18:56:42.634536+00:00",
+      "client_ip": "127.0.0.1",
+      "details": "Admin authentication successful"
+    },
+    {
+      "event": "admin_intercom_sent",
+      "timestamp": "2026-10-03T19:00:54.921210+00:00",
+      "client_ip": "internal",
+      "details": "Admin intercom note dispatched to user client_n5yxl40fl9"
+    },
+    {
+      "event": "user_permanently_banned",
+      "timestamp": "2026-10-03T19:01:20.666212+00:00",
+      "client_ip": "127.0.0.1",
+      "details": "Device banned (ID: client_n5yxl40fl9, FP: FP-5D2C55868F197194FA8B3A4692E0B166, IP: 127.0.0.1). Reason: Administrative policy violation: Manual blacklist"
+    },
+    {
+      "event": "ban_cross_infected",
+      "timestamp": "2026-10-03T19:01:21.329351+00:00",
+      "client_ip": "127.0.0.1",
+      "details": "Banned device cross-infected with new vector. Trigger: device_fingerprint (FP-5D2C55868F197...)"
+    },
+    {
+      "event": "user_permanently_banned",
+      "timestamp": "2026-10-03T19:01:25.987201+00:00",
+      "client_ip": "127.0.0.1",
+      "details": "Device banned (ID: client_n5yxl40fl9, FP: FP-5D2C55868F197194FA8B3A4692E0B166, IP: 127.0.0.1). Reason: Administrative policy violation: Manual blacklist"
+    },
+    {
+      "event": "ban_cross_infected",
+      "timestamp": "2026-10-03T19:01:26.697510+00:00",
+      "client_ip": "127.0.0.1",
+      "details": "Banned device cross-infected with new vector. Trigger: device_fingerprint (FP-5D2C55868F197...)"
+    },
+    {
+      "event": "user_permanently_banned",
+      "timestamp": "2026-10-03T19:01:27.304830+00:00",
+      "client_ip": "127.0.0.1",
+      "details": "Device banned (ID: client_n5yxl40fl9, FP: FP-5D2C55868F197194FA8B3A4692E0B166, IP: 127.0.0.1). Reason: Administrative policy violation: Manual blacklist"
+    },
+    {
+      "event": "user_permanently_banned",
+      "timestamp": "2026-10-03T19:01:27.983059+00:00",
+      "client_ip": "127.0.0.1",
+      "details": "Device banned (ID: client_n5yxl40fl9, FP: FP-5D2C55868F197194FA8B3A4692E0B166, IP: 127.0.0.1). Reason: Administrative policy violation: Manual blacklist"
+    },
+    {
+      "event": "ban_cross_infected",
+      "timestamp": "2026-10-03T19:01:28.954685+00:00",
+      "client_ip": "127.0.0.1",
+      "details": "Banned device cross-infected with new vector. Trigger: device_fingerprint (FP-5D2C55868F197...)"
+    },
+    {
+      "event": "user_permanently_banned",
+      "timestamp": "2026-10-03T19:01:32.116265+00:00",
+      "client_ip": "127.0.0.1",
+      "details": "Device banned (ID: client_n5yxl40fl9, FP: FP-5D2C55868F197194FA8B3A4692E0B166, IP: 127.0.0.1). Reason: Administrative policy violation: Manual blacklist"
+    },
+    {
+      "event": "user_permanently_banned",
+      "timestamp": "2026-10-03T19:01:32.787841+00:00",
+      "client_ip": "127.0.0.1",
+      "details": "Device banned (ID: client_n5yxl40fl9, FP: FP-5D2C55868F197194FA8B3A4692E0B166, IP: 127.0.0.1). Reason: Administrative policy violation: Manual blacklist"
+    },
+    {
+      "event": "ban_cross_infected",
+      "timestamp": "2026-10-03T19:01:33.501186+00:00",
+      "client_ip": "127.0.0.1",
+      "details": "Banned device cross-infected with new vector. Trigger: device_fingerprint (FP-5D2C55868F197...)"
+    },
+    {
+      "event": "user_permanently_banned",
+      "timestamp": "2026-10-03T19:01:34.946473+00:00",
+      "client_ip": "127.0.0.1",
+      "details": "Device banned (ID: client_n5yxl40fl9, FP: FP-5D2C55868F197194FA8B3A4692E0B166, IP: 127.0.0.1). Reason: Administrative policy violation: Manual blacklist"
+    },
+    {
+      "event": "user_permanently_banned",
+      "timestamp": "2026-10-03T19:01:35.775822+00:00",
+      "client_ip": "127.0.0.1",
+      "details": "Device banned (ID: client_n5yxl40fl9, FP: FP-5D2C55868F197194FA8B3A4692E0B166, IP: 127.0.0.1). Reason: Administrative policy violation: Manual blacklist"
+    },
+    {
+      "event": "user_permanently_banned",
+      "timestamp": "2026-10-03T19:01:36.492772+00:00",
+      "client_ip": "127.0.0.1",
+      "details": "Device banned (ID: client_n5yxl40fl9, FP: FP-5D2C55868F197194FA8B3A4692E0B166, IP: 127.0.0.1). Reason: Administrative policy violation: Manual blacklist"
+    },
+    {
+      "event": "user_permanently_banned",
+      "timestamp": "2026-10-03T19:01:37.495197+00:00",
+      "client_ip": "127.0.0.1",
+      "details": "Device banned (ID: client_n5yxl40fl9, FP: FP-5D2C55868F197194FA8B3A4692E0B166, IP: 127.0.0.1). Reason: Administrative policy violation: Manual blacklist"
+    },
+    {
+      "event": "ban_cross_infected",
+      "timestamp": "2026-10-03T19:01:38.149205+00:00",
+      "client_ip": "127.0.0.1",
+      "details": "Banned device cross-infected with new vector. Trigger: device_fingerprint (FP-5D2C55868F197...)"
+    },
+    {
+      "event": "user_permanently_banned",
+      "timestamp": "2026-10-03T19:01:39.097788+00:00",
+      "client_ip": "127.0.0.1",
+      "details": "Device banned (ID: client_n5yxl40fl9, FP: FP-5D2C55868F197194FA8B3A4692E0B166, IP: 127.0.0.1). Reason: Administrative policy violation: Manual blacklist"
+    },
+    {
+      "event": "ban_cross_infected",
+      "timestamp": "2026-10-03T19:01:40.752260+00:00",
+      "client_ip": "127.0.0.1",
+      "details": "Banned device cross-infected with new vector. Trigger: device_fingerprint (FP-5D2C55868F197...)"
+    },
+    {
+      "event": "user_unbanned",
+      "timestamp": "2026-10-03T19:03:10.904132+00:00",
+      "client_ip": "internal",
+      "details": "Unbanned target matching identifier 'client_n5yxl40fl9'"
+    },
+    {
+      "event": "public_lockout_started",
+      "timestamp": "2026-10-03T19:03:40.488134+00:00",
+      "client_ip": "internal",
+      "details": "Public access suspended for 15m until 2026-10-03T19:18:40.254771+00:00"
+    },
+    {
+      "event": "public_lockout_lifted",
+      "timestamp": "2026-10-03T19:03:51.067917+00:00",
+      "client_ip": "internal",
+      "details": "Public access suspension lifted early by administrator."
+    },
+    {
+      "event": "config_updated",
+      "timestamp": "2026-10-03T19:04:36.024807+00:00",
+      "client_ip": "internal",
+      "details": "System configuration and governance updated"
+    },
+    {
+      "event": "login_success",
+      "timestamp": "2026-10-03T19:14:58.670784+00:00",
+      "client_ip": "127.0.0.1",
+      "details": "Admin authentication successful"
+    },
+    {
+      "event": "broadcast_updated",
+      "timestamp": "2026-10-03T19:14:59.246736+00:00",
+      "client_ip": "internal",
+      "details": "Broadcast banner updated (active: True, theme: warning, message: '\u26a0\ufe0f Public Notice: Live system optimizati')"
+    },
+    {
+      "event": "login_success",
+      "timestamp": "2026-10-03T19:15:19.735995+00:00",
+      "client_ip": "127.0.0.1",
+      "details": "Admin authentication successful"
+    },
+    {
+      "event": "admin_intercom_sent",
+      "timestamp": "2026-10-03T19:15:20.467881+00:00",
+      "client_ip": "internal",
+      "details": "Admin intercom note dispatched to user test_intercom_user_01"
+    },
+    {
+      "event": "login_success",
+      "timestamp": "2026-10-03T19:15:32.402995+00:00",
+      "client_ip": "127.0.0.1",
+      "details": "Admin authentication successful"
+    },
+    {
+      "event": "config_updated",
+      "timestamp": "2026-10-03T19:15:32.934481+00:00",
+      "client_ip": "internal",
+      "details": "System configuration and governance updated"
+    },
+    {
+      "event": "config_updated",
+      "timestamp": "2026-10-03T19:15:34.103946+00:00",
+      "client_ip": "internal",
+      "details": "System configuration and governance updated"
+    },
+    {
+      "event": "login_success",
+      "timestamp": "2026-10-03T19:18:32.540575+00:00",
+      "client_ip": "127.0.0.1",
+      "details": "Admin authentication successful"
+    },
+    {
+      "event": "admin_intercom_sent",
+      "timestamp": "2026-10-03T19:22:33.841557+00:00",
+      "client_ip": "internal",
+      "details": "Admin intercom note dispatched to user test_intercom_user_01"
+    },
+    {
+      "event": "login_success",
+      "timestamp": "2026-10-03T19:27:57.566034+00:00",
+      "client_ip": "127.0.0.1",
+      "details": "Admin authentication successful"
+    },
+    {
+      "event": "admin_intercom_sent",
+      "timestamp": "2026-10-03T19:30:33.738997+00:00",
+      "client_ip": "internal",
+      "details": "Admin intercom note dispatched to user client_n5yxl40fl9"
+    },
+    {
+      "event": "login_success",
+      "timestamp": "2026-10-03T19:30:53.227166+00:00",
+      "client_ip": "127.0.0.1",
+      "details": "Admin authentication successful"
+    },
+    {
+      "event": "broadcast_updated",
+      "timestamp": "2026-10-03T19:32:05.057665+00:00",
+      "client_ip": "internal",
+      "details": "Broadcast banner updated (active: True, theme: alert, message: 'System Maintenance: Core update in progr')"
+    },
+    {
+      "event": "broadcast_updated",
+      "timestamp": "2026-10-03T19:33:17.812254+00:00",
+      "client_ip": "internal",
+      "details": "Broadcast banner updated (active: True, theme: alert, message: 'System Maintenance: Core update in progr')"
+    }
+  ],
+  "sessions_revoked_before": 1790953775.034166,
+  "broadcast_announcement": {
+    "enabled": true,
+    "message": "System Maintenance: Core update in progress.",
+    "theme": "alert",
+    "updated_at": "2026-10-03T19:33:17.543728+00:00"
+  },
+  "maintenance_message": "System maintenance: Upgrading PyTorch core.",
+  "banned_users": {},
+  "public_lockout_until": 0.0,
+  "public_lockout_reason": ""
+}

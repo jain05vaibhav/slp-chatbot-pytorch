@@ -21,6 +21,15 @@ if %ERRORLEVEL% neq 0 (
 
 where docker >nul 2>nul
 if %ERRORLEVEL% neq 0 (
+    if exist "%LOCALAPPDATA%\Programs\DockerDesktop\resources\bin\docker.exe" (
+        set "PATH=%LOCALAPPDATA%\Programs\DockerDesktop\resources\bin;%PATH%"
+    ) else if exist "C:\Program Files\Docker\Docker\resources\bin\docker.exe" (
+        set "PATH=C:\Program Files\Docker\Docker\resources\bin;%PATH%"
+    )
+)
+
+where docker >nul 2>nul
+if %ERRORLEVEL% neq 0 (
     echo [!] ERROR: Docker is not installed or not in PATH.
     echo Please start Docker Desktop: https://www.docker.com/
     exit /b 1
@@ -58,9 +67,23 @@ if %ERRORLEVEL% neq 0 (
     aws ecr create-repository --repository-name %REPO_NAME% --region %AWS_REGION% >nul
 )
 
-:: 5. Build Docker Image
+:: 4.5 Build Modern React Frontend
+if exist frontend\package.json (
+    echo [*] Building modern React frontend bundle into static/...
+    call npm --prefix frontend run build
+    if !ERRORLEVEL! neq 0 (
+        echo [!] React frontend build failed.
+        exit /b 1
+    )
+)
+
+:: 5. Build Docker Image (disabling provenance and sbom to output Docker V2 Schema 2 required by AWS Lambda)
 echo [*] Building Lambda Docker image...
-docker build -t %REPO_NAME%:latest -f Dockerfile.lambda .
+docker build --provenance=false --sbom=false -t %REPO_NAME%:latest -f Dockerfile.lambda .
+if %ERRORLEVEL% neq 0 (
+    echo [!] Retrying docker build with standard buildx flags...
+    docker buildx build --provenance=false --sbom=false --output type=docker -t %REPO_NAME%:latest -f Dockerfile.lambda .
+)
 if %ERRORLEVEL% neq 0 (
     echo [!] Docker build failed.
     exit /b 1
@@ -99,9 +122,12 @@ aws lambda get-function --function-name %FUNCTION_NAME% --region %AWS_REGION% >n
 if %ERRORLEVEL% equ 0 (
     echo [+] Updating existing Lambda function code...
     aws lambda update-function-code --function-name %FUNCTION_NAME% --image-uri %ECR_URI%:latest --region %AWS_REGION% >nul
+    echo [*] Waiting for Lambda code update to complete...
+    aws lambda wait function-updated --function-name %FUNCTION_NAME% --region %AWS_REGION%
     if not "!LAMBDA_ENV!"=="" (
         echo [+] Updating Lambda environment variables...
         aws lambda update-function-configuration --function-name %FUNCTION_NAME% --environment "!LAMBDA_ENV!" --region %AWS_REGION% >nul
+        aws lambda wait function-updated --function-name %FUNCTION_NAME% --region %AWS_REGION%
     )
 ) else (
     echo [+] Creating IAM execution role for Lambda...
@@ -125,7 +151,7 @@ if %ERRORLEVEL% equ 0 (
             --timeout 30 ^
             --memory-size 1536 ^
             --environment "!LAMBDA_ENV!" ^
-            --region %AWS_REGION% >nul
+            --region %AWS_REGION%
     ) else (
         aws lambda create-function ^
             --function-name %FUNCTION_NAME% ^
@@ -134,7 +160,11 @@ if %ERRORLEVEL% equ 0 (
             --role !ROLE_ARN! ^
             --timeout 30 ^
             --memory-size 1536 ^
-            --region %AWS_REGION% >nul
+            --region %AWS_REGION%
+    )
+    if !ERRORLEVEL! neq 0 (
+        echo [!] Failed to create Lambda function.
+        exit /b 1
     )
 )
 
@@ -154,6 +184,14 @@ if %ERRORLEVEL% neq 0 (
         --action lambda:InvokeFunctionUrl ^
         --principal "*" ^
         --function-url-auth-type NONE ^
+        --region %AWS_REGION% >nul
+    
+    aws lambda add-permission ^
+        --function-name %FUNCTION_NAME% ^
+        --statement-id AllowInvokeFunction ^
+        --action lambda:InvokeFunction ^
+        --principal "*" ^
+        --invoked-via-function-url ^
         --region %AWS_REGION% >nul
 )
 

@@ -39,9 +39,16 @@ echo "[*] Ensuring ECR repository exists..."
 aws ecr describe-repositories --repository-names "${REPO_NAME}" --region "${AWS_REGION}" >/dev/null 2>&1 || \
     aws ecr create-repository --repository-name "${REPO_NAME}" --region "${AWS_REGION}" >/dev/null
 
-# 5. Build Docker Image
+# 4.5 Build Modern React Frontend
+if [ -f "frontend/package.json" ]; then
+    echo "[*] Building modern React frontend bundle into static/..."
+    npm --prefix frontend run build
+fi
+
+# 5. Build Docker Image (disabling provenance and sbom to output Docker V2 Schema 2 required by AWS Lambda)
 echo "[*] Building Lambda Docker image..."
-docker build -t "${REPO_NAME}:latest" -f Dockerfile.lambda .
+docker build --provenance=false --sbom=false -t "${REPO_NAME}:latest" -f Dockerfile.lambda . || \
+    docker buildx build --provenance=false --sbom=false --output type=docker -t "${REPO_NAME}:latest" -f Dockerfile.lambda .
 
 # 6. Tag and Push Image to ECR
 echo "[*] Tagging and pushing image to ECR..."
@@ -116,6 +123,14 @@ if ! aws lambda get-function-url-config --function-name "${FUNCTION_NAME}" --reg
         --action lambda:InvokeFunctionUrl \
         --principal "*" \
         --function-url-auth-type NONE \
+        --region "${AWS_REGION}" >/dev/null
+
+    aws lambda add-permission \
+        --function-name "${FUNCTION_NAME}" \
+        --statement-id AllowInvokeFunction \
+        --action lambda:InvokeFunction \
+        --principal "*" \
+        --invoked-via-function-url \
         --region "${AWS_REGION}" >/dev/null
 fi
 

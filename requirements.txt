@@ -3,9 +3,11 @@ fastapi>=0.100.0
 uvicorn>=0.20.0
 groq>=0.4.0
 python-dotenv>=1.0.0
-numpy>=1.24.0
+numpy==1.26.4
 pydantic>=2.0.0
 gunicorn>=21.2.0
 python-multipart>=0.0.6
 requests>=2.31.0
 mangum>=0.17.0
+psutil>=5.9.0
+boto3>=1.28.0

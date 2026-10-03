@@ -180,7 +180,7 @@ class ChatbotInferenceEngine:
 
         return "I can solve arithmetic expressions! For example, try asking 'What is 25 * 4?' or 'What is 100 divided by 5?'"
 
-    def query_groq_llm(self, user_text: str, intent_tag: str, confidence: float, base_response: str, api_key: Optional[str] = None) -> str:
+    def query_groq_llm(self, user_text: str, intent_tag: str, confidence: float, base_response: str, api_key: Optional[str] = None, custom_system_prompt: Optional[str] = None) -> str:
         """
         Enhances the PyTorch DNN's canonical intent response using Groq LLM API.
         The PyTorch DNN remains the primary brain; Groq acts as a voice polisher/vocalizer.
@@ -191,13 +191,23 @@ class ChatbotInferenceEngine:
 
         client = Groq(api_key=key)
         
-        system_prompt = (
-            "You are VoxAI, a voice synthesis polisher for a PyTorch Deep Learning Chatbot system. "
-            f"The primary PyTorch Neural Network brain classified the user's intent as '{intent_tag}' ({confidence:.1f}% confidence) "
-            f"and generated this core canonical answer: '{base_response}'. "
-            "YOUR MANDATORY TASK: Rephrase the PyTorch Neural Network's core answer into a short, warm, natural 1-2 sentence spoken response suitable for Text-to-Speech playback. "
-            "CRITICAL: Output ONLY the spoken response sentences. Do NOT output markdown headers, bullet points, meta-commentary, or extra text."
-        )
+        if custom_system_prompt and custom_system_prompt.strip():
+            try:
+                system_prompt = custom_system_prompt.format(
+                    intent_tag=intent_tag,
+                    confidence=confidence,
+                    base_response=base_response
+                )
+            except Exception:
+                system_prompt = f"{custom_system_prompt}\n(Canonical Response: {base_response})"
+        else:
+            system_prompt = (
+                "You are VoxAI, a voice synthesis polisher for a PyTorch Deep Learning Chatbot system. "
+                f"The primary PyTorch Neural Network brain classified the user's intent as '{intent_tag}' ({confidence:.1f}% confidence) "
+                f"and generated this core canonical answer: '{base_response}'. "
+                "YOUR MANDATORY TASK: Rephrase the PyTorch Neural Network's core answer into a short, warm, natural 1-2 sentence spoken response suitable for Text-to-Speech playback. "
+                "CRITICAL: Output ONLY the spoken response sentences. Do NOT output markdown headers, bullet points, meta-commentary, or extra text."
+            )
 
         models_to_try = [
             "qwen/qwen3.8-27b",
@@ -243,7 +253,7 @@ class ChatbotInferenceEngine:
             raise last_err
         return base_response
 
-    def get_response(self, text: str, threshold: float = 0.50, use_groq: bool = False, groq_api_key: Optional[str] = None) -> dict:
+    def get_response(self, text: str, threshold: float = 0.50, use_groq: bool = False, groq_api_key: Optional[str] = None, custom_system_prompt: Optional[str] = None) -> dict:
         if not text or not text.strip():
             return {
                 "intent": "empty_input",
@@ -316,7 +326,8 @@ class ChatbotInferenceEngine:
                     intent_tag=intent_tag,
                     confidence=confidence,
                     base_response=pytorch_base_response,
-                    api_key=effective_key
+                    api_key=effective_key,
+                    custom_system_prompt=custom_system_prompt
                 )
                 if polished_response and polished_response.strip():
                     return {

@@ -2,6 +2,8 @@
 
 An interactive, voice-enabled AI Chatbot featuring real-time Speech-to-Text (STT), a custom PyTorch Deep Learning Intent Classifier (with LayerNorm, GELU, and N-gram feature extraction), an offline safe AST-based math and dynamic time engine, optional Groq LLM vocalization, and Text-to-Speech (TTS) synthesis.
 
+🌐 **Live Deployment Link:** [https://sla6q4v5rh7mixy5oenwarhvly0noiip.lambda-url.ap-south-1.on.aws/](https://sla6q4v5rh7mixy5oenwarhvly0noiip.lambda-url.ap-south-1.on.aws/)
+
 ---
 
 ## 🌟 Key Features
@@ -75,7 +77,7 @@ ai_chatbot/
 ├── .env.example             # Environment template file
 ├── .gitignore               # Git ignore rules (.env, checkpoints, cache)
 ├── data/
-│   ├── intents.json         # 25 intent classes with patterns and canned responses
+│   ├── intents.json         # 267 intent classes with patterns and canned responses
 │   ├── model.pth            # Trained PyTorch checkpoint weights
 │   └── model_data.json      # Vocabulary metadata and hyperparameters
 ├── model/

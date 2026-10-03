@@ -3,3 +3,5 @@ __pycache__/
 *.pyc
 data/*.pth
 scratch/
+frontend/node_modules/
+static_legacy_backup/

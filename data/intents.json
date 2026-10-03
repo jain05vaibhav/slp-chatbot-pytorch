@@ -20,14 +20,23 @@
         "Yo",
         "Hello assistant",
         "Hey VoxAI",
-        "Hi VoxAI"
+        "Hi VoxAI",
+        "Hiya",
+        "Yo VoxAI",
+        "Good to see you",
+        "Hello there friend",
+        "What's happening",
+        "Hey buddy",
+        "Salutations"
       ],
       "responses": [
         "Hello! I am VoxAI, your voice-enabled AI assistant. How can I assist you today?",
         "Hi there! How can I help you today?",
         "Greetings! Speak to me using your mic or type your prompt.",
         "Hey! Ready to chat. What's on your mind?",
-        "Hello! Great to hear from you. What would you like to explore today?"
+        "Hello! Great to hear from you. What would you like to explore today?",
+        "Hey there! VoxAI online and listening.",
+        "Hi! Mic's hot, brain's warmed up. Fire away."
       ]
     },
     {
@@ -47,14 +56,21 @@
         "Talk to you later",
         "See you soon",
         "Have a nice day",
-        "I have to go now"
+        "I have to go now",
+        "Signing off",
+        "Gotta run",
+        "Later VoxAI",
+        "I'm heading out",
+        "Close the app"
       ],
       "responses": [
         "Goodbye! Have a fantastic day ahead.",
         "See you later! Feel free to talk to me anytime.",
         "Farewell! Take care and have a wonderful day.",
         "Bye! Thanks for conversing with me.",
-        "Good night and take care! I'll be here whenever you need me."
+        "Good night and take care! I'll be here whenever you need me.",
+        "Catch you next time — powering down the mic.",
+        "Take it easy! I'll keep my weights warm for next time."
       ]
     },
     {
@@ -70,14 +86,19 @@
         "Much appreciated",
         "Thanks for the help",
         "You were very helpful",
-        "Cheers"
+        "Cheers",
+        "Thanks a bunch",
+        "That helped a lot",
+        "Nice, thank you",
+        "You're a lifesaver"
       ],
       "responses": [
         "You're very welcome!",
         "Happy to help! Let me know if you need anything else.",
         "Anytime! Glad I could assist you.",
         "My pleasure! Feel free to ask more questions.",
-        "Always glad to be of service!"
+        "Always glad to be of service!",
+        "Glad that worked out — happy to help again anytime."
       ]
     },
     {
@@ -92,7 +113,10 @@
         "Introduce yourself",
         "What does VoxAI mean?",
         "Are you a robot?",
-        "Are you a virtual assistant?"
+        "Are you a virtual assistant?",
+        "What kind of AI are you?",
+        "Give me your bio",
+        "Describe yourself"
       ],
       "responses": [
         "I am VoxAI, a Voice-Enabled AI Assistant powered by a PyTorch Deep Neural Network for real-time intent classification and speech recognition.",
@@ -110,7 +134,9 @@
         "Who programmed you?",
         "Who is your author?",
         "Who trained your model?",
-        "Who is the author of this project?"
+        "Who is the author of this project?",
+        "Whose project is this?",
+        "Did Vaibhav make you?"
       ],
       "responses": [
         "I was developed and trained by Vaibhav as an advanced Voice-Enabled Deep Learning Chatbot project using PyTorch and FastAPI!",
@@ -130,7 +156,8 @@
         "What are your skills?",
         "What can I ask you?",
         "How can you help me?",
-        "List your capabilities"
+        "List your capabilities",
+        "What are you good at?"
       ],
       "responses": [
         "I can recognize your speech in real-time, classify your intent using a PyTorch Deep Neural Network, perform math calculations, tell time and date, explain AI and deep learning, share jokes, and speak responses aloud!",
@@ -147,7 +174,9 @@
         "How does speech recognition work?",
         "Can you hear me?",
         "Microphone permission",
-        "How to use voice?"
+        "How to use voice?",
+        "My mic isn't working",
+        "Voice not detected"
       ],
       "responses": [
         "Click the large microphone button on the screen, grant microphone permission in your browser, speak clearly, and I will transcribe and process your speech in real-time!",
@@ -167,7 +196,10 @@
         "How does your model predict?",
         "What is backpropagation?",
         "Tell me about PyTorch",
-        "How was the model trained?"
+        "How was the model trained?",
+        "What is an activation function?",
+        "What is GELU?",
+        "What is dropout regularization?"
       ],
       "responses": [
         "I am driven by a Multi-Layer Perceptron Deep Neural Network (DNN) in PyTorch. It features an n-gram feature vector input, dense linear layers with LayerNorm, GELU activations, and Dropout regularization, trained with Cross-Entropy Loss and Adam optimization.",
@@ -183,7 +215,9 @@
         "How does ML work?",
         "Difference between AI and ML",
         "What is supervised learning?",
-        "Tell me about ML algorithms"
+        "Tell me about ML algorithms",
+        "What is unsupervised learning?",
+        "What is overfitting?"
       ],
       "responses": [
         "Machine Learning (ML) is a subset of AI where systems learn patterns from training data rather than following explicitly hardcoded rules. This chatbot uses supervised learning with labeled intent patterns.",
@@ -198,7 +232,9 @@
         "Explain AI",
         "Tell me about artificial intelligence",
         "Define AI",
-        "How smart is AI?"
+        "How smart is AI?",
+        "Will AI replace humans?",
+        "Is AI dangerous?"
       ],
       "responses": [
         "Artificial Intelligence (AI) is the simulation of human intelligence processes by machines, encompassing Natural Language Processing (NLP), Computer Vision, Deep Learning, and Reasoning.",
@@ -215,7 +251,9 @@
         "What is the temperature outside?",
         "Is it sunny outside?",
         "Do I need an umbrella?",
-        "Weather update"
+        "Weather update",
+        "Is it going to rain tomorrow?",
+        "How hot is it today?"
       ],
       "responses": [
         "The atmospheric conditions look pleasant with clear skies and mild temperatures! Remember to stay hydrated.",
@@ -252,7 +290,9 @@
         "Tell a funny story",
         "Another joke",
         "Crack a joke",
-        "Got any jokes?"
+        "Got any jokes?",
+        "Tell me a programmer joke",
+        "One more joke please"
       ],
       "responses": [
         "Why do programmers prefer dark mode? Because light attracts bugs!",
@@ -260,7 +300,9 @@
         "There are 10 types of people in the world: those who understand binary, and those who don't!",
         "Why do Java developers wear glasses? Because they don't C#!",
         "A SQL query walks into a bar, walks up to two tables and asks: 'Can I join you?'",
-        "Why was the JavaScript developer sad? Because they didn't Node how to Express themselves!"
+        "Why was the JavaScript developer sad? Because they didn't Node how to Express themselves!",
+        "Why do programmers hate nature? It has too many bugs and no debugger.",
+        "How many programmers does it take to change a light bulb? None, that's a hardware problem."
       ]
     },
     {
@@ -271,12 +313,14 @@
         "Do you know any riddles?",
         "Ask me a riddle",
         "Brain teaser",
-        "Riddle me this"
+        "Riddle me this",
+        "Another riddle please"
       ],
       "responses": [
         "I have keys but no locks. I have space but no room. You can enter, but you can't go outside. What am I? ... A keyboard!",
         "I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I? ... An echo!",
-        "The more of this there is, the less you see. What is it? ... Darkness!"
+        "The more of this there is, the less you see. What is it? ... Darkness!",
+        "What has to be broken before you can use it? ... An egg!"
       ]
     },
     {
@@ -304,7 +348,8 @@
         "Tell me about Python",
         "Why use Python for AI?",
         "Is Python good for machine learning?",
-        "Python programming language"
+        "Python programming language",
+        "What is a Python virtual environment?"
       ],
       "responses": [
         "Python is a high-level, versatile programming language renowned for its readability, dynamic typing, and massive AI/ML ecosystem including PyTorch, NumPy, and FastAPI.",
@@ -322,7 +367,8 @@
         "What is 7 times 8?",
         "Math calculation",
         "Calculate 25 * 4",
-        "Solve math"
+        "Solve math",
+        "What is the square root of 144?"
       ],
       "responses": [
         "MATH_CALC_DYNAMIC"
@@ -340,7 +386,9 @@
         "Cool project",
         "Impressive",
         "You're the best",
-        "Good work"
+        "Good work",
+        "This is really cool",
+        "Nice work VoxAI"
       ],
       "responses": [
         "Thank you so much! I really appreciate the positive feedback.",
@@ -358,7 +406,9 @@
         "Boring",
         "Terrible answer",
         "You made a mistake",
-        "You don't understand"
+        "You don't understand",
+        "This is useless",
+        "You're not smart"
       ],
       "responses": [
         "I apologize for the confusion! As an offline deep learning model, I'm continuously learning. Try rephrasing or asking about another topic.",
@@ -373,7 +423,8 @@
         "How is it going?",
         "Everything ok?",
         "Are you doing well?",
-        "How's life?"
+        "How's life?",
+        "Are you feeling okay?"
       ],
       "responses": [
         "I'm operating at 100% efficiency! All PyTorch neural network weights are loaded and ready. How are you doing today?",
@@ -391,7 +442,8 @@
         "Support",
         "Help options",
         "Commands list",
-        "What can I say?"
+        "What can I say?",
+        "I'm lost, help"
       ],
       "responses": [
         "I am here to assist! You can ask me about AI, deep learning, tech stack, weather, time/date, math calculations, jokes, or click the mic to speak!",
@@ -453,6 +505,3814 @@
       "responses": [
         "You can click the 'Clear History' button at the top right of the conversation window to reset the chat at any time!",
         "To start fresh, click the 'Clear History' button or refresh the page."
+      ]
+    },
+    {
+      "tag": "computer_vision",
+      "patterns": [
+        "What is computer vision?",
+        "Explain computer vision",
+        "How does image recognition work?",
+        "What is object detection?",
+        "Tell me about CNNs",
+        "What is a convolutional neural network?",
+        "How do self-driving cars see?",
+        "What is image classification?"
+      ],
+      "responses": [
+        "Computer Vision is a field of AI that trains computers to interpret and understand visual information from images and video, often using Convolutional Neural Networks (CNNs).",
+        "A CNN uses convolutional filters to detect edges, textures, and shapes in images, building up to high-level object recognition through stacked layers."
+      ]
+    },
+    {
+      "tag": "nlp",
+      "patterns": [
+        "What is NLP?",
+        "Explain natural language processing",
+        "How do chatbots understand text?",
+        "What is tokenization?",
+        "What is a transformer model?",
+        "Explain attention mechanism",
+        "What is BERT?",
+        "What is GPT?"
+      ],
+      "responses": [
+        "Natural Language Processing (NLP) enables machines to understand, interpret, and generate human language, powering chatbots, translation, and sentiment analysis.",
+        "Transformer models use self-attention to weigh the relevance of different words in a sentence, enabling powerful context-aware language understanding, as seen in BERT and GPT."
+      ]
+    },
+    {
+      "tag": "reinforcement_learning",
+      "patterns": [
+        "What is reinforcement learning?",
+        "Explain RL",
+        "What is Q-learning?",
+        "How did AlphaGo work?",
+        "What is a reward function?"
+      ],
+      "responses": [
+        "Reinforcement Learning (RL) trains an agent to make decisions by rewarding desired behaviors and penalizing undesired ones, learning an optimal policy through trial and error.",
+        "In RL, an agent interacts with an environment, receiving rewards or penalties, and gradually learns a policy that maximizes cumulative reward over time."
+      ]
+    },
+    {
+      "tag": "data_science",
+      "patterns": [
+        "What is data science?",
+        "Explain data science",
+        "What does a data scientist do?",
+        "What is exploratory data analysis?",
+        "What is feature engineering?"
+      ],
+      "responses": [
+        "Data Science combines statistics, programming, and domain expertise to extract insights and build predictive models from structured and unstructured data.",
+        "A data scientist cleans data, explores patterns, engineers features, and builds models to solve business or research problems."
+      ]
+    },
+    {
+      "tag": "big_data",
+      "patterns": [
+        "What is big data?",
+        "Explain big data",
+        "What is Hadoop?",
+        "What is Apache Spark?",
+        "What are the 3 Vs of big data?"
+      ],
+      "responses": [
+        "Big Data refers to extremely large and complex datasets that traditional data-processing tools struggle to handle, often characterized by Volume, Velocity, and Variety.",
+        "Apache Spark and Hadoop are distributed computing frameworks designed to process massive datasets across clusters of machines efficiently."
+      ]
+    },
+    {
+      "tag": "cloud_computing",
+      "patterns": [
+        "What is cloud computing?",
+        "Explain cloud computing",
+        "What is AWS?",
+        "What is Azure?",
+        "What is Google Cloud?",
+        "What is serverless computing?",
+        "Difference between IaaS PaaS and SaaS"
+      ],
+      "responses": [
+        "Cloud Computing delivers computing resources like servers, storage, and databases over the internet, letting you scale infrastructure on demand instead of owning physical hardware.",
+        "AWS, Azure, and Google Cloud are the major cloud providers offering compute, storage, networking, and AI/ML services on a pay-as-you-go basis."
+      ]
+    },
+    {
+      "tag": "cybersecurity",
+      "patterns": [
+        "What is cybersecurity?",
+        "Explain cybersecurity",
+        "What is a firewall?",
+        "What is phishing?",
+        "What is encryption?",
+        "How do I stay safe online?",
+        "What is a VPN?",
+        "What is two-factor authentication?"
+      ],
+      "responses": [
+        "Cybersecurity involves protecting systems, networks, and data from digital attacks through practices like encryption, firewalls, and access control.",
+        "A VPN encrypts your internet traffic and routes it through a secure server, helping protect your privacy and data on public networks."
+      ]
+    },
+    {
+      "tag": "blockchain",
+      "patterns": [
+        "What is blockchain?",
+        "Explain blockchain",
+        "How does blockchain work?",
+        "What is a smart contract?",
+        "What is a distributed ledger?"
+      ],
+      "responses": [
+        "Blockchain is a distributed, immutable ledger technology where data is stored in linked blocks, verified across a decentralized network of nodes.",
+        "Smart contracts are self-executing programs stored on a blockchain that automatically enforce agreements when predefined conditions are met."
+      ]
+    },
+    {
+      "tag": "cryptocurrency",
+      "patterns": [
+        "What is cryptocurrency?",
+        "Explain Bitcoin",
+        "What is Ethereum?",
+        "Should I invest in crypto?",
+        "What is a crypto wallet?",
+        "What is mining in crypto?"
+      ],
+      "responses": [
+        "Cryptocurrency is a digital or virtual currency secured by cryptography, typically built on blockchain technology and operating independently of a central authority.",
+        "I can't give personalized investment advice, but I can explain that crypto markets are highly volatile — always research thoroughly and only invest what you can afford to lose."
+      ]
+    },
+    {
+      "tag": "stock_market",
+      "patterns": [
+        "What is the stock market?",
+        "How does the stock market work?",
+        "What is a mutual fund?",
+        "What is an index fund?",
+        "What is SIP?",
+        "Should I invest in stocks?",
+        "What is compounding?"
+      ],
+      "responses": [
+        "The stock market is a marketplace where shares of publicly listed companies are bought and sold, with prices driven by supply, demand, and company performance.",
+        "A Systematic Investment Plan (SIP) lets you invest a fixed amount regularly into mutual funds, helping average out market volatility over time through rupee-cost averaging."
+      ]
+    },
+    {
+      "tag": "iot",
+      "patterns": [
+        "What is IoT?",
+        "Explain the Internet of Things",
+        "What is an IoT device?",
+        "What is edge computing?",
+        "How do IoT sensors work?"
+      ],
+      "responses": [
+        "The Internet of Things (IoT) refers to a network of physical devices embedded with sensors and software that collect and exchange data over the internet.",
+        "Edge computing processes data closer to where it's generated — like on an IoT device itself — reducing latency and bandwidth use compared to sending everything to the cloud."
+      ]
+    },
+    {
+      "tag": "robotics",
+      "patterns": [
+        "What is robotics?",
+        "Explain robotics",
+        "How do robots work?",
+        "What is embedded systems?",
+        "What is a microcontroller?",
+        "What is Arduino?",
+        "What is Raspberry Pi?"
+      ],
+      "responses": [
+        "Robotics combines mechanical engineering, electronics, and software to design machines that sense their environment and perform physical tasks autonomously or semi-autonomously.",
+        "A microcontroller like an Arduino or ESP32 is a compact chip that runs embedded code to read sensors and control actuators in real time — a core building block of robotics and IoT projects."
+      ]
+    },
+    {
+      "tag": "quantum_computing",
+      "patterns": [
+        "What is quantum computing?",
+        "Explain quantum computing",
+        "What is a qubit?",
+        "How is quantum computing different from classical computing?"
+      ],
+      "responses": [
+        "Quantum computing uses qubits, which can exist in superpositions of states, allowing certain computations to be performed exponentially faster than classical bits for specific problems.",
+        "Unlike classical bits that are strictly 0 or 1, qubits leverage superposition and entanglement, enabling quantum computers to explore many solutions simultaneously."
+      ]
+    },
+    {
+      "tag": "programming_languages",
+      "patterns": [
+        "What programming languages should I learn?",
+        "Best programming language for beginners",
+        "What language should I learn first?",
+        "Compare programming languages"
+      ],
+      "responses": [
+        "For beginners, Python is often recommended for its readability; for systems programming, C/C++ or Rust; for web development, JavaScript/TypeScript is essential.",
+        "The 'best' language depends on your goal: Python for AI/data, JavaScript for web, Java/Kotlin for Android, Swift for iOS, and C++ for performance-critical systems."
+      ]
+    },
+    {
+      "tag": "javascript_info",
+      "patterns": [
+        "What is JavaScript?",
+        "Tell me about JavaScript",
+        "What is Node.js?",
+        "What is React?",
+        "What is TypeScript?",
+        "Explain async await in JavaScript"
+      ],
+      "responses": [
+        "JavaScript is the core scripting language of the web, enabling interactive front-end experiences and, via Node.js, full server-side applications.",
+        "React is a popular JavaScript library for building component-based user interfaces, while TypeScript adds static typing on top of JavaScript for safer, more maintainable code."
+      ]
+    },
+    {
+      "tag": "java_info",
+      "patterns": [
+        "What is Java?",
+        "Tell me about Java",
+        "What is JVM?",
+        "Is Java good for Android development?"
+      ],
+      "responses": [
+        "Java is a class-based, object-oriented programming language known for its 'write once, run anywhere' portability via the Java Virtual Machine (JVM).",
+        "Java (and Kotlin) power native Android app development, offering strong tooling, garbage collection, and a mature ecosystem."
+      ]
+    },
+    {
+      "tag": "cpp_info",
+      "patterns": [
+        "What is C++?",
+        "Tell me about C++",
+        "Why is C++ fast?",
+        "What is memory management in C++?",
+        "What is a pointer?"
+      ],
+      "responses": [
+        "C++ is a high-performance, compiled language giving fine-grained control over memory and hardware, widely used in systems programming, game engines, and embedded systems.",
+        "In C++, pointers store memory addresses directly, giving programmers precise control over memory allocation, though this requires careful management to avoid leaks or crashes."
+      ]
+    },
+    {
+      "tag": "web_development",
+      "patterns": [
+        "What is web development?",
+        "How do I become a web developer?",
+        "What is frontend development?",
+        "What is backend development?",
+        "What is full-stack development?",
+        "What is REST API?"
+      ],
+      "responses": [
+        "Web development involves building websites and web applications, split into frontend (UI/UX in the browser) and backend (servers, databases, business logic).",
+        "A full-stack developer works across both the frontend (HTML/CSS/JS/React) and backend (APIs, databases, servers), tying the whole application together."
+      ]
+    },
+    {
+      "tag": "app_development",
+      "patterns": [
+        "What is app development?",
+        "How do I build a mobile app?",
+        "What is Flutter?",
+        "What is React Native?",
+        "Native vs cross-platform apps"
+      ],
+      "responses": [
+        "Mobile app development builds software for smartphones, using native tools (Swift/Kotlin) or cross-platform frameworks like Flutter and React Native.",
+        "Flutter and React Native let you write one codebase that runs on both iOS and Android, trading some native performance for faster development."
+      ]
+    },
+    {
+      "tag": "database_info",
+      "patterns": [
+        "What is a database?",
+        "Explain databases",
+        "What is SQL vs NoSQL?",
+        "What is normalization?",
+        "What is indexing in databases?"
+      ],
+      "responses": [
+        "A database is an organized collection of structured data, managed by a Database Management System (DBMS) to allow efficient storage, retrieval, and querying.",
+        "SQL (relational) databases like PostgreSQL organize data into tables with fixed schemas, while NoSQL databases like MongoDB offer flexible, schema-less document storage."
+      ]
+    },
+    {
+      "tag": "sql_info",
+      "patterns": [
+        "What is SQL?",
+        "Explain SQL queries",
+        "What is a JOIN in SQL?",
+        "What is a primary key?",
+        "What is a foreign key?"
+      ],
+      "responses": [
+        "SQL (Structured Query Language) is used to create, read, update, and delete data in relational databases through statements like SELECT, INSERT, and JOIN.",
+        "A JOIN combines rows from two or more tables based on a related column, such as a foreign key referencing another table's primary key."
+      ]
+    },
+    {
+      "tag": "api_info",
+      "patterns": [
+        "What is an API?",
+        "Explain APIs",
+        "What is REST?",
+        "What is GraphQL?",
+        "What is a webhook?",
+        "How do I call an API?"
+      ],
+      "responses": [
+        "An API (Application Programming Interface) defines how software components communicate, letting one system request data or actions from another.",
+        "REST APIs use standard HTTP methods (GET, POST, PUT, DELETE) over stateless requests, while GraphQL lets clients request exactly the data fields they need."
+      ]
+    },
+    {
+      "tag": "github_info",
+      "patterns": [
+        "What is GitHub?",
+        "What is Git?",
+        "What is version control?",
+        "What is a pull request?",
+        "What is a merge conflict?",
+        "How do I use Git?"
+      ],
+      "responses": [
+        "Git is a distributed version control system that tracks changes to code over time, while GitHub is a cloud platform for hosting Git repositories and collaborating with others.",
+        "A pull request proposes merging changes from one branch into another, allowing teammates to review the diff before it's merged into the main codebase."
+      ]
+    },
+    {
+      "tag": "linux_info",
+      "patterns": [
+        "What is Linux?",
+        "Tell me about Linux",
+        "What is a Linux distribution?",
+        "What is the terminal?",
+        "What is bash?",
+        "How do I use the command line?"
+      ],
+      "responses": [
+        "Linux is a free, open-source operating system kernel that powers everything from servers and supercomputers to Android phones and embedded devices.",
+        "Bash is a common command-line shell on Linux/Unix systems, letting you navigate the filesystem, run programs, and automate tasks via scripts."
+      ]
+    },
+    {
+      "tag": "operating_systems",
+      "patterns": [
+        "What is an operating system?",
+        "Explain operating systems",
+        "Windows vs Linux vs macOS",
+        "What does an OS do?",
+        "What is a kernel?"
+      ],
+      "responses": [
+        "An Operating System (OS) manages hardware resources and provides services for application software, acting as an intermediary between users and the computer's hardware.",
+        "The kernel is the core of an OS, handling process scheduling, memory management, and device communication at the lowest level."
+      ]
+    },
+    {
+      "tag": "networking",
+      "patterns": [
+        "What is computer networking?",
+        "Explain networking",
+        "What is TCP/IP?",
+        "What is DNS?",
+        "What is an IP address?",
+        "What is HTTP vs HTTPS?"
+      ],
+      "responses": [
+        "Computer networking connects devices to share data and resources, relying on protocols like TCP/IP to reliably route packets across the internet.",
+        "DNS (Domain Name System) translates human-readable domain names into IP addresses, while HTTPS adds an encrypted, secure layer on top of standard HTTP traffic."
+      ]
+    },
+    {
+      "tag": "algorithms",
+      "patterns": [
+        "What is an algorithm?",
+        "Explain algorithms",
+        "What is Big O notation?",
+        "What is time complexity?",
+        "What is a sorting algorithm?",
+        "Explain binary search"
+      ],
+      "responses": [
+        "An algorithm is a step-by-step procedure for solving a problem or performing a computation, forming the backbone of all software.",
+        "Big O notation describes how an algorithm's runtime or memory usage grows relative to input size, helping compare efficiency between different approaches."
+      ]
+    },
+    {
+      "tag": "data_structures",
+      "patterns": [
+        "What is a data structure?",
+        "Explain data structures",
+        "What is an array?",
+        "What is a linked list?",
+        "What is a hash map?",
+        "What is a binary tree?",
+        "What is a stack and queue?"
+      ],
+      "responses": [
+        "A data structure organizes and stores data so it can be accessed and modified efficiently — common examples include arrays, linked lists, trees, and hash maps.",
+        "A hash map stores key-value pairs and offers average constant-time lookups by hashing keys into array indices, making it one of the most widely used data structures."
+      ]
+    },
+    {
+      "tag": "competitive_programming",
+      "patterns": [
+        "Tips for competitive programming",
+        "How do I get better at competitive programming?",
+        "What is Codeforces?",
+        "What is LeetCode?",
+        "How do I prepare for coding contests?",
+        "What is dynamic programming?"
+      ],
+      "responses": [
+        "Competitive programming sharpens problem-solving speed and algorithmic thinking through timed contests on platforms like Codeforces, LeetCode, and CodeChef.",
+        "Dynamic programming solves complex problems by breaking them into overlapping subproblems and storing (memoizing) results to avoid redundant computation.",
+        "A good approach is to practice consistently, review editorial solutions after contests, and focus on core patterns: two pointers, DP, graphs, and greedy algorithms."
+      ]
+    },
+    {
+      "tag": "docker_kubernetes",
+      "patterns": [
+        "What is Docker?",
+        "What is a container?",
+        "What is Kubernetes?",
+        "Docker vs virtual machine",
+        "What is a Dockerfile?"
+      ],
+      "responses": [
+        "Docker packages an application with all its dependencies into a lightweight, portable container that runs consistently across different environments.",
+        "Kubernetes orchestrates and manages containerized applications at scale, handling deployment, scaling, and self-healing across clusters of machines."
+      ]
+    },
+    {
+      "tag": "open_source",
+      "patterns": [
+        "What is open source?",
+        "Why contribute to open source?",
+        "How do I contribute to open source projects?",
+        "What is a software license?"
+      ],
+      "responses": [
+        "Open source software has publicly available source code that anyone can inspect, modify, and distribute, often maintained collaboratively by a community.",
+        "Contributing to open source is a great way to build real-world skills — start by fixing small bugs, improving documentation, or tackling issues labeled 'good first issue'."
+      ]
+    },
+    {
+      "tag": "career_advice",
+      "patterns": [
+        "Give me career advice",
+        "What career should I pursue?",
+        "How do I choose a career path?",
+        "Software engineer vs data scientist",
+        "Should I do a masters or a job?",
+        "What career is best after CS engineering?"
+      ],
+      "responses": [
+        "Focus on projects and skills that genuinely interest you — recruiters value depth and real, working projects far more than a long list of buzzwords.",
+        "Consider what kind of problems energize you: building products (software engineering), extracting insights (data science), or research (higher studies) — all are strong paths from a CS background."
+      ]
+    },
+    {
+      "tag": "interview_prep",
+      "patterns": [
+        "How do I prepare for interviews?",
+        "Tips for technical interviews",
+        "How do I prepare for a coding interview?",
+        "What should I expect in an HR round?",
+        "How do I prepare for a system design interview?"
+      ],
+      "responses": [
+        "Practice data structures and algorithms consistently, revise your own projects deeply enough to explain design decisions, and rehearse clear, structured communication.",
+        "For system design rounds, focus on trade-offs — scalability, consistency, latency — rather than memorizing one 'correct' architecture."
+      ]
+    },
+    {
+      "tag": "resume_tips",
+      "patterns": [
+        "Help me with my resume",
+        "How do I write a good resume?",
+        "What should I include in my resume?",
+        "Resume tips for freshers"
+      ],
+      "responses": [
+        "Lead with impact: quantify results where possible, highlight real projects over course lists, and tailor keywords to the specific role you're applying for.",
+        "Keep it to one page as a student, prioritize projects and internships over generic coursework, and make sure every bullet shows an action and an outcome."
+      ]
+    },
+    {
+      "tag": "college_life",
+      "patterns": [
+        "How do I balance college and projects?",
+        "Tips for managing college workload",
+        "How do I stay productive in college?",
+        "Balancing academics and coding"
+      ],
+      "responses": [
+        "Block dedicated time for personal projects separate from coursework, and treat deadlines for both with equal seriousness — momentum compounds over a semester.",
+        "Try time-boxing: fixed hours for classes/assignments, and protected evening or weekend slots for the projects you actually want to build."
+      ]
+    },
+    {
+      "tag": "exam_stress",
+      "patterns": [
+        "I'm stressed about exams",
+        "How do I deal with exam pressure?",
+        "I have exam anxiety",
+        "Tips to stay calm before exams"
+      ],
+      "responses": [
+        "It's completely normal to feel pressure before exams — breaking your syllabus into small, focused review sessions can make the workload feel much more manageable.",
+        "Try short breaks, deep breathing, and prioritizing sleep over last-minute all-nighters — rested focus usually beats extra hours of tired studying."
+      ]
+    },
+    {
+      "tag": "motivation",
+      "patterns": [
+        "I need motivation",
+        "Motivate me",
+        "I'm feeling unmotivated",
+        "How do I stay motivated to code?",
+        "I feel like giving up on my project"
+      ],
+      "responses": [
+        "Every complex project looks messy in the middle — that's normal, not a sign of failure. Break it into the next small, concrete step and just do that one thing.",
+        "Progress rarely feels linear. Revisit why you started this project, then focus only on today's smallest next task instead of the whole finish line."
+      ]
+    },
+    {
+      "tag": "productivity_tips",
+      "patterns": [
+        "Tips for productivity",
+        "How do I stop procrastinating?",
+        "How do I focus better while coding?",
+        "What is the Pomodoro technique?"
+      ],
+      "responses": [
+        "The Pomodoro technique breaks work into focused 25-minute intervals with short breaks, helping sustain concentration without burning out.",
+        "Try starting with the smallest possible version of a task — momentum from a tiny first step often dissolves procrastination faster than willpower alone."
+      ]
+    },
+    {
+      "tag": "book_recommendation",
+      "patterns": [
+        "Recommend me a book",
+        "What book should I read?",
+        "Suggest a good tech book",
+        "Best books on AI"
+      ],
+      "responses": [
+        "For AI fundamentals, 'Deep Learning' by Goodfellow, Bengio, and Courville is a classic reference; for a gentler intro, try 'Grokking Deep Learning' by Andrew Trask.",
+        "'Clean Code' by Robert C. Martin is a widely recommended read for improving software craftsmanship regardless of language."
+      ]
+    },
+    {
+      "tag": "movie_recommendation",
+      "patterns": [
+        "Recommend a movie",
+        "What movie should I watch?",
+        "Suggest a good sci-fi movie",
+        "Best movies about AI"
+      ],
+      "responses": [
+        "If you enjoy AI-themed stories, 'Ex Machina' and 'Her' offer thoughtful takes on artificial intelligence and consciousness.",
+        "'The Social Network' and 'The Imitation Game' are great picks if you're into tech-and-people driven true stories."
+      ]
+    },
+    {
+      "tag": "news_update",
+      "patterns": [
+        "What's in the news today?",
+        "Tell me the latest news",
+        "Any tech news updates?",
+        "What's happening in AI news?"
+      ],
+      "responses": [
+        "I don't have live internet access built into this offline classifier, so I can't fetch real-time news — check a live news source for the latest updates!",
+        "As an offline deep learning model, I can't browse current headlines, but I'm happy to explain the concepts behind any tech news you've read!"
+      ]
+    },
+    {
+      "tag": "sports_update",
+      "patterns": [
+        "What's the cricket score?",
+        "Tell me the football score",
+        "Any sports updates?",
+        "Who won the match?"
+      ],
+      "responses": [
+        "I don't have live internet access, so I can't fetch real-time scores — but I'd be glad to chat about the sport itself!",
+        "As an offline model I can't check live scores, sorry! A sports app or live score site would have the latest."
+      ]
+    },
+    {
+      "tag": "health_tips",
+      "patterns": [
+        "Give me health tips",
+        "How do I stay healthy while studying?",
+        "Tips for a healthy lifestyle",
+        "How much water should I drink daily?"
+      ],
+      "responses": [
+        "Small habits compound: regular sleep, short movement breaks between study sessions, and staying hydrated go a long way for both focus and long-term health.",
+        "Aim for consistent sleep timing, balanced meals, and short walks between long coding or study sessions to avoid burnout."
+      ]
+    },
+    {
+      "tag": "fitness",
+      "patterns": [
+        "Give me a workout tip",
+        "How do I start exercising?",
+        "Best exercises for beginners",
+        "How do I stay fit as a student?"
+      ],
+      "responses": [
+        "Starting with a simple routine — like bodyweight exercises or a daily walk — is more sustainable than an intense plan you can't keep up with long-term.",
+        "Consistency beats intensity when starting out: 20–30 minutes of movement most days will build the habit before you worry about optimizing it."
+      ]
+    },
+    {
+      "tag": "nutrition",
+      "patterns": [
+        "Give me nutrition tips",
+        "What should I eat to stay focused?",
+        "Healthy diet tips for students",
+        "Foods good for the brain"
+      ],
+      "responses": [
+        "Balanced meals with protein, whole grains, and vegetables help sustain energy and focus better than sugar-heavy snacks during long study or coding sessions.",
+        "Staying hydrated and eating regular meals — rather than skipping them while deep in a project — helps maintain steady concentration."
+      ]
+    },
+    {
+      "tag": "travel",
+      "patterns": [
+        "Suggest a travel destination",
+        "Where should I travel in India?",
+        "Best places to visit for a short trip",
+        "Travel tips for students"
+      ],
+      "responses": [
+        "For a quick student getaway, hill stations like Ooty, Coorg, or Munnar offer a refreshing break without needing a long trip.",
+        "Booking early and traveling with a small group can make weekend trips far more affordable for students."
+      ]
+    },
+    {
+      "tag": "food_recommendation",
+      "patterns": [
+        "Recommend a food dish",
+        "What should I eat today?",
+        "Suggest a good restaurant dish",
+        "I'm hungry, suggest something"
+      ],
+      "responses": [
+        "If you're in the mood for something comforting, a good biryani or a simple dal-rice combo rarely disappoints!",
+        "Can't go wrong with a classic — maybe try a new cuisine you haven't explored recently, like Thai or Mediterranean."
+      ]
+    },
+    {
+      "tag": "coffee_tea",
+      "patterns": [
+        "Coffee or tea?",
+        "Best coffee for late night coding",
+        "How much caffeine is too much?",
+        "Recommend a coffee for studying"
+      ],
+      "responses": [
+        "Both work great for focus — coffee gives a quicker, sharper boost while tea offers a gentler, longer sustained lift with less crash.",
+        "Try to keep caffeine intake moderate and avoid it late at night, since it can interfere with sleep quality even if you don't feel wired."
+      ]
+    },
+    {
+      "tag": "music_genre",
+      "patterns": [
+        "Recommend music for coding",
+        "Best genre for focus while studying",
+        "What music helps concentration?",
+        "Suggest lo-fi music"
+      ],
+      "responses": [
+        "Lo-fi beats, ambient, and instrumental soundtracks are popular for coding since they minimize lyrical distraction while keeping energy up.",
+        "Some people focus best with white noise or nature sounds instead of music entirely — worth experimenting to see what keeps you in flow."
+      ]
+    },
+    {
+      "tag": "gaming",
+      "patterns": [
+        "Recommend a video game",
+        "What games should I play?",
+        "Best strategy games",
+        "Good games for relaxing after coding"
+      ],
+      "responses": [
+        "If you enjoy strategic thinking, games like Chess.com puzzles or 'Civilization' can be a satisfying mental switch from coding.",
+        "For quick relaxation between study sessions, casual puzzle games can reset your focus without eating up hours."
+      ]
+    },
+    {
+      "tag": "philosophy",
+      "patterns": [
+        "Tell me something philosophical",
+        "What is the meaning of life?",
+        "Explain existentialism",
+        "What is stoicism?"
+      ],
+      "responses": [
+        "Stoicism teaches focusing energy only on what's within your control — your effort and reactions — while accepting what isn't, which pairs surprisingly well with debugging code!",
+        "Existentialism explores how individuals create their own meaning and purpose in a universe that doesn't hand one to them by default."
+      ]
+    },
+    {
+      "tag": "history_facts",
+      "patterns": [
+        "Tell me a history fact",
+        "Interesting history fact",
+        "Who invented the computer?",
+        "History of the internet"
+      ],
+      "responses": [
+        "The first general-purpose electronic computer, ENIAC, was completed in 1945 and occupied an entire room, yet was far less powerful than a modern calculator.",
+        "The internet evolved from ARPANET, a US Department of Defense project from the late 1960s designed to let research computers communicate over long distances."
+      ]
+    },
+    {
+      "tag": "science_facts",
+      "patterns": [
+        "Tell me a science fact",
+        "Interesting science fact",
+        "Fun fact about physics",
+        "Fun fact about biology"
+      ],
+      "responses": [
+        "Light from the Sun takes about 8 minutes and 20 seconds to reach Earth, meaning we always see the Sun slightly 'in the past.'",
+        "Human DNA is about 99.9% identical between any two people — the tiny remaining fraction accounts for all visible human variation."
+      ]
+    },
+    {
+      "tag": "space_facts",
+      "patterns": [
+        "Tell me a space fact",
+        "Interesting fact about space",
+        "How big is the universe?",
+        "Tell me about black holes"
+      ],
+      "responses": [
+        "A black hole's gravity is so strong that not even light can escape past its event horizon, making it truly invisible except for its effects on nearby matter.",
+        "The observable universe is roughly 93 billion light-years in diameter, and it's still expanding at an accelerating rate."
+      ]
+    },
+    {
+      "tag": "geography",
+      "patterns": [
+        "Tell me a geography fact",
+        "What is the largest country?",
+        "What is the tallest mountain?",
+        "What is the longest river?"
+      ],
+      "responses": [
+        "Mount Everest, standing at about 8,849 meters, is the tallest mountain above sea level, located in the Himalayas on the border of Nepal and China.",
+        "Russia is the largest country by land area, spanning eleven time zones across Europe and Asia."
+      ]
+    },
+    {
+      "tag": "language_translation",
+      "patterns": [
+        "Translate this to Hindi",
+        "How do I say hello in French?",
+        "Can you translate languages?",
+        "Translate 'thank you' to Spanish"
+      ],
+      "responses": [
+        "I'm primarily an offline intent-classification model and don't have built-in translation, but a dedicated translation service would handle that best.",
+        "I can't do live translation myself, but common greetings are easy to look up — 'hello' in French is 'bonjour', and in Spanish it's 'hola'."
+      ]
+    },
+    {
+      "tag": "unit_conversion",
+      "patterns": [
+        "Convert kilometers to miles",
+        "Convert Celsius to Fahrenheit",
+        "How many grams in a kilogram?",
+        "Convert inches to centimeters"
+      ],
+      "responses": [
+        "1 kilometer is approximately 0.621 miles, and 1 kilogram equals 1000 grams — happy to walk through the formula if you give me a specific value!",
+        "To convert Celsius to Fahrenheit: multiply by 9/5 and add 32. For example, 20°C converts to 68°F."
+      ]
+    },
+    {
+      "tag": "currency_conversion",
+      "patterns": [
+        "Convert dollars to rupees",
+        "What is the USD to INR rate?",
+        "How much is 100 dollars in rupees?"
+      ],
+      "responses": [
+        "I don't have live access to current exchange rates, so I can't give you today's exact figure — a live currency converter would have the most accurate rate.",
+        "Exchange rates fluctuate constantly, so please check a live financial source for the current USD to INR conversion."
+      ]
+    },
+    {
+      "tag": "birthday",
+      "patterns": [
+        "Wish me happy birthday",
+        "It's my birthday today",
+        "Can you sing happy birthday?"
+      ],
+      "responses": [
+        "Happy birthday! Wishing you a fantastic year ahead filled with great projects and even better memories.",
+        "Happy birthday! Hope your day is as great as your latest commit streak!"
+      ]
+    },
+    {
+      "tag": "reminder",
+      "patterns": [
+        "Set a reminder",
+        "Remind me later",
+        "Can you set an alarm?",
+        "Remind me to submit my assignment"
+      ],
+      "responses": [
+        "I don't currently have reminder or alarm functionality built in, but your phone's default reminder or calendar app would work great for that!",
+        "I can't set live reminders myself yet, but noting it in your phone's calendar app would ensure you don't miss it."
+      ]
+    },
+    {
+      "tag": "email_help",
+      "patterns": [
+        "Help me write an email",
+        "Draft a professional email",
+        "How do I write a formal email?",
+        "Email etiquette tips"
+      ],
+      "responses": [
+        "A good professional email is concise: a clear subject line, a brief greeting, the specific ask stated early, and a polite sign-off.",
+        "Keep formal emails to the point — state your purpose in the first sentence, provide necessary context briefly, and end with a clear call to action."
+      ]
+    },
+    {
+      "tag": "password_tips",
+      "patterns": [
+        "How do I create a strong password?",
+        "Password security tips",
+        "Is my password safe?",
+        "What makes a good password?"
+      ],
+      "responses": [
+        "A strong password combines length (12+ characters), a mix of letters, numbers, and symbols, and avoids common words or personal information.",
+        "Using a password manager to generate and store unique passwords per site is one of the simplest ways to dramatically improve your security."
+      ]
+    },
+    {
+      "tag": "privacy_concerns",
+      "patterns": [
+        "Is my data safe with you?",
+        "Do you store my conversations?",
+        "Are you recording me?",
+        "Is my voice data private?"
+      ],
+      "responses": [
+        "As an offline PyTorch model, I process your input locally for intent classification without needing to send it to external servers.",
+        "Your voice is only processed through your browser's Web Speech API for transcription — I don't have hidden data collection built into this project."
+      ]
+    },
+    {
+      "tag": "feedback",
+      "patterns": [
+        "I want to give feedback",
+        "How do I report a bug?",
+        "I found an issue",
+        "Feature request",
+        "This feature is missing"
+      ],
+      "responses": [
+        "Thanks for the feedback! Since I'm an offline model without live update capability, feel free to note it down for the developer, Vaibhav, to review.",
+        "Bug reports and feature requests are always valuable — jot down the exact steps or idea so it can be addressed in a future version of this project."
+      ]
+    },
+    {
+      "tag": "chatbot_limitations",
+      "patterns": [
+        "What can't you do?",
+        "What are your limitations?",
+        "Why don't you know the news?",
+        "Do you have internet access?"
+      ],
+      "responses": [
+        "Since I'm an offline PyTorch intent-classification model, I don't have live internet access — so no real-time news, weather, or search results.",
+        "My knowledge comes from a fixed set of trained intents and patterns rather than a live connection, so I can't browse the web or fetch current data."
+      ]
+    },
+    {
+      "tag": "c",
+      "patterns": [
+        "What is C?",
+        "Tell me about C",
+        "Explain C",
+        "Define C",
+        "How does C work?",
+        "Why is C important?",
+        "Give me an overview of C",
+        "C explained"
+      ],
+      "responses": [
+        "C is a foundational procedural programming language created by Dennis Ritchie in 1972, giving low-level memory access that underpins operating systems and embedded firmware.",
+        "Most modern languages, including C++, Java, and Python's interpreter itself, borrow heavily from C's syntax and design philosophy."
+      ]
+    },
+    {
+      "tag": "c_2",
+      "patterns": [
+        "What is C#?",
+        "Tell me about C#",
+        "Explain C#",
+        "Define C#",
+        "How does C# work?",
+        "Why is C# important?",
+        "Give me an overview of C#",
+        "C# explained"
+      ],
+      "responses": [
+        "C# is a modern, object-oriented language developed by Microsoft, running on the .NET platform and widely used for Windows apps, game development with Unity, and enterprise backends.",
+        "C# combines strong typing with modern features like LINQ, async/await, and pattern matching, making it productive for both desktop and web development."
+      ]
+    },
+    {
+      "tag": "go",
+      "patterns": [
+        "What is Go?",
+        "Tell me about Go",
+        "Explain Go",
+        "Define Go",
+        "How does Go work?",
+        "Why is Go important?",
+        "Give me an overview of Go",
+        "Go explained"
+      ],
+      "responses": [
+        "Go, created at Google, is a statically typed, compiled language designed for simplicity, fast compilation, and built-in support for concurrency via goroutines.",
+        "Go is popular for cloud infrastructure tools like Docker and Kubernetes, thanks to its performance and small, efficient binaries."
+      ]
+    },
+    {
+      "tag": "rust",
+      "patterns": [
+        "What is Rust?",
+        "Tell me about Rust",
+        "Explain Rust",
+        "Define Rust",
+        "How does Rust work?",
+        "Why is Rust important?",
+        "Give me an overview of Rust",
+        "Rust explained"
+      ],
+      "responses": [
+        "Rust is a systems programming language focused on memory safety without a garbage collector, using a unique ownership and borrowing model checked at compile time.",
+        "Rust consistently ranks as one of the most loved languages among developers for eliminating whole classes of bugs like null pointer dereferences and data races."
+      ]
+    },
+    {
+      "tag": "kotlin",
+      "patterns": [
+        "What is Kotlin?",
+        "Tell me about Kotlin",
+        "Explain Kotlin",
+        "Define Kotlin",
+        "How does Kotlin work?",
+        "Why is Kotlin important?",
+        "Give me an overview of Kotlin",
+        "Kotlin explained"
+      ],
+      "responses": [
+        "Kotlin is a modern, statically typed language that runs on the JVM and is Google's preferred language for native Android development.",
+        "Kotlin offers concise syntax, null safety, and full interoperability with existing Java code and libraries."
+      ]
+    },
+    {
+      "tag": "swift",
+      "patterns": [
+        "What is Swift?",
+        "Tell me about Swift",
+        "Explain Swift",
+        "Define Swift",
+        "How does Swift work?",
+        "Why is Swift important?",
+        "Give me an overview of Swift",
+        "Swift explained"
+      ],
+      "responses": [
+        "Swift is Apple's modern programming language for iOS, macOS, watchOS, and tvOS development, designed to be safe, fast, and expressive.",
+        "Swift replaced Objective-C as Apple's primary language, offering optionals for safer handling of missing values and modern syntax."
+      ]
+    },
+    {
+      "tag": "php",
+      "patterns": [
+        "What is PHP?",
+        "Tell me about PHP",
+        "Explain PHP",
+        "Define PHP",
+        "How does PHP work?",
+        "Why is PHP important?",
+        "Give me an overview of PHP",
+        "PHP explained"
+      ],
+      "responses": [
+        "PHP is a server-side scripting language designed for web development, powering a large share of the web including platforms like WordPress.",
+        "PHP is embedded directly into HTML and executed on the server to generate dynamic web pages before sending them to the browser."
+      ]
+    },
+    {
+      "tag": "ruby",
+      "patterns": [
+        "What is Ruby?",
+        "Tell me about Ruby",
+        "Explain Ruby",
+        "Define Ruby",
+        "How does Ruby work?",
+        "Why is Ruby important?",
+        "Give me an overview of Ruby",
+        "Ruby explained"
+      ],
+      "responses": [
+        "Ruby is a dynamic, object-oriented language known for its readable syntax and the popular Ruby on Rails web framework.",
+        "Ruby emphasizes programmer happiness and convention over configuration, which made Rails a favorite for rapid web app development."
+      ]
+    },
+    {
+      "tag": "r",
+      "patterns": [
+        "What is R?",
+        "Tell me about R",
+        "Explain R",
+        "Define R",
+        "How does R work?",
+        "Why is R important?",
+        "Give me an overview of R",
+        "R explained"
+      ],
+      "responses": [
+        "R is a programming language and environment built specifically for statistical computing, data analysis, and visualization.",
+        "R is widely used in academia, bioinformatics, and data science for its rich ecosystem of statistical packages like ggplot2 and dplyr."
+      ]
+    },
+    {
+      "tag": "matlab",
+      "patterns": [
+        "What is MATLAB?",
+        "Tell me about MATLAB",
+        "Explain MATLAB",
+        "Define MATLAB",
+        "How does MATLAB work?",
+        "Why is MATLAB important?",
+        "Give me an overview of MATLAB",
+        "MATLAB explained"
+      ],
+      "responses": [
+        "MATLAB is a numerical computing environment widely used in engineering for matrix operations, simulations, and control systems design.",
+        "MATLAB's Simulink extension is especially popular for modeling and simulating dynamic and embedded systems."
+      ]
+    },
+    {
+      "tag": "scala",
+      "patterns": [
+        "What is Scala?",
+        "Tell me about Scala",
+        "Explain Scala",
+        "Define Scala",
+        "How does Scala work?",
+        "Why is Scala important?",
+        "Give me an overview of Scala",
+        "Scala explained"
+      ],
+      "responses": [
+        "Scala is a language that blends object-oriented and functional programming, running on the JVM and interoperating seamlessly with Java.",
+        "Scala powers big data tools like Apache Spark, which is itself written primarily in Scala."
+      ]
+    },
+    {
+      "tag": "dart",
+      "patterns": [
+        "What is Dart?",
+        "Tell me about Dart",
+        "Explain Dart",
+        "Define Dart",
+        "How does Dart work?",
+        "Why is Dart important?",
+        "Give me an overview of Dart",
+        "Dart explained"
+      ],
+      "responses": [
+        "Dart is Google's client-optimized language, best known as the language behind the Flutter framework for cross-platform app development.",
+        "Dart supports both just-in-time compilation for fast development and ahead-of-time compilation for optimized production builds."
+      ]
+    },
+    {
+      "tag": "julia",
+      "patterns": [
+        "What is Julia?",
+        "Tell me about Julia",
+        "Explain Julia",
+        "Define Julia",
+        "How does Julia work?",
+        "Why is Julia important?",
+        "Give me an overview of Julia",
+        "Julia explained"
+      ],
+      "responses": [
+        "Julia is a high-performance language designed for numerical and scientific computing, combining Python-like syntax with C-like speed.",
+        "Julia's just-in-time compilation lets it achieve performance close to compiled languages while remaining highly readable."
+      ]
+    },
+    {
+      "tag": "haskell",
+      "patterns": [
+        "What is Haskell?",
+        "Tell me about Haskell",
+        "Explain Haskell",
+        "Define Haskell",
+        "How does Haskell work?",
+        "Why is Haskell important?",
+        "Give me an overview of Haskell",
+        "Haskell explained"
+      ],
+      "responses": [
+        "Haskell is a purely functional programming language with strong static typing and lazy evaluation, popular in academia and finance.",
+        "Haskell's emphasis on pure functions and immutability makes it a favorite for reasoning rigorously about program correctness."
+      ]
+    },
+    {
+      "tag": "assembly_language",
+      "patterns": [
+        "What is Assembly language?",
+        "Tell me about Assembly language",
+        "Explain Assembly language",
+        "Define Assembly language",
+        "How does Assembly language work?",
+        "Why is Assembly language important?",
+        "Give me an overview of Assembly language",
+        "Assembly language explained"
+      ],
+      "responses": [
+        "Assembly language is a low-level, human-readable representation of a processor's machine instructions, specific to a given CPU architecture.",
+        "Writing in assembly gives maximum control over hardware but requires managing registers and memory manually without high-level abstractions."
+      ]
+    },
+    {
+      "tag": "html",
+      "patterns": [
+        "What is HTML?",
+        "Tell me about HTML",
+        "Explain HTML",
+        "Define HTML",
+        "How does HTML work?",
+        "Why is HTML important?",
+        "Give me an overview of HTML",
+        "HTML explained"
+      ],
+      "responses": [
+        "HTML (HyperText Markup Language) is the standard markup language used to structure content on the web, defining elements like headings, paragraphs, and links.",
+        "HTML works together with CSS for styling and JavaScript for interactivity to build modern web pages."
+      ]
+    },
+    {
+      "tag": "css",
+      "patterns": [
+        "What is CSS?",
+        "Tell me about CSS",
+        "Explain CSS",
+        "Define CSS",
+        "How does CSS work?",
+        "Why is CSS important?",
+        "Give me an overview of CSS",
+        "CSS explained"
+      ],
+      "responses": [
+        "CSS (Cascading Style Sheets) controls the visual presentation of HTML content, including layout, colors, fonts, and responsiveness.",
+        "Modern CSS features like Flexbox and Grid make it possible to build complex, responsive layouts without relying on frameworks."
+      ]
+    },
+    {
+      "tag": "react",
+      "patterns": [
+        "What is React?",
+        "Tell me about React",
+        "Explain React",
+        "Define React",
+        "How does React work?",
+        "Why is React important?",
+        "Give me an overview of React",
+        "React explained"
+      ],
+      "responses": [
+        "React is a JavaScript library for building user interfaces through reusable, composable components and a virtual DOM for efficient rendering.",
+        "React's one-way data flow and hooks system (like useState and useEffect) make managing complex UI state more predictable."
+      ]
+    },
+    {
+      "tag": "angular",
+      "patterns": [
+        "What is Angular?",
+        "Tell me about Angular",
+        "Explain Angular",
+        "Define Angular",
+        "How does Angular work?",
+        "Why is Angular important?",
+        "Give me an overview of Angular",
+        "Angular explained"
+      ],
+      "responses": [
+        "Angular is a comprehensive TypeScript-based framework from Google for building large-scale single-page web applications.",
+        "Angular provides built-in tools for routing, forms, and dependency injection, offering a more opinionated structure than lighter libraries like React."
+      ]
+    },
+    {
+      "tag": "vue_js",
+      "patterns": [
+        "What is Vue.js?",
+        "Tell me about Vue.js",
+        "Explain Vue.js",
+        "Define Vue.js",
+        "How does Vue.js work?",
+        "Why is Vue.js important?",
+        "Give me an overview of Vue.js",
+        "Vue.js explained"
+      ],
+      "responses": [
+        "Vue.js is a progressive JavaScript framework for building user interfaces, known for its gentle learning curve and flexible adoption.",
+        "Vue combines a reactive data-binding system with an approachable component model, making it popular for both small and large projects."
+      ]
+    },
+    {
+      "tag": "django",
+      "patterns": [
+        "What is Django?",
+        "Tell me about Django",
+        "Explain Django",
+        "Define Django",
+        "How does Django work?",
+        "Why is Django important?",
+        "Give me an overview of Django",
+        "Django explained"
+      ],
+      "responses": [
+        "Django is a high-level Python web framework that encourages rapid development with a 'batteries-included' philosophy, covering ORM, admin, and authentication out of the box.",
+        "Django's built-in admin interface and ORM make it a popular choice for quickly building secure, database-driven web applications."
+      ]
+    },
+    {
+      "tag": "flask",
+      "patterns": [
+        "What is Flask?",
+        "Tell me about Flask",
+        "Explain Flask",
+        "Define Flask",
+        "How does Flask work?",
+        "Why is Flask important?",
+        "Give me an overview of Flask",
+        "Flask explained"
+      ],
+      "responses": [
+        "Flask is a lightweight Python web framework that gives developers flexibility by providing only core tools, letting you add extensions as needed.",
+        "Flask is often chosen for smaller APIs and microservices where a minimal, unopinionated framework is preferred over Django's structure."
+      ]
+    },
+    {
+      "tag": "fastapi",
+      "patterns": [
+        "What is FastAPI?",
+        "Tell me about FastAPI",
+        "Explain FastAPI",
+        "Define FastAPI",
+        "How does FastAPI work?",
+        "Why is FastAPI important?",
+        "Give me an overview of FastAPI",
+        "FastAPI explained"
+      ],
+      "responses": [
+        "FastAPI is a modern, high-performance Python web framework for building APIs, using type hints for automatic request validation and interactive documentation.",
+        "FastAPI is built on Starlette and Pydantic, and its async support makes it well-suited for high-concurrency backend services."
+      ]
+    },
+    {
+      "tag": "spring_boot",
+      "patterns": [
+        "What is Spring Boot?",
+        "Tell me about Spring Boot",
+        "Explain Spring Boot",
+        "Define Spring Boot",
+        "How does Spring Boot work?",
+        "Why is Spring Boot important?",
+        "Give me an overview of Spring Boot",
+        "Spring Boot explained"
+      ],
+      "responses": [
+        "Spring Boot is a Java framework that simplifies building production-ready applications by reducing boilerplate configuration in the broader Spring ecosystem.",
+        "Spring Boot's auto-configuration and embedded servers make it a dominant choice for enterprise Java microservices."
+      ]
+    },
+    {
+      "tag": "node_js",
+      "patterns": [
+        "What is Node.js?",
+        "Tell me about Node.js",
+        "Explain Node.js",
+        "Define Node.js",
+        "How does Node.js work?",
+        "Why is Node.js important?",
+        "Give me an overview of Node.js",
+        "Node.js explained"
+      ],
+      "responses": [
+        "Node.js is a JavaScript runtime built on Chrome's V8 engine that lets JavaScript run outside the browser, commonly used for backend servers.",
+        "Node's non-blocking, event-driven architecture makes it efficient for handling many concurrent connections, such as real-time chat apps."
+      ]
+    },
+    {
+      "tag": "express_js",
+      "patterns": [
+        "What is Express.js?",
+        "Tell me about Express.js",
+        "Explain Express.js",
+        "Define Express.js",
+        "How does Express.js work?",
+        "Why is Express.js important?",
+        "Give me an overview of Express.js",
+        "Express.js explained"
+      ],
+      "responses": [
+        "Express.js is a minimal and flexible Node.js web framework that provides routing and middleware support for building APIs and web servers.",
+        "Express is often paired with databases like MongoDB in the popular MERN (MongoDB, Express, React, Node) stack."
+      ]
+    },
+    {
+      "tag": "tensorflow",
+      "patterns": [
+        "What is TensorFlow?",
+        "Tell me about TensorFlow",
+        "Explain TensorFlow",
+        "Define TensorFlow",
+        "How does TensorFlow work?",
+        "Why is TensorFlow important?",
+        "Give me an overview of TensorFlow",
+        "TensorFlow explained"
+      ],
+      "responses": [
+        "TensorFlow is an open-source deep learning framework developed by Google, used for building and training machine learning models at scale.",
+        "TensorFlow supports deployment across servers, mobile devices, and browsers via tools like TensorFlow Lite and TensorFlow.js."
+      ]
+    },
+    {
+      "tag": "pytorch",
+      "patterns": [
+        "What is PyTorch?",
+        "Tell me about PyTorch",
+        "Explain PyTorch",
+        "Define PyTorch",
+        "How does PyTorch work?",
+        "Why is PyTorch important?",
+        "Give me an overview of PyTorch",
+        "PyTorch explained"
+      ],
+      "responses": [
+        "PyTorch is an open-source deep learning framework developed by Meta, favored for its dynamic computation graphs and intuitive, Pythonic API.",
+        "PyTorch is widely used in research due to its flexibility, and it also powers many production ML systems today."
+      ]
+    },
+    {
+      "tag": "keras",
+      "patterns": [
+        "What is Keras?",
+        "Tell me about Keras",
+        "Explain Keras",
+        "Define Keras",
+        "How does Keras work?",
+        "Why is Keras important?",
+        "Give me an overview of Keras",
+        "Keras explained"
+      ],
+      "responses": [
+        "Keras is a high-level neural network API, now integrated with TensorFlow, that simplifies building and training deep learning models.",
+        "Keras's simple, readable syntax makes it a popular starting point for beginners in deep learning."
+      ]
+    },
+    {
+      "tag": "scikit_learn",
+      "patterns": [
+        "What is Scikit-learn?",
+        "Tell me about Scikit-learn",
+        "Explain Scikit-learn",
+        "Define Scikit-learn",
+        "How does Scikit-learn work?",
+        "Why is Scikit-learn important?",
+        "Give me an overview of Scikit-learn",
+        "Scikit-learn explained"
+      ],
+      "responses": [
+        "Scikit-learn is a Python library providing simple, efficient tools for classical machine learning tasks like classification, regression, and clustering.",
+        "Scikit-learn is often the first stop for machine learning pipelines before moving to deep learning frameworks for more complex models."
+      ]
+    },
+    {
+      "tag": "pandas",
+      "patterns": [
+        "What is Pandas?",
+        "Tell me about Pandas",
+        "Explain Pandas",
+        "Define Pandas",
+        "How does Pandas work?",
+        "Why is Pandas important?",
+        "Give me an overview of Pandas",
+        "Pandas explained"
+      ],
+      "responses": [
+        "Pandas is a Python library for data manipulation and analysis, providing the DataFrame structure for working with tabular data efficiently.",
+        "Pandas is a core tool in nearly every Python data science workflow, from cleaning messy data to aggregating and reshaping it."
+      ]
+    },
+    {
+      "tag": "numpy",
+      "patterns": [
+        "What is NumPy?",
+        "Tell me about NumPy",
+        "Explain NumPy",
+        "Define NumPy",
+        "How does NumPy work?",
+        "Why is NumPy important?",
+        "Give me an overview of NumPy",
+        "NumPy explained"
+      ],
+      "responses": [
+        "NumPy is the fundamental Python library for numerical computing, offering fast, multi-dimensional array operations.",
+        "Nearly every scientific Python library, including Pandas, TensorFlow, and PyTorch, is built on top of NumPy's array foundations."
+      ]
+    },
+    {
+      "tag": "docker",
+      "patterns": [
+        "What is Docker?",
+        "Tell me about Docker",
+        "Explain Docker",
+        "Define Docker",
+        "How does Docker work?",
+        "Why is Docker important?",
+        "Give me an overview of Docker",
+        "Docker explained"
+      ],
+      "responses": [
+        "Docker packages an application with its dependencies into a lightweight, portable container that runs consistently across different environments.",
+        "Docker containers share the host OS kernel, making them far lighter and faster to start than full virtual machines."
+      ]
+    },
+    {
+      "tag": "kubernetes",
+      "patterns": [
+        "What is Kubernetes?",
+        "Tell me about Kubernetes",
+        "Explain Kubernetes",
+        "Define Kubernetes",
+        "How does Kubernetes work?",
+        "Why is Kubernetes important?",
+        "Give me an overview of Kubernetes",
+        "Kubernetes explained"
+      ],
+      "responses": [
+        "Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications across clusters of machines.",
+        "Kubernetes handles self-healing, load balancing, and rolling updates, making it the standard for running containers in production."
+      ]
+    },
+    {
+      "tag": "git",
+      "patterns": [
+        "What is Git?",
+        "Tell me about Git",
+        "Explain Git",
+        "Define Git",
+        "How does Git work?",
+        "Why is Git important?",
+        "Give me an overview of Git",
+        "Git explained"
+      ],
+      "responses": [
+        "Git is a distributed version control system that tracks changes to source code over time, enabling branching, merging, and collaboration.",
+        "Because Git is distributed, every developer has a full copy of the project history locally, not just a central server."
+      ]
+    },
+    {
+      "tag": "aws",
+      "patterns": [
+        "What is AWS?",
+        "Tell me about AWS",
+        "Explain AWS",
+        "Define AWS",
+        "How does AWS work?",
+        "Why is AWS important?",
+        "Give me an overview of AWS",
+        "AWS explained"
+      ],
+      "responses": [
+        "Amazon Web Services (AWS) is the largest cloud computing platform, offering compute, storage, databases, and AI/ML services on demand.",
+        "AWS services like EC2, S3, and Lambda let developers build scalable applications without owning physical servers."
+      ]
+    },
+    {
+      "tag": "microsoft_azure",
+      "patterns": [
+        "What is Microsoft Azure?",
+        "Tell me about Microsoft Azure",
+        "Explain Microsoft Azure",
+        "Define Microsoft Azure",
+        "How does Microsoft Azure work?",
+        "Why is Microsoft Azure important?",
+        "Give me an overview of Microsoft Azure",
+        "Microsoft Azure explained"
+      ],
+      "responses": [
+        "Microsoft Azure is a major cloud platform offering compute, storage, AI, and enterprise services tightly integrated with the Microsoft ecosystem.",
+        "Azure is especially popular among enterprises already using Windows Server, Active Directory, and Office 365."
+      ]
+    },
+    {
+      "tag": "google_cloud_platform",
+      "patterns": [
+        "What is Google Cloud Platform?",
+        "Tell me about Google Cloud Platform",
+        "Explain Google Cloud Platform",
+        "Define Google Cloud Platform",
+        "How does Google Cloud Platform work?",
+        "Why is Google Cloud Platform important?",
+        "Give me an overview of Google Cloud Platform",
+        "Google Cloud Platform explained"
+      ],
+      "responses": [
+        "Google Cloud Platform (GCP) is Google's cloud computing suite, known for strengths in data analytics, Kubernetes, and machine learning infrastructure.",
+        "GCP's BigQuery and Vertex AI are popular choices for large-scale data warehousing and ML model deployment."
+      ]
+    },
+    {
+      "tag": "mongodb",
+      "patterns": [
+        "What is MongoDB?",
+        "Tell me about MongoDB",
+        "Explain MongoDB",
+        "Define MongoDB",
+        "How does MongoDB work?",
+        "Why is MongoDB important?",
+        "Give me an overview of MongoDB",
+        "MongoDB explained"
+      ],
+      "responses": [
+        "MongoDB is a popular NoSQL document database that stores data in flexible, JSON-like documents rather than rigid tables.",
+        "MongoDB's schema-less design makes it a common choice for applications with rapidly evolving or unstructured data."
+      ]
+    },
+    {
+      "tag": "postgresql",
+      "patterns": [
+        "What is PostgreSQL?",
+        "Tell me about PostgreSQL",
+        "Explain PostgreSQL",
+        "Define PostgreSQL",
+        "How does PostgreSQL work?",
+        "Why is PostgreSQL important?",
+        "Give me an overview of PostgreSQL",
+        "PostgreSQL explained"
+      ],
+      "responses": [
+        "PostgreSQL is a powerful, open-source relational database known for standards compliance, extensibility, and advanced features like JSON support.",
+        "PostgreSQL is often praised for handling complex queries and large datasets reliably, making it popular for serious production systems."
+      ]
+    },
+    {
+      "tag": "mysql",
+      "patterns": [
+        "What is MySQL?",
+        "Tell me about MySQL",
+        "Explain MySQL",
+        "Define MySQL",
+        "How does MySQL work?",
+        "Why is MySQL important?",
+        "Give me an overview of MySQL",
+        "MySQL explained"
+      ],
+      "responses": [
+        "MySQL is one of the world's most widely used open-source relational database management systems, powering countless web applications.",
+        "MySQL is a core part of the classic LAMP (Linux, Apache, MySQL, PHP) web development stack."
+      ]
+    },
+    {
+      "tag": "redis",
+      "patterns": [
+        "What is Redis?",
+        "Tell me about Redis",
+        "Explain Redis",
+        "Define Redis",
+        "How does Redis work?",
+        "Why is Redis important?",
+        "Give me an overview of Redis",
+        "Redis explained"
+      ],
+      "responses": [
+        "Redis is an in-memory data store used as a database, cache, and message broker, prized for its extremely fast read and write speeds.",
+        "Redis is commonly used to cache frequently accessed data or manage session state in web applications."
+      ]
+    },
+    {
+      "tag": "graphql",
+      "patterns": [
+        "What is GraphQL?",
+        "Tell me about GraphQL",
+        "Explain GraphQL",
+        "Define GraphQL",
+        "How does GraphQL work?",
+        "Why is GraphQL important?",
+        "Give me an overview of GraphQL",
+        "GraphQL explained"
+      ],
+      "responses": [
+        "GraphQL is a query language for APIs that lets clients request exactly the data fields they need, avoiding over- or under-fetching.",
+        "Unlike REST's multiple fixed endpoints, GraphQL typically exposes a single endpoint with a flexible, client-defined query structure."
+      ]
+    },
+    {
+      "tag": "firebase",
+      "patterns": [
+        "What is Firebase?",
+        "Tell me about Firebase",
+        "Explain Firebase",
+        "Define Firebase",
+        "How does Firebase work?",
+        "Why is Firebase important?",
+        "Give me an overview of Firebase",
+        "Firebase explained"
+      ],
+      "responses": [
+        "Firebase is Google's platform for building web and mobile apps, offering a real-time database, authentication, hosting, and cloud functions.",
+        "Firebase is popular among indie developers and startups for letting them build full backends without managing servers directly."
+      ]
+    },
+    {
+      "tag": "bootstrap",
+      "patterns": [
+        "What is Bootstrap?",
+        "Tell me about Bootstrap",
+        "Explain Bootstrap",
+        "Define Bootstrap",
+        "How does Bootstrap work?",
+        "Why is Bootstrap important?",
+        "Give me an overview of Bootstrap",
+        "Bootstrap explained"
+      ],
+      "responses": [
+        "Bootstrap is a popular CSS framework providing pre-built, responsive UI components to speed up front-end web development.",
+        "Bootstrap's grid system makes it easy to build layouts that adapt cleanly across desktop, tablet, and mobile screens."
+      ]
+    },
+    {
+      "tag": "tailwind_css",
+      "patterns": [
+        "What is Tailwind CSS?",
+        "Tell me about Tailwind CSS",
+        "Explain Tailwind CSS",
+        "Define Tailwind CSS",
+        "How does Tailwind CSS work?",
+        "Why is Tailwind CSS important?",
+        "Give me an overview of Tailwind CSS",
+        "Tailwind CSS explained"
+      ],
+      "responses": [
+        "Tailwind CSS is a utility-first CSS framework that lets developers style elements directly in HTML using small, composable classes.",
+        "Tailwind avoids writing custom CSS for most designs, instead composing utility classes like flex, p-4, and text-center."
+      ]
+    },
+    {
+      "tag": "jquery",
+      "patterns": [
+        "What is jQuery?",
+        "Tell me about jQuery",
+        "Explain jQuery",
+        "Define jQuery",
+        "How does jQuery work?",
+        "Why is jQuery important?",
+        "Give me an overview of jQuery",
+        "jQuery explained"
+      ],
+      "responses": [
+        "jQuery is a JavaScript library that simplified DOM manipulation, event handling, and AJAX requests in the early era of web development.",
+        "Though less central since modern frameworks emerged, jQuery still powers a large share of legacy websites."
+      ]
+    },
+    {
+      "tag": "next_js",
+      "patterns": [
+        "What is Next.js?",
+        "Tell me about Next.js",
+        "Explain Next.js",
+        "Define Next.js",
+        "How does Next.js work?",
+        "Why is Next.js important?",
+        "Give me an overview of Next.js",
+        "Next.js explained"
+      ],
+      "responses": [
+        "Next.js is a React framework that adds server-side rendering, static site generation, and file-based routing for production-ready web apps.",
+        "Next.js is widely used for its performance benefits and built-in SEO advantages over plain client-side React apps."
+      ]
+    },
+    {
+      "tag": "selenium",
+      "patterns": [
+        "What is Selenium?",
+        "Tell me about Selenium",
+        "Explain Selenium",
+        "Define Selenium",
+        "How does Selenium work?",
+        "Why is Selenium important?",
+        "Give me an overview of Selenium",
+        "Selenium explained"
+      ],
+      "responses": [
+        "Selenium is an open-source tool for automating web browsers, commonly used for automated testing of web applications.",
+        "Selenium supports multiple programming languages and browsers, making it a standard choice for end-to-end UI testing."
+      ]
+    },
+    {
+      "tag": "jenkins",
+      "patterns": [
+        "What is Jenkins?",
+        "Tell me about Jenkins",
+        "Explain Jenkins",
+        "Define Jenkins",
+        "How does Jenkins work?",
+        "Why is Jenkins important?",
+        "Give me an overview of Jenkins",
+        "Jenkins explained"
+      ],
+      "responses": [
+        "Jenkins is an open-source automation server used to build continuous integration and continuous delivery (CI/CD) pipelines.",
+        "Jenkins can automatically build, test, and deploy code whenever changes are pushed to a repository."
+      ]
+    },
+    {
+      "tag": "terraform",
+      "patterns": [
+        "What is Terraform?",
+        "Tell me about Terraform",
+        "Explain Terraform",
+        "Define Terraform",
+        "How does Terraform work?",
+        "Why is Terraform important?",
+        "Give me an overview of Terraform",
+        "Terraform explained"
+      ],
+      "responses": [
+        "Terraform is an infrastructure-as-code tool that lets you define and provision cloud resources using a declarative configuration language.",
+        "Terraform tracks infrastructure state, letting teams version-control and reliably reproduce entire cloud environments."
+      ]
+    },
+    {
+      "tag": "ansible",
+      "patterns": [
+        "What is Ansible?",
+        "Tell me about Ansible",
+        "Explain Ansible",
+        "Define Ansible",
+        "How does Ansible work?",
+        "Why is Ansible important?",
+        "Give me an overview of Ansible",
+        "Ansible explained"
+      ],
+      "responses": [
+        "Ansible is an open-source automation tool for configuration management, application deployment, and orchestration, using simple YAML playbooks.",
+        "Unlike some tools, Ansible is agentless, connecting over SSH rather than requiring software installed on managed machines."
+      ]
+    },
+    {
+      "tag": "apache_kafka",
+      "patterns": [
+        "What is Apache Kafka?",
+        "Tell me about Apache Kafka",
+        "Explain Apache Kafka",
+        "Define Apache Kafka",
+        "How does Apache Kafka work?",
+        "Why is Apache Kafka important?",
+        "Give me an overview of Apache Kafka",
+        "Apache Kafka explained"
+      ],
+      "responses": [
+        "Apache Kafka is a distributed event-streaming platform used to build real-time data pipelines and streaming applications at scale.",
+        "Kafka is widely used for decoupling microservices, letting them communicate asynchronously through durable, ordered message logs."
+      ]
+    },
+    {
+      "tag": "rabbitmq",
+      "patterns": [
+        "What is RabbitMQ?",
+        "Tell me about RabbitMQ",
+        "Explain RabbitMQ",
+        "Define RabbitMQ",
+        "How does RabbitMQ work?",
+        "Why is RabbitMQ important?",
+        "Give me an overview of RabbitMQ",
+        "RabbitMQ explained"
+      ],
+      "responses": [
+        "RabbitMQ is an open-source message broker that enables applications to communicate asynchronously by sending messages through queues.",
+        "RabbitMQ implements the AMQP protocol and is commonly used to decouple services in distributed system architectures."
+      ]
+    },
+    {
+      "tag": "elasticsearch",
+      "patterns": [
+        "What is Elasticsearch?",
+        "Tell me about Elasticsearch",
+        "Explain Elasticsearch",
+        "Define Elasticsearch",
+        "How does Elasticsearch work?",
+        "Why is Elasticsearch important?",
+        "Give me an overview of Elasticsearch",
+        "Elasticsearch explained"
+      ],
+      "responses": [
+        "Elasticsearch is a distributed search and analytics engine built for fast, full-text search across large volumes of data.",
+        "Elasticsearch is often paired with Logstash and Kibana in the 'ELK stack' for log analysis and monitoring."
+      ]
+    },
+    {
+      "tag": "hadoop",
+      "patterns": [
+        "What is Hadoop?",
+        "Tell me about Hadoop",
+        "Explain Hadoop",
+        "Define Hadoop",
+        "How does Hadoop work?",
+        "Why is Hadoop important?",
+        "Give me an overview of Hadoop",
+        "Hadoop explained"
+      ],
+      "responses": [
+        "Apache Hadoop is a framework for distributed storage and processing of massive datasets across clusters of commodity hardware.",
+        "Hadoop's core components, HDFS and MapReduce, were foundational to the early big data ecosystem."
+      ]
+    },
+    {
+      "tag": "apache_spark",
+      "patterns": [
+        "What is Apache Spark?",
+        "Tell me about Apache Spark",
+        "Explain Apache Spark",
+        "Define Apache Spark",
+        "How does Apache Spark work?",
+        "Why is Apache Spark important?",
+        "Give me an overview of Apache Spark",
+        "Apache Spark explained"
+      ],
+      "responses": [
+        "Apache Spark is a fast, distributed data processing engine that can handle batch and streaming workloads far quicker than traditional Hadoop MapReduce.",
+        "Spark's in-memory computation model makes it significantly faster than disk-based alternatives for iterative algorithms like machine learning."
+      ]
+    },
+    {
+      "tag": "apache_airflow",
+      "patterns": [
+        "What is Apache Airflow?",
+        "Tell me about Apache Airflow",
+        "Explain Apache Airflow",
+        "Define Apache Airflow",
+        "How does Apache Airflow work?",
+        "Why is Apache Airflow important?",
+        "Give me an overview of Apache Airflow",
+        "Apache Airflow explained"
+      ],
+      "responses": [
+        "Apache Airflow is a platform for programmatically authoring, scheduling, and monitoring data pipelines as directed acyclic graphs (DAGs).",
+        "Airflow is widely used in data engineering to orchestrate complex ETL workflows with dependencies between tasks."
+      ]
+    },
+    {
+      "tag": "opencv",
+      "patterns": [
+        "What is OpenCV?",
+        "Tell me about OpenCV",
+        "Explain OpenCV",
+        "Define OpenCV",
+        "How does OpenCV work?",
+        "Why is OpenCV important?",
+        "Give me an overview of OpenCV",
+        "OpenCV explained"
+      ],
+      "responses": [
+        "OpenCV is an open-source computer vision library providing tools for image processing, object detection, and video analysis.",
+        "OpenCV is a common choice for real-time computer vision applications, from face detection to robotics perception."
+      ]
+    },
+    {
+      "tag": "nltk",
+      "patterns": [
+        "What is NLTK?",
+        "Tell me about NLTK",
+        "Explain NLTK",
+        "Define NLTK",
+        "How does NLTK work?",
+        "Why is NLTK important?",
+        "Give me an overview of NLTK",
+        "NLTK explained"
+      ],
+      "responses": [
+        "NLTK (Natural Language Toolkit) is a Python library providing tools and datasets for classic natural language processing tasks like tokenization and parsing.",
+        "NLTK is often used in academic and educational NLP settings for its extensive linguistic corpora and teaching-friendly design."
+      ]
+    },
+    {
+      "tag": "spacy",
+      "patterns": [
+        "What is spaCy?",
+        "Tell me about spaCy",
+        "Explain spaCy",
+        "Define spaCy",
+        "How does spaCy work?",
+        "Why is spaCy important?",
+        "Give me an overview of spaCy",
+        "spaCy explained"
+      ],
+      "responses": [
+        "spaCy is an industrial-strength Python NLP library optimized for production use, offering fast tokenization, tagging, and named entity recognition.",
+        "Unlike NLTK's academic focus, spaCy emphasizes speed and ease of integration into real-world applications."
+      ]
+    },
+    {
+      "tag": "hugging_face_transformers",
+      "patterns": [
+        "What is Hugging Face Transformers?",
+        "Tell me about Hugging Face Transformers",
+        "Explain Hugging Face Transformers",
+        "Define Hugging Face Transformers",
+        "How does Hugging Face Transformers work?",
+        "Why is Hugging Face Transformers important?",
+        "Give me an overview of Hugging Face Transformers",
+        "Hugging Face Transformers explained"
+      ],
+      "responses": [
+        "Hugging Face Transformers is a widely used library providing pre-trained transformer models like BERT and GPT for NLP tasks.",
+        "The Hugging Face Hub lets developers easily download, fine-tune, and share thousands of pre-trained models."
+      ]
+    },
+    {
+      "tag": "unity",
+      "patterns": [
+        "What is Unity?",
+        "Tell me about Unity",
+        "Explain Unity",
+        "Define Unity",
+        "How does Unity work?",
+        "Why is Unity important?",
+        "Give me an overview of Unity",
+        "Unity explained"
+      ],
+      "responses": [
+        "Unity is a widely used cross-platform game engine supporting 2D and 3D game development for consoles, mobile, and PC.",
+        "Unity uses C# scripting and is popular among indie developers for its accessible learning curve and large asset store."
+      ]
+    },
+    {
+      "tag": "unreal_engine",
+      "patterns": [
+        "What is Unreal Engine?",
+        "Tell me about Unreal Engine",
+        "Explain Unreal Engine",
+        "Define Unreal Engine",
+        "How does Unreal Engine work?",
+        "Why is Unreal Engine important?",
+        "Give me an overview of Unreal Engine",
+        "Unreal Engine explained"
+      ],
+      "responses": [
+        "Unreal Engine is a powerful game engine known for high-fidelity graphics, used in many AAA games and increasingly in film production.",
+        "Unreal uses C++ and its visual scripting system, Blueprints, letting both programmers and designers build gameplay logic."
+      ]
+    },
+    {
+      "tag": "godot",
+      "patterns": [
+        "What is Godot?",
+        "Tell me about Godot",
+        "Explain Godot",
+        "Define Godot",
+        "How does Godot work?",
+        "Why is Godot important?",
+        "Give me an overview of Godot",
+        "Godot explained"
+      ],
+      "responses": [
+        "Godot is a free, open-source game engine known for its lightweight footprint and its own scripting language, GDScript.",
+        "Godot has grown popular among indie developers as a free alternative to commercial engines like Unity and Unreal."
+      ]
+    },
+    {
+      "tag": "android_studio",
+      "patterns": [
+        "What is Android Studio?",
+        "Tell me about Android Studio",
+        "Explain Android Studio",
+        "Define Android Studio",
+        "How does Android Studio work?",
+        "Why is Android Studio important?",
+        "Give me an overview of Android Studio",
+        "Android Studio explained"
+      ],
+      "responses": [
+        "Android Studio is the official integrated development environment (IDE) for building native Android applications, based on JetBrains' IntelliJ IDEA.",
+        "Android Studio includes tools for UI design, emulator testing, and performance profiling specific to Android apps."
+      ]
+    },
+    {
+      "tag": "xcode",
+      "patterns": [
+        "What is Xcode?",
+        "Tell me about Xcode",
+        "Explain Xcode",
+        "Define Xcode",
+        "How does Xcode work?",
+        "Why is Xcode important?",
+        "Give me an overview of Xcode",
+        "Xcode explained"
+      ],
+      "responses": [
+        "Xcode is Apple's official IDE for developing software for macOS, iOS, watchOS, and tvOS, primarily using Swift or Objective-C.",
+        "Xcode includes Interface Builder for visual UI design and simulators for testing apps without physical Apple devices."
+      ]
+    },
+    {
+      "tag": "visual_studio_code",
+      "patterns": [
+        "What is Visual Studio Code?",
+        "Tell me about Visual Studio Code",
+        "Explain Visual Studio Code",
+        "Define Visual Studio Code",
+        "How does Visual Studio Code work?",
+        "Why is Visual Studio Code important?",
+        "Give me an overview of Visual Studio Code",
+        "Visual Studio Code explained"
+      ],
+      "responses": [
+        "Visual Studio Code (VS Code) is a free, lightweight, and highly extensible code editor developed by Microsoft.",
+        "VS Code's massive extension marketplace lets developers customize it for virtually any language or workflow."
+      ]
+    },
+    {
+      "tag": "intellij_idea",
+      "patterns": [
+        "What is IntelliJ IDEA?",
+        "Tell me about IntelliJ IDEA",
+        "Explain IntelliJ IDEA",
+        "Define IntelliJ IDEA",
+        "How does IntelliJ IDEA work?",
+        "Why is IntelliJ IDEA important?",
+        "Give me an overview of IntelliJ IDEA",
+        "IntelliJ IDEA explained"
+      ],
+      "responses": [
+        "IntelliJ IDEA is a powerful Java-focused IDE by JetBrains known for intelligent code completion and refactoring tools.",
+        "IntelliJ's smart features often let developers write and refactor Java and Kotlin code significantly faster than plain text editors."
+      ]
+    },
+    {
+      "tag": "pycharm",
+      "patterns": [
+        "What is PyCharm?",
+        "Tell me about PyCharm",
+        "Explain PyCharm",
+        "Define PyCharm",
+        "How does PyCharm work?",
+        "Why is PyCharm important?",
+        "Give me an overview of PyCharm",
+        "PyCharm explained"
+      ],
+      "responses": [
+        "PyCharm is a dedicated Python IDE by JetBrains offering intelligent code completion, debugging, and support for scientific and web development.",
+        "PyCharm's Professional edition adds tools for Django, database access, and remote development."
+      ]
+    },
+    {
+      "tag": "wordpress",
+      "patterns": [
+        "What is WordPress?",
+        "Tell me about WordPress",
+        "Explain WordPress",
+        "Define WordPress",
+        "How does WordPress work?",
+        "Why is WordPress important?",
+        "Give me an overview of WordPress",
+        "WordPress explained"
+      ],
+      "responses": [
+        "WordPress is an open-source content management system powering a large portion of websites on the internet, from blogs to full e-commerce stores.",
+        "WordPress's plugin and theme ecosystem lets even non-developers build feature-rich websites without writing code."
+      ]
+    },
+    {
+      "tag": "linux_kernel",
+      "patterns": [
+        "What is Linux kernel?",
+        "Tell me about Linux kernel",
+        "Explain Linux kernel",
+        "Define Linux kernel",
+        "How does Linux kernel work?",
+        "Why is Linux kernel important?",
+        "Give me an overview of Linux kernel",
+        "Linux kernel explained"
+      ],
+      "responses": [
+        "The Linux kernel is the core of the Linux operating system, managing hardware resources, processes, and memory for everything from servers to smartphones.",
+        "Originally created by Linus Torvalds in 1991, the Linux kernel is now developed collaboratively by thousands of contributors worldwide."
+      ]
+    },
+    {
+      "tag": "nginx",
+      "patterns": [
+        "What is Nginx?",
+        "Tell me about Nginx",
+        "Explain Nginx",
+        "Define Nginx",
+        "How does Nginx work?",
+        "Why is Nginx important?",
+        "Give me an overview of Nginx",
+        "Nginx explained"
+      ],
+      "responses": [
+        "Nginx is a high-performance web server and reverse proxy known for efficiently handling many concurrent connections with low resource usage.",
+        "Nginx is commonly used to load-balance traffic across backend servers and serve static content quickly."
+      ]
+    },
+    {
+      "tag": "apache_http_server",
+      "patterns": [
+        "What is Apache HTTP Server?",
+        "Tell me about Apache HTTP Server",
+        "Explain Apache HTTP Server",
+        "Define Apache HTTP Server",
+        "How does Apache HTTP Server work?",
+        "Why is Apache HTTP Server important?",
+        "Give me an overview of Apache HTTP Server",
+        "Apache HTTP Server explained"
+      ],
+      "responses": [
+        "The Apache HTTP Server is one of the oldest and most widely used open-source web servers, powering a significant share of websites globally.",
+        "Apache's modular architecture allows extensive customization through modules for security, caching, and scripting support."
+      ]
+    },
+    {
+      "tag": "vim",
+      "patterns": [
+        "What is Vim?",
+        "Tell me about Vim",
+        "Explain Vim",
+        "Define Vim",
+        "How does Vim work?",
+        "Why is Vim important?",
+        "Give me an overview of Vim",
+        "Vim explained"
+      ],
+      "responses": [
+        "Vim is a highly configurable, keyboard-driven text editor descended from the classic Unix vi editor, favored for its speed once mastered.",
+        "Vim's modal editing — separating insertion and command modes — lets experienced users edit text extremely quickly without touching a mouse."
+      ]
+    },
+    {
+      "tag": "postman",
+      "patterns": [
+        "What is Postman?",
+        "Tell me about Postman",
+        "Explain Postman",
+        "Define Postman",
+        "How does Postman work?",
+        "Why is Postman important?",
+        "Give me an overview of Postman",
+        "Postman explained"
+      ],
+      "responses": [
+        "Postman is a popular tool for building, testing, and documenting APIs through a graphical interface for sending HTTP requests.",
+        "Postman lets developers organize API requests into collections and automate testing without writing custom scripts."
+      ]
+    },
+    {
+      "tag": "grpc",
+      "patterns": [
+        "What is gRPC?",
+        "Tell me about gRPC",
+        "Explain gRPC",
+        "Define gRPC",
+        "How does gRPC work?",
+        "Why is gRPC important?",
+        "Give me an overview of gRPC",
+        "gRPC explained"
+      ],
+      "responses": [
+        "gRPC is a high-performance remote procedure call framework developed by Google, using Protocol Buffers for efficient, strongly typed communication.",
+        "gRPC is popular for microservice-to-microservice communication where speed and strict contracts matter more than human readability."
+      ]
+    },
+    {
+      "tag": "websockets",
+      "patterns": [
+        "What is WebSockets?",
+        "Tell me about WebSockets",
+        "Explain WebSockets",
+        "Define WebSockets",
+        "How does WebSockets work?",
+        "Why is WebSockets important?",
+        "Give me an overview of WebSockets",
+        "WebSockets explained"
+      ],
+      "responses": [
+        "WebSockets provide a persistent, full-duplex communication channel between client and server, ideal for real-time applications like chat and live dashboards.",
+        "Unlike standard HTTP requests, a WebSocket connection stays open, letting the server push updates to the client instantly."
+      ]
+    },
+    {
+      "tag": "oauth",
+      "patterns": [
+        "What is OAuth?",
+        "Tell me about OAuth",
+        "Explain OAuth",
+        "Define OAuth",
+        "How does OAuth work?",
+        "Why is OAuth important?",
+        "Give me an overview of OAuth",
+        "OAuth explained"
+      ],
+      "responses": [
+        "OAuth is an open standard for access delegation, commonly used to let users grant apps limited access to their data without sharing passwords.",
+        "'Sign in with Google' or 'Sign in with GitHub' buttons on websites are typically powered by the OAuth authorization protocol."
+      ]
+    },
+    {
+      "tag": "json",
+      "patterns": [
+        "What is JSON?",
+        "Tell me about JSON",
+        "Explain JSON",
+        "Define JSON",
+        "How does JSON work?",
+        "Why is JSON important?",
+        "Give me an overview of JSON",
+        "JSON explained"
+      ],
+      "responses": [
+        "JSON (JavaScript Object Notation) is a lightweight, human-readable data format widely used for exchanging data between servers and web applications.",
+        "JSON's simple key-value structure makes it easy to parse in virtually every programming language, which is why it dominates modern APIs."
+      ]
+    },
+    {
+      "tag": "yaml",
+      "patterns": [
+        "What is YAML?",
+        "Tell me about YAML",
+        "Explain YAML",
+        "Define YAML",
+        "How does YAML work?",
+        "Why is YAML important?",
+        "Give me an overview of YAML",
+        "YAML explained"
+      ],
+      "responses": [
+        "YAML is a human-readable data serialization format often used for configuration files, such as in Docker Compose or Kubernetes manifests.",
+        "YAML relies on indentation rather than brackets, making config files easier to read but sensitive to whitespace errors."
+      ]
+    },
+    {
+      "tag": "xml",
+      "patterns": [
+        "What is XML?",
+        "Tell me about XML",
+        "Explain XML",
+        "Define XML",
+        "How does XML work?",
+        "Why is XML important?",
+        "Give me an overview of XML",
+        "XML explained"
+      ],
+      "responses": [
+        "XML (eXtensible Markup Language) is a markup format designed to store and transport data in a structured, self-describing way using custom tags.",
+        "While more verbose than JSON, XML remains common in enterprise systems, SOAP APIs, and document formats like RSS feeds."
+      ]
+    },
+    {
+      "tag": "automata_theory",
+      "patterns": [
+        "What is automata theory?",
+        "Tell me about automata theory",
+        "Explain automata theory",
+        "Define automata theory",
+        "How does automata theory work?",
+        "Why is automata theory important?",
+        "Give me an overview of automata theory",
+        "automata theory explained"
+      ],
+      "responses": [
+        "Automata theory studies abstract computational models like finite automata, pushdown automata, and Turing machines to understand what problems are computable.",
+        "It forms the theoretical foundation for compiler design, regular expressions, and formal language classification."
+      ]
+    },
+    {
+      "tag": "compiler_design",
+      "patterns": [
+        "What is compiler design?",
+        "Tell me about compiler design",
+        "Explain compiler design",
+        "Define compiler design",
+        "How does compiler design work?",
+        "Why is compiler design important?",
+        "Give me an overview of compiler design",
+        "compiler design explained"
+      ],
+      "responses": [
+        "Compiler design covers translating source code into machine code through phases like lexical analysis, parsing, semantic analysis, optimization, and code generation.",
+        "Understanding compiler design helps engineers write more efficient code and build tools like linters, interpreters, and transpilers."
+      ]
+    },
+    {
+      "tag": "software_engineering",
+      "patterns": [
+        "What is software engineering?",
+        "Tell me about software engineering",
+        "Explain software engineering",
+        "Define software engineering",
+        "How does software engineering work?",
+        "Why is software engineering important?",
+        "Give me an overview of software engineering",
+        "software engineering explained"
+      ],
+      "responses": [
+        "Software engineering applies systematic, disciplined methods to the design, development, testing, and maintenance of software systems.",
+        "Core practices include requirements analysis, version control, testing, and following methodologies like Agile or Waterfall."
+      ]
+    },
+    {
+      "tag": "design_patterns",
+      "patterns": [
+        "What is design patterns?",
+        "Tell me about design patterns",
+        "Explain design patterns",
+        "Define design patterns",
+        "How does design patterns work?",
+        "Why is design patterns important?",
+        "Give me an overview of design patterns",
+        "design patterns explained"
+      ],
+      "responses": [
+        "Design patterns are proven, reusable solutions to common software design problems, such as Singleton, Factory, Observer, and Strategy patterns.",
+        "Learning design patterns helps developers communicate architecture decisions using a shared vocabulary across teams."
+      ]
+    },
+    {
+      "tag": "solid_principles",
+      "patterns": [
+        "What is SOLID principles?",
+        "Tell me about SOLID principles",
+        "Explain SOLID principles",
+        "Define SOLID principles",
+        "How does SOLID principles work?",
+        "Why is SOLID principles important?",
+        "Give me an overview of SOLID principles",
+        "SOLID principles explained"
+      ],
+      "responses": [
+        "SOLID is a set of five object-oriented design principles — Single responsibility, Open-closed, Liskov substitution, Interface segregation, and Dependency inversion — aimed at maintainable code.",
+        "Following SOLID principles generally leads to code that's easier to test, extend, and refactor without breaking existing functionality."
+      ]
+    },
+    {
+      "tag": "agile_methodology",
+      "patterns": [
+        "What is Agile methodology?",
+        "Tell me about Agile methodology",
+        "Explain Agile methodology",
+        "Define Agile methodology",
+        "How does Agile methodology work?",
+        "Why is Agile methodology important?",
+        "Give me an overview of Agile methodology",
+        "Agile methodology explained"
+      ],
+      "responses": [
+        "Agile is an iterative software development approach emphasizing short cycles, continuous feedback, and adapting to changing requirements over rigid upfront planning.",
+        "Agile frameworks like Scrum and Kanban break work into small increments, with frequent check-ins to reassess priorities."
+      ]
+    },
+    {
+      "tag": "scrum",
+      "patterns": [
+        "What is Scrum?",
+        "Tell me about Scrum",
+        "Explain Scrum",
+        "Define Scrum",
+        "How does Scrum work?",
+        "Why is Scrum important?",
+        "Give me an overview of Scrum",
+        "Scrum explained"
+      ],
+      "responses": [
+        "Scrum is a popular Agile framework organizing work into fixed-length sprints, with defined roles like Product Owner, Scrum Master, and Development Team.",
+        "Scrum ceremonies — sprint planning, daily stand-ups, sprint review, and retrospective — structure how a team plans and reflects on its work."
+      ]
+    },
+    {
+      "tag": "devops",
+      "patterns": [
+        "What is DevOps?",
+        "Tell me about DevOps",
+        "Explain DevOps",
+        "Define DevOps",
+        "How does DevOps work?",
+        "Why is DevOps important?",
+        "Give me an overview of DevOps",
+        "DevOps explained"
+      ],
+      "responses": [
+        "DevOps is a culture and set of practices that bring development and operations teams together to automate and streamline software delivery and infrastructure changes.",
+        "DevOps relies heavily on CI/CD pipelines, infrastructure as code, and monitoring to ship software faster and more reliably."
+      ]
+    },
+    {
+      "tag": "ci_cd",
+      "patterns": [
+        "What is CI/CD?",
+        "Tell me about CI/CD",
+        "Explain CI/CD",
+        "Define CI/CD",
+        "How does CI/CD work?",
+        "Why is CI/CD important?",
+        "Give me an overview of CI/CD",
+        "CI/CD explained"
+      ],
+      "responses": [
+        "CI/CD stands for Continuous Integration and Continuous Delivery/Deployment, automating the building, testing, and releasing of code changes.",
+        "A good CI/CD pipeline catches bugs early by running automated tests on every commit, reducing the risk of shipping broken code."
+      ]
+    },
+    {
+      "tag": "unit_testing",
+      "patterns": [
+        "What is unit testing?",
+        "Tell me about unit testing",
+        "Explain unit testing",
+        "Define unit testing",
+        "How does unit testing work?",
+        "Why is unit testing important?",
+        "Give me an overview of unit testing",
+        "unit testing explained"
+      ],
+      "responses": [
+        "Unit testing verifies that individual components of code, like functions or classes, behave correctly in isolation from the rest of the system.",
+        "Writing unit tests early helps catch regressions quickly and makes refactoring code far less risky."
+      ]
+    },
+    {
+      "tag": "multithreading",
+      "patterns": [
+        "What is multithreading?",
+        "Tell me about multithreading",
+        "Explain multithreading",
+        "Define multithreading",
+        "How does multithreading work?",
+        "Why is multithreading important?",
+        "Give me an overview of multithreading",
+        "multithreading explained"
+      ],
+      "responses": [
+        "Multithreading lets a program execute multiple sequences of instructions concurrently within a single process, improving responsiveness and CPU utilization.",
+        "Multithreaded programs must carefully manage shared resources with locks or other synchronization to avoid race conditions."
+      ]
+    },
+    {
+      "tag": "concurrency",
+      "patterns": [
+        "What is concurrency?",
+        "Tell me about concurrency",
+        "Explain concurrency",
+        "Define concurrency",
+        "How does concurrency work?",
+        "Why is concurrency important?",
+        "Give me an overview of concurrency",
+        "concurrency explained"
+      ],
+      "responses": [
+        "Concurrency is the ability of a system to handle multiple tasks that make progress within overlapping time periods, whether truly parallel or interleaved.",
+        "Concurrency introduces challenges like race conditions and deadlocks, which is why languages provide tools like mutexes and async/await."
+      ]
+    },
+    {
+      "tag": "distributed_systems",
+      "patterns": [
+        "What is distributed systems?",
+        "Tell me about distributed systems",
+        "Explain distributed systems",
+        "Define distributed systems",
+        "How does distributed systems work?",
+        "Why is distributed systems important?",
+        "Give me an overview of distributed systems",
+        "distributed systems explained"
+      ],
+      "responses": [
+        "Distributed systems consist of multiple independent computers that coordinate to appear as a single coherent system to users.",
+        "Key challenges in distributed systems include network partitions, consistency, and fault tolerance, often summarized by the CAP theorem."
+      ]
+    },
+    {
+      "tag": "microservices",
+      "patterns": [
+        "What is microservices?",
+        "Tell me about microservices",
+        "Explain microservices",
+        "Define microservices",
+        "How does microservices work?",
+        "Why is microservices important?",
+        "Give me an overview of microservices",
+        "microservices explained"
+      ],
+      "responses": [
+        "Microservices architecture structures an application as a collection of small, independently deployable services, each responsible for a specific business capability.",
+        "Microservices improve scalability and team autonomy but add complexity around service communication, monitoring, and data consistency."
+      ]
+    },
+    {
+      "tag": "data_warehousing",
+      "patterns": [
+        "What is data warehousing?",
+        "Tell me about data warehousing",
+        "Explain data warehousing",
+        "Define data warehousing",
+        "How does data warehousing work?",
+        "Why is data warehousing important?",
+        "Give me an overview of data warehousing",
+        "data warehousing explained"
+      ],
+      "responses": [
+        "A data warehouse is a centralized repository that consolidates data from multiple sources for reporting and business intelligence analysis.",
+        "Unlike operational databases optimized for transactions, data warehouses are optimized for complex analytical queries over historical data."
+      ]
+    },
+    {
+      "tag": "etl",
+      "patterns": [
+        "What is ETL?",
+        "Tell me about ETL",
+        "Explain ETL",
+        "Define ETL",
+        "How does ETL work?",
+        "Why is ETL important?",
+        "Give me an overview of ETL",
+        "ETL explained"
+      ],
+      "responses": [
+        "ETL (Extract, Transform, Load) describes the process of pulling data from source systems, cleaning and reshaping it, then loading it into a target system like a data warehouse.",
+        "Modern data pipelines increasingly use ELT (loading raw data first, then transforming it) leveraging the power of cloud data warehouses."
+      ]
+    },
+    {
+      "tag": "business_intelligence",
+      "patterns": [
+        "What is business intelligence?",
+        "Tell me about business intelligence",
+        "Explain business intelligence",
+        "Define business intelligence",
+        "How does business intelligence work?",
+        "Why is business intelligence important?",
+        "Give me an overview of business intelligence",
+        "business intelligence explained"
+      ],
+      "responses": [
+        "Business Intelligence (BI) refers to technologies and practices for collecting, analyzing, and presenting business data to support decision-making.",
+        "BI tools like Power BI and Tableau turn raw data into dashboards and visualizations that help non-technical stakeholders spot trends."
+      ]
+    },
+    {
+      "tag": "statistics",
+      "patterns": [
+        "What is statistics?",
+        "Tell me about statistics",
+        "Explain statistics",
+        "Define statistics",
+        "How does statistics work?",
+        "Why is statistics important?",
+        "Give me an overview of statistics",
+        "statistics explained"
+      ],
+      "responses": [
+        "Statistics is the branch of mathematics dealing with collecting, analyzing, interpreting, and presenting data, forming the backbone of data science and ML.",
+        "Concepts like mean, variance, hypothesis testing, and p-values are essential tools for validating patterns found in data."
+      ]
+    },
+    {
+      "tag": "probability",
+      "patterns": [
+        "What is probability?",
+        "Tell me about probability",
+        "Explain probability",
+        "Define probability",
+        "How does probability work?",
+        "Why is probability important?",
+        "Give me an overview of probability",
+        "probability explained"
+      ],
+      "responses": [
+        "Probability theory studies the likelihood of events occurring, providing the mathematical foundation for statistics, machine learning, and risk analysis.",
+        "Concepts like conditional probability and Bayes' theorem underpin algorithms ranging from spam filters to medical diagnosis models."
+      ]
+    },
+    {
+      "tag": "linear_algebra",
+      "patterns": [
+        "What is linear algebra?",
+        "Tell me about linear algebra",
+        "Explain linear algebra",
+        "Define linear algebra",
+        "How does linear algebra work?",
+        "Why is linear algebra important?",
+        "Give me an overview of linear algebra",
+        "linear algebra explained"
+      ],
+      "responses": [
+        "Linear algebra studies vectors, matrices, and linear transformations, forming the mathematical backbone of computer graphics and machine learning.",
+        "Operations like matrix multiplication are at the heart of how neural networks process data through their layers."
+      ]
+    },
+    {
+      "tag": "calculus",
+      "patterns": [
+        "What is calculus?",
+        "Tell me about calculus",
+        "Explain calculus",
+        "Define calculus",
+        "How does calculus work?",
+        "Why is calculus important?",
+        "Give me an overview of calculus",
+        "calculus explained"
+      ],
+      "responses": [
+        "Calculus studies rates of change and accumulation through derivatives and integrals, and it underlies how machine learning models are trained via gradient descent.",
+        "Backpropagation in neural networks relies directly on the chain rule from differential calculus to compute gradients."
+      ]
+    },
+    {
+      "tag": "discrete_mathematics",
+      "patterns": [
+        "What is discrete mathematics?",
+        "Tell me about discrete mathematics",
+        "Explain discrete mathematics",
+        "Define discrete mathematics",
+        "How does discrete mathematics work?",
+        "Why is discrete mathematics important?",
+        "Give me an overview of discrete mathematics",
+        "discrete mathematics explained"
+      ],
+      "responses": [
+        "Discrete mathematics covers mathematical structures that are fundamentally discrete rather than continuous, including logic, set theory, graphs, and combinatorics.",
+        "It forms the theoretical foundation for computer science topics like algorithms, cryptography, and database theory."
+      ]
+    },
+    {
+      "tag": "graph_theory",
+      "patterns": [
+        "What is graph theory?",
+        "Tell me about graph theory",
+        "Explain graph theory",
+        "Define graph theory",
+        "How does graph theory work?",
+        "Why is graph theory important?",
+        "Give me an overview of graph theory",
+        "graph theory explained"
+      ],
+      "responses": [
+        "Graph theory studies networks of nodes and edges, modeling relationships in problems ranging from social networks to road maps and computer networks.",
+        "Algorithms like Dijkstra's shortest path and breadth-first search are core graph theory tools used throughout software engineering."
+      ]
+    },
+    {
+      "tag": "set_theory",
+      "patterns": [
+        "What is set theory?",
+        "Tell me about set theory",
+        "Explain set theory",
+        "Define set theory",
+        "How does set theory work?",
+        "Why is set theory important?",
+        "Give me an overview of set theory",
+        "set theory explained"
+      ],
+      "responses": [
+        "Set theory studies collections of objects and their relationships, forming a foundational language for nearly all of modern mathematics and logic.",
+        "Concepts like unions, intersections, and subsets appear throughout database theory, particularly in relational algebra behind SQL."
+      ]
+    },
+    {
+      "tag": "boolean_algebra",
+      "patterns": [
+        "What is Boolean algebra?",
+        "Tell me about Boolean algebra",
+        "Explain Boolean algebra",
+        "Define Boolean algebra",
+        "How does Boolean algebra work?",
+        "Why is Boolean algebra important?",
+        "Give me an overview of Boolean algebra",
+        "Boolean algebra explained"
+      ],
+      "responses": [
+        "Boolean algebra is a branch of algebra dealing with true/false logical values, forming the mathematical basis for digital logic circuits.",
+        "Operations like AND, OR, and NOT in Boolean algebra directly correspond to logic gates used in computer hardware design."
+      ]
+    },
+    {
+      "tag": "number_systems",
+      "patterns": [
+        "What is number systems?",
+        "Tell me about number systems",
+        "Explain number systems",
+        "Define number systems",
+        "How does number systems work?",
+        "Why is number systems important?",
+        "Give me an overview of number systems",
+        "number systems explained"
+      ],
+      "responses": [
+        "Number systems describe how numbers are represented, including binary, octal, decimal, and hexadecimal, each used differently in computing contexts.",
+        "Computers fundamentally operate in binary, while hexadecimal is often used as a compact, human-friendly way to represent binary data like memory addresses."
+      ]
+    },
+    {
+      "tag": "computer_architecture",
+      "patterns": [
+        "What is computer architecture?",
+        "Tell me about computer architecture",
+        "Explain computer architecture",
+        "Define computer architecture",
+        "How does computer architecture work?",
+        "Why is computer architecture important?",
+        "Give me an overview of computer architecture",
+        "computer architecture explained"
+      ],
+      "responses": [
+        "Computer architecture studies how CPU components — like the ALU, control unit, and registers — are designed and organized to execute instructions efficiently.",
+        "Understanding architecture concepts like pipelining and caching helps explain why certain code runs faster than seemingly similar alternatives."
+      ]
+    },
+    {
+      "tag": "cache_memory",
+      "patterns": [
+        "What is cache memory?",
+        "Tell me about cache memory",
+        "Explain cache memory",
+        "Define cache memory",
+        "How does cache memory work?",
+        "Why is cache memory important?",
+        "Give me an overview of cache memory",
+        "cache memory explained"
+      ],
+      "responses": [
+        "Cache memory is small, fast memory located close to the CPU that stores frequently accessed data to reduce the time needed to fetch it from main memory.",
+        "Modern CPUs use multiple cache levels (L1, L2, L3), trading off size and speed to balance performance and cost."
+      ]
+    },
+    {
+      "tag": "virtual_memory",
+      "patterns": [
+        "What is virtual memory?",
+        "Tell me about virtual memory",
+        "Explain virtual memory",
+        "Define virtual memory",
+        "How does virtual memory work?",
+        "Why is virtual memory important?",
+        "Give me an overview of virtual memory",
+        "virtual memory explained"
+      ],
+      "responses": [
+        "Virtual memory is a technique that gives programs the illusion of a large, contiguous block of memory, backed by both RAM and disk storage.",
+        "Virtual memory enables multitasking and memory protection by mapping each process's virtual addresses to physical memory via page tables."
+      ]
+    },
+    {
+      "tag": "risc_vs_cisc",
+      "patterns": [
+        "What is RISC vs CISC?",
+        "Tell me about RISC vs CISC",
+        "Explain RISC vs CISC",
+        "Define RISC vs CISC",
+        "How does RISC vs CISC work?",
+        "Why is RISC vs CISC important?",
+        "Give me an overview of RISC vs CISC",
+        "RISC vs CISC explained"
+      ],
+      "responses": [
+        "RISC (Reduced Instruction Set Computer) architectures use simple, fixed-length instructions executed quickly, while CISC (Complex Instruction Set Computer) architectures use more complex, variable-length instructions.",
+        "ARM processors, common in smartphones, follow the RISC philosophy, while traditional x86 processors follow the CISC approach."
+      ]
+    },
+    {
+      "tag": "pipelining",
+      "patterns": [
+        "What is pipelining?",
+        "Tell me about pipelining",
+        "Explain pipelining",
+        "Define pipelining",
+        "How does pipelining work?",
+        "Why is pipelining important?",
+        "Give me an overview of pipelining",
+        "pipelining explained"
+      ],
+      "responses": [
+        "Pipelining is a CPU design technique that overlaps the execution of multiple instructions by breaking them into stages, similar to an assembly line.",
+        "Pipelining increases instruction throughput but can suffer from hazards like branch mispredictions, which modern CPUs mitigate with prediction techniques."
+      ]
+    },
+    {
+      "tag": "cryptography",
+      "patterns": [
+        "What is cryptography?",
+        "Tell me about cryptography",
+        "Explain cryptography",
+        "Define cryptography",
+        "How does cryptography work?",
+        "Why is cryptography important?",
+        "Give me an overview of cryptography",
+        "cryptography explained"
+      ],
+      "responses": [
+        "Cryptography is the study of techniques for secure communication, using mathematical methods to encrypt, decrypt, and verify the authenticity of data.",
+        "Modern cryptography underlies HTTPS, digital signatures, and cryptocurrencies, relying on hard mathematical problems like factoring large primes."
+      ]
+    },
+    {
+      "tag": "computer_graphics",
+      "patterns": [
+        "What is computer graphics?",
+        "Tell me about computer graphics",
+        "Explain computer graphics",
+        "Define computer graphics",
+        "How does computer graphics work?",
+        "Why is computer graphics important?",
+        "Give me an overview of computer graphics",
+        "computer graphics explained"
+      ],
+      "responses": [
+        "Computer graphics studies how images and visual content are generated, manipulated, and rendered by computers, spanning 2D drawing to 3D rendering pipelines.",
+        "Techniques like rasterization and ray tracing are core methods used to render realistic 3D scenes in games and films."
+      ]
+    },
+    {
+      "tag": "software_testing",
+      "patterns": [
+        "What is software testing?",
+        "Tell me about software testing",
+        "Explain software testing",
+        "Define software testing",
+        "How does software testing work?",
+        "Why is software testing important?",
+        "Give me an overview of software testing",
+        "software testing explained"
+      ],
+      "responses": [
+        "Software testing evaluates whether a system meets its requirements and functions correctly, spanning unit, integration, system, and acceptance testing levels.",
+        "Automated testing frameworks let teams catch regressions quickly and confidently ship changes without manually re-checking every feature."
+      ]
+    },
+    {
+      "tag": "debugging",
+      "patterns": [
+        "What is debugging?",
+        "Tell me about debugging",
+        "Explain debugging",
+        "Define debugging",
+        "How does debugging work?",
+        "Why is debugging important?",
+        "Give me an overview of debugging",
+        "debugging explained"
+      ],
+      "responses": [
+        "Debugging is the systematic process of finding and fixing defects in software, often using tools like breakpoints, logging, and step-through debuggers.",
+        "A disciplined debugging approach — reproducing the bug reliably, isolating the cause, and verifying the fix — is far more effective than guesswork."
+      ]
+    },
+    {
+      "tag": "performance_optimization",
+      "patterns": [
+        "What is performance optimization?",
+        "Tell me about performance optimization",
+        "Explain performance optimization",
+        "Define performance optimization",
+        "How does performance optimization work?",
+        "Why is performance optimization important?",
+        "Give me an overview of performance optimization",
+        "performance optimization explained"
+      ],
+      "responses": [
+        "Performance optimization involves identifying and eliminating bottlenecks in software, whether in algorithms, memory usage, or I/O operations.",
+        "Profiling tools help pinpoint exactly where time or memory is being spent before you optimize, since intuition about bottlenecks is often wrong."
+      ]
+    },
+    {
+      "tag": "thermodynamics",
+      "patterns": [
+        "What is thermodynamics?",
+        "Tell me about thermodynamics",
+        "Explain thermodynamics",
+        "Define thermodynamics",
+        "How does thermodynamics work?",
+        "Why is thermodynamics important?",
+        "Give me an overview of thermodynamics",
+        "thermodynamics explained"
+      ],
+      "responses": [
+        "Thermodynamics is the branch of physics studying heat, energy, and work, governed by fundamental laws about energy conservation and entropy.",
+        "Even outside mechanical engineering, thermodynamic concepts like entropy show up in information theory and statistical mechanics."
+      ]
+    },
+    {
+      "tag": "engineering_mathematics",
+      "patterns": [
+        "What is engineering mathematics?",
+        "Tell me about engineering mathematics",
+        "Explain engineering mathematics",
+        "Define engineering mathematics",
+        "How does engineering mathematics work?",
+        "Why is engineering mathematics important?",
+        "Give me an overview of engineering mathematics",
+        "engineering mathematics explained"
+      ],
+      "responses": [
+        "Engineering mathematics applies calculus, linear algebra, differential equations, and numerical methods to solve real-world engineering problems.",
+        "It provides the quantitative toolkit engineers use to model systems ranging from electrical circuits to structural loads."
+      ]
+    },
+    {
+      "tag": "digital_logic",
+      "patterns": [
+        "What is digital logic?",
+        "Tell me about digital logic",
+        "Explain digital logic",
+        "Define digital logic",
+        "How does digital logic work?",
+        "Why is digital logic important?",
+        "Give me an overview of digital logic",
+        "digital logic explained"
+      ],
+      "responses": [
+        "Digital logic design studies how logic gates, combinational circuits, and sequential circuits are combined to build digital systems like processors and memory.",
+        "Flip-flops and latches, built from logic gates, form the basic memory elements used to build registers and counters in digital hardware."
+      ]
+    },
+    {
+      "tag": "computer_networks",
+      "patterns": [
+        "What is computer networks?",
+        "Tell me about computer networks",
+        "Explain computer networks",
+        "Define computer networks",
+        "How does computer networks work?",
+        "Why is computer networks important?",
+        "Give me an overview of computer networks",
+        "computer networks explained"
+      ],
+      "responses": [
+        "Computer networks studies how devices communicate through layered protocols, from physical cabling up through application-level protocols like HTTP.",
+        "The OSI and TCP/IP models describe these layers conceptually, helping engineers reason about where a networking problem is occurring."
+      ]
+    },
+    {
+      "tag": "mercury_planet",
+      "patterns": [
+        "What is Mercury (planet)?",
+        "Tell me about Mercury (planet)",
+        "Explain Mercury (planet)",
+        "Define Mercury (planet)",
+        "How does Mercury (planet) work?",
+        "Why is Mercury (planet) important?",
+        "Give me an overview of Mercury (planet)",
+        "Mercury (planet) explained"
+      ],
+      "responses": [
+        "Mercury is the smallest and closest planet to the Sun, with surface temperatures swinging dramatically between day and night due to its lack of atmosphere.",
+        "A single day on Mercury lasts about 176 Earth days because of its extremely slow rotation relative to its orbit."
+      ]
+    },
+    {
+      "tag": "venus_planet",
+      "patterns": [
+        "What is Venus (planet)?",
+        "Tell me about Venus (planet)",
+        "Explain Venus (planet)",
+        "Define Venus (planet)",
+        "How does Venus (planet) work?",
+        "Why is Venus (planet) important?",
+        "Give me an overview of Venus (planet)",
+        "Venus (planet) explained"
+      ],
+      "responses": [
+        "Venus is the hottest planet in the solar system due to a runaway greenhouse effect, with surface temperatures hot enough to melt lead.",
+        "Venus rotates in the opposite direction to most planets and has a day longer than its year."
+      ]
+    },
+    {
+      "tag": "mars_planet",
+      "patterns": [
+        "What is Mars (planet)?",
+        "Tell me about Mars (planet)",
+        "Explain Mars (planet)",
+        "Define Mars (planet)",
+        "How does Mars (planet) work?",
+        "Why is Mars (planet) important?",
+        "Give me an overview of Mars (planet)",
+        "Mars (planet) explained"
+      ],
+      "responses": [
+        "Mars, often called the Red Planet due to iron oxide on its surface, is a major target for future human exploration and colonization research.",
+        "Mars has the largest volcano in the solar system, Olympus Mons, which is nearly three times the height of Mount Everest."
+      ]
+    },
+    {
+      "tag": "jupiter_planet",
+      "patterns": [
+        "What is Jupiter (planet)?",
+        "Tell me about Jupiter (planet)",
+        "Explain Jupiter (planet)",
+        "Define Jupiter (planet)",
+        "How does Jupiter (planet) work?",
+        "Why is Jupiter (planet) important?",
+        "Give me an overview of Jupiter (planet)",
+        "Jupiter (planet) explained"
+      ],
+      "responses": [
+        "Jupiter is the largest planet in the solar system, a gas giant with a Great Red Spot that is actually a giant storm larger than Earth.",
+        "Jupiter's strong gravity helps shield the inner solar system by capturing or deflecting many comets and asteroids."
+      ]
+    },
+    {
+      "tag": "saturn_planet",
+      "patterns": [
+        "What is Saturn (planet)?",
+        "Tell me about Saturn (planet)",
+        "Explain Saturn (planet)",
+        "Define Saturn (planet)",
+        "How does Saturn (planet) work?",
+        "Why is Saturn (planet) important?",
+        "Give me an overview of Saturn (planet)",
+        "Saturn (planet) explained"
+      ],
+      "responses": [
+        "Saturn is famous for its spectacular ring system, made mostly of ice particles with a smaller amount of rocky debris and dust.",
+        "Saturn is the least dense planet in the solar system — it would technically float in water if you could find an ocean big enough."
+      ]
+    },
+    {
+      "tag": "black_holes",
+      "patterns": [
+        "What is black holes?",
+        "Tell me about black holes",
+        "Explain black holes",
+        "Define black holes",
+        "How does black holes work?",
+        "Why is black holes important?",
+        "Give me an overview of black holes",
+        "black holes explained"
+      ],
+      "responses": [
+        "A black hole is a region of spacetime where gravity is so strong that nothing, not even light, can escape once it crosses the event horizon.",
+        "Black holes can form from the collapse of massive stars, and supermassive black holes are believed to sit at the center of most galaxies."
+      ]
+    },
+    {
+      "tag": "albert_einstein",
+      "patterns": [
+        "What is Albert Einstein?",
+        "Tell me about Albert Einstein",
+        "Explain Albert Einstein",
+        "Define Albert Einstein",
+        "How does Albert Einstein work?",
+        "Why is Albert Einstein important?",
+        "Give me an overview of Albert Einstein",
+        "Albert Einstein explained"
+      ],
+      "responses": [
+        "Albert Einstein developed the theory of relativity, fundamentally reshaping our understanding of space, time, and gravity.",
+        "Einstein won the Nobel Prize in Physics in 1921, notably for his explanation of the photoelectric effect rather than relativity."
+      ]
+    },
+    {
+      "tag": "isaac_newton",
+      "patterns": [
+        "What is Isaac Newton?",
+        "Tell me about Isaac Newton",
+        "Explain Isaac Newton",
+        "Define Isaac Newton",
+        "How does Isaac Newton work?",
+        "Why is Isaac Newton important?",
+        "Give me an overview of Isaac Newton",
+        "Isaac Newton explained"
+      ],
+      "responses": [
+        "Isaac Newton formulated the laws of motion and universal gravitation, laying the foundation for classical mechanics.",
+        "Newton also co-developed calculus independently alongside Gottfried Leibniz."
+      ]
+    },
+    {
+      "tag": "alan_turing",
+      "patterns": [
+        "What is Alan Turing?",
+        "Tell me about Alan Turing",
+        "Explain Alan Turing",
+        "Define Alan Turing",
+        "How does Alan Turing work?",
+        "Why is Alan Turing important?",
+        "Give me an overview of Alan Turing",
+        "Alan Turing explained"
+      ],
+      "responses": [
+        "Alan Turing is considered a father of theoretical computer science, formalizing the concept of computation with the Turing machine.",
+        "Turing also played a crucial role in breaking the German Enigma code during World War II, significantly aiding the Allied war effort."
+      ]
+    },
+    {
+      "tag": "nikola_tesla",
+      "patterns": [
+        "What is Nikola Tesla?",
+        "Tell me about Nikola Tesla",
+        "Explain Nikola Tesla",
+        "Define Nikola Tesla",
+        "How does Nikola Tesla work?",
+        "Why is Nikola Tesla important?",
+        "Give me an overview of Nikola Tesla",
+        "Nikola Tesla explained"
+      ],
+      "responses": [
+        "Nikola Tesla was an inventor and engineer known for his contributions to alternating current (AC) electrical systems still used worldwide today.",
+        "Tesla held hundreds of patents across areas including electrical engineering, wireless communication, and radio technology."
+      ]
+    },
+    {
+      "tag": "marie_curie",
+      "patterns": [
+        "What is Marie Curie?",
+        "Tell me about Marie Curie",
+        "Explain Marie Curie",
+        "Define Marie Curie",
+        "How does Marie Curie work?",
+        "Why is Marie Curie important?",
+        "Give me an overview of Marie Curie",
+        "Marie Curie explained"
+      ],
+      "responses": [
+        "Marie Curie was a pioneering physicist and chemist who conducted groundbreaking research on radioactivity, a term she coined.",
+        "Curie remains the only person to win Nobel Prizes in two different sciences: Physics and Chemistry."
+      ]
+    },
+    {
+      "tag": "charles_darwin",
+      "patterns": [
+        "What is Charles Darwin?",
+        "Tell me about Charles Darwin",
+        "Explain Charles Darwin",
+        "Define Charles Darwin",
+        "How does Charles Darwin work?",
+        "Why is Charles Darwin important?",
+        "Give me an overview of Charles Darwin",
+        "Charles Darwin explained"
+      ],
+      "responses": [
+        "Charles Darwin developed the theory of evolution by natural selection, fundamentally transforming biology as a science.",
+        "Darwin's observations during his voyage on HMS Beagle, especially in the Galápagos Islands, were key evidence for his theory."
+      ]
+    },
+    {
+      "tag": "ada_lovelace",
+      "patterns": [
+        "What is Ada Lovelace?",
+        "Tell me about Ada Lovelace",
+        "Explain Ada Lovelace",
+        "Define Ada Lovelace",
+        "How does Ada Lovelace work?",
+        "Why is Ada Lovelace important?",
+        "Give me an overview of Ada Lovelace",
+        "Ada Lovelace explained"
+      ],
+      "responses": [
+        "Ada Lovelace is often regarded as the first computer programmer, having written an algorithm intended for Charles Babbage's Analytical Engine.",
+        "Lovelace foresaw that computers could go beyond pure calculation to manipulate symbols and even create music, decades before real computers existed."
+      ]
+    },
+    {
+      "tag": "charles_babbage",
+      "patterns": [
+        "What is Charles Babbage?",
+        "Tell me about Charles Babbage",
+        "Explain Charles Babbage",
+        "Define Charles Babbage",
+        "How does Charles Babbage work?",
+        "Why is Charles Babbage important?",
+        "Give me an overview of Charles Babbage",
+        "Charles Babbage explained"
+      ],
+      "responses": [
+        "Charles Babbage designed the Analytical Engine, a mechanical general-purpose computer concept considered a forerunner of modern computers.",
+        "Though never fully built in his lifetime, Babbage's designs included concepts like a memory store and programmability."
+      ]
+    },
+    {
+      "tag": "the_invention_of_the_internet",
+      "patterns": [
+        "What is the invention of the internet?",
+        "Tell me about the invention of the internet",
+        "Explain the invention of the internet",
+        "Define the invention of the internet",
+        "How does the invention of the internet work?",
+        "Why is the invention of the internet important?",
+        "Give me an overview of the invention of the internet",
+        "the invention of the internet explained"
+      ],
+      "responses": [
+        "The internet evolved from ARPANET, a US Department of Defense research network from the late 1960s designed for resilient long-distance computer communication.",
+        "The World Wide Web, invented by Tim Berners-Lee in 1989, is a system built on top of the internet for linking and browsing documents."
+      ]
+    },
+    {
+      "tag": "the_invention_of_the_telephone",
+      "patterns": [
+        "What is the invention of the telephone?",
+        "Tell me about the invention of the telephone",
+        "Explain the invention of the telephone",
+        "Define the invention of the telephone",
+        "How does the invention of the telephone work?",
+        "Why is the invention of the telephone important?",
+        "Give me an overview of the invention of the telephone",
+        "the invention of the telephone explained"
+      ],
+      "responses": [
+        "Alexander Graham Bell is credited with patenting the first practical telephone in 1876, transforming long-distance communication forever.",
+        "Early telephone networks required manual switchboard operators to physically connect calls between users."
+      ]
+    },
+    {
+      "tag": "the_invention_of_the_light_bulb",
+      "patterns": [
+        "What is the invention of the light bulb?",
+        "Tell me about the invention of the light bulb",
+        "Explain the invention of the light bulb",
+        "Define the invention of the light bulb",
+        "How does the invention of the light bulb work?",
+        "Why is the invention of the light bulb important?",
+        "Give me an overview of the invention of the light bulb",
+        "the invention of the light bulb explained"
+      ],
+      "responses": [
+        "Thomas Edison is widely credited with developing the first commercially practical incandescent light bulb in 1879.",
+        "Edison's design improved on earlier experimental bulbs by finding a filament material durable enough to glow for hundreds of hours."
+      ]
+    },
+    {
+      "tag": "the_invention_of_the_airplane",
+      "patterns": [
+        "What is the invention of the airplane?",
+        "Tell me about the invention of the airplane",
+        "Explain the invention of the airplane",
+        "Define the invention of the airplane",
+        "How does the invention of the airplane work?",
+        "Why is the invention of the airplane important?",
+        "Give me an overview of the invention of the airplane",
+        "the invention of the airplane explained"
+      ],
+      "responses": [
+        "The Wright brothers achieved the first sustained, controlled, powered flight of a heavier-than-air machine in 1903 at Kitty Hawk, North Carolina.",
+        "Their key innovation was a three-axis control system that allowed pilots to steer the aircraft effectively, a foundation still used today."
+      ]
+    },
+    {
+      "tag": "the_moon_landing",
+      "patterns": [
+        "What is the moon landing?",
+        "Tell me about the moon landing",
+        "Explain the moon landing",
+        "Define the moon landing",
+        "How does the moon landing work?",
+        "Why is the moon landing important?",
+        "Give me an overview of the moon landing",
+        "the moon landing explained"
+      ],
+      "responses": [
+        "Apollo 11 achieved the first crewed Moon landing in July 1969, with astronauts Neil Armstrong and Buzz Aldrin walking on the lunar surface.",
+        "Armstrong's famous words, 'That's one small step for man, one giant leap for mankind,' were transmitted live to a global television audience."
+      ]
+    },
+    {
+      "tag": "the_great_wall_of_china",
+      "patterns": [
+        "What is the Great Wall of China?",
+        "Tell me about the Great Wall of China",
+        "Explain the Great Wall of China",
+        "Define the Great Wall of China",
+        "How does the Great Wall of China work?",
+        "Why is the Great Wall of China important?",
+        "Give me an overview of the Great Wall of China",
+        "the Great Wall of China explained"
+      ],
+      "responses": [
+        "The Great Wall of China is a series of fortifications built over centuries to protect Chinese states from invasions, stretching thousands of kilometers.",
+        "Contrary to popular myth, the Great Wall is not actually visible to the naked eye from space."
+      ]
+    },
+    {
+      "tag": "the_taj_mahal",
+      "patterns": [
+        "What is the Taj Mahal?",
+        "Tell me about the Taj Mahal",
+        "Explain the Taj Mahal",
+        "Define the Taj Mahal",
+        "How does the Taj Mahal work?",
+        "Why is the Taj Mahal important?",
+        "Give me an overview of the Taj Mahal",
+        "the Taj Mahal explained"
+      ],
+      "responses": [
+        "The Taj Mahal is a marble mausoleum in Agra, India, commissioned by Mughal emperor Shah Jahan in memory of his wife Mumtaz Mahal.",
+        "The monument is celebrated as a masterpiece of Mughal architecture and is one of the most visited landmarks in the world."
+      ]
+    },
+    {
+      "tag": "the_amazon_rainforest",
+      "patterns": [
+        "What is the Amazon rainforest?",
+        "Tell me about the Amazon rainforest",
+        "Explain the Amazon rainforest",
+        "Define the Amazon rainforest",
+        "How does the Amazon rainforest work?",
+        "Why is the Amazon rainforest important?",
+        "Give me an overview of the Amazon rainforest",
+        "the Amazon rainforest explained"
+      ],
+      "responses": [
+        "The Amazon rainforest is the largest tropical rainforest on Earth, home to an estimated 10% of all known species on the planet.",
+        "The Amazon plays a critical role in regulating global climate by absorbing large amounts of carbon dioxide."
+      ]
+    },
+    {
+      "tag": "the_human_brain",
+      "patterns": [
+        "What is the human brain?",
+        "Tell me about the human brain",
+        "Explain the human brain",
+        "Define the human brain",
+        "How does the human brain work?",
+        "Why is the human brain important?",
+        "Give me an overview of the human brain",
+        "the human brain explained"
+      ],
+      "responses": [
+        "The human brain contains roughly 86 billion neurons, forming trillions of connections that enable thought, memory, and consciousness.",
+        "Despite making up only about 2% of body weight, the brain consumes around 20% of the body's energy."
+      ]
+    },
+    {
+      "tag": "dna",
+      "patterns": [
+        "What is DNA?",
+        "Tell me about DNA",
+        "Explain DNA",
+        "Define DNA",
+        "How does DNA work?",
+        "Why is DNA important?",
+        "Give me an overview of DNA",
+        "DNA explained"
+      ],
+      "responses": [
+        "DNA (deoxyribonucleic acid) carries the genetic instructions for the development and functioning of all known living organisms.",
+        "DNA's double-helix structure was famously described by James Watson and Francis Crick in 1953, building on Rosalind Franklin's X-ray diffraction data."
+      ]
+    },
+    {
+      "tag": "the_water_cycle",
+      "patterns": [
+        "What is the water cycle?",
+        "Tell me about the water cycle",
+        "Explain the water cycle",
+        "Define the water cycle",
+        "How does the water cycle work?",
+        "Why is the water cycle important?",
+        "Give me an overview of the water cycle",
+        "the water cycle explained"
+      ],
+      "responses": [
+        "The water cycle describes the continuous movement of water through evaporation, condensation, precipitation, and collection across Earth's systems.",
+        "Solar energy powers the entire water cycle by driving evaporation from oceans, lakes, and rivers."
+      ]
+    },
+    {
+      "tag": "photosynthesis",
+      "patterns": [
+        "What is photosynthesis?",
+        "Tell me about photosynthesis",
+        "Explain photosynthesis",
+        "Define photosynthesis",
+        "How does photosynthesis work?",
+        "Why is photosynthesis important?",
+        "Give me an overview of photosynthesis",
+        "photosynthesis explained"
+      ],
+      "responses": [
+        "Photosynthesis is the process by which plants convert sunlight, water, and carbon dioxide into glucose and oxygen, sustaining most life on Earth.",
+        "This process takes place primarily in chloroplasts, using the pigment chlorophyll to capture light energy."
+      ]
+    },
+    {
+      "tag": "climate_change",
+      "patterns": [
+        "What is climate change?",
+        "Tell me about climate change",
+        "Explain climate change",
+        "Define climate change",
+        "How does climate change work?",
+        "Why is climate change important?",
+        "Give me an overview of climate change",
+        "climate change explained"
+      ],
+      "responses": [
+        "Climate change refers to long-term shifts in temperatures and weather patterns, largely driven since the industrial era by human greenhouse gas emissions.",
+        "Rising global temperatures are linked to more frequent extreme weather events, melting ice sheets, and rising sea levels."
+      ]
+    },
+    {
+      "tag": "renewable_energy",
+      "patterns": [
+        "What is renewable energy?",
+        "Tell me about renewable energy",
+        "Explain renewable energy",
+        "Define renewable energy",
+        "How does renewable energy work?",
+        "Why is renewable energy important?",
+        "Give me an overview of renewable energy",
+        "renewable energy explained"
+      ],
+      "responses": [
+        "Renewable energy comes from naturally replenishing sources like sunlight, wind, and water, offering alternatives to finite fossil fuels.",
+        "Solar and wind power costs have fallen dramatically over the past decade, making them increasingly competitive with traditional energy sources."
+      ]
+    },
+    {
+      "tag": "vaccines",
+      "patterns": [
+        "What is vaccines?",
+        "Tell me about vaccines",
+        "Explain vaccines",
+        "Define vaccines",
+        "How does vaccines work?",
+        "Why is vaccines important?",
+        "Give me an overview of vaccines",
+        "vaccines explained"
+      ],
+      "responses": [
+        "Vaccines work by training the immune system to recognize and fight specific pathogens without causing the disease itself, often using weakened or inactivated agents.",
+        "Widespread vaccination has led to the eradication of smallpox and dramatic reductions in diseases like polio and measles."
+      ]
+    },
+    {
+      "tag": "the_periodic_table",
+      "patterns": [
+        "What is the periodic table?",
+        "Tell me about the periodic table",
+        "Explain the periodic table",
+        "Define the periodic table",
+        "How does the periodic table work?",
+        "Why is the periodic table important?",
+        "Give me an overview of the periodic table",
+        "the periodic table explained"
+      ],
+      "responses": [
+        "The periodic table organizes all known chemical elements by increasing atomic number, arranged so elements with similar properties fall into the same columns.",
+        "Dmitri Mendeleev's 19th-century version famously left gaps that correctly predicted the properties of elements not yet discovered."
+      ]
+    },
+    {
+      "tag": "gravity",
+      "patterns": [
+        "What is gravity?",
+        "Tell me about gravity",
+        "Explain gravity",
+        "Define gravity",
+        "How does gravity work?",
+        "Why is gravity important?",
+        "Give me an overview of gravity",
+        "gravity explained"
+      ],
+      "responses": [
+        "Gravity is the fundamental force of attraction between masses, responsible for keeping planets in orbit and giving objects weight on Earth's surface.",
+        "Einstein's general relativity reframed gravity not as a force in the Newtonian sense, but as the curvature of spacetime caused by mass and energy."
+      ]
+    },
+    {
+      "tag": "the_speed_of_light",
+      "patterns": [
+        "What is the speed of light?",
+        "Tell me about the speed of light",
+        "Explain the speed of light",
+        "Define the speed of light",
+        "How does the speed of light work?",
+        "Why is the speed of light important?",
+        "Give me an overview of the speed of light",
+        "the speed of light explained"
+      ],
+      "responses": [
+        "The speed of light in a vacuum, about 299,792 kilometers per second, is a fundamental constant that nothing with mass can reach or exceed.",
+        "Because light takes time to travel, looking at distant stars means seeing light that left them thousands or millions of years ago."
+      ]
+    },
+    {
+      "tag": "artificial_general_intelligence",
+      "patterns": [
+        "What is artificial general intelligence?",
+        "Tell me about artificial general intelligence",
+        "Explain artificial general intelligence",
+        "Define artificial general intelligence",
+        "How does artificial general intelligence work?",
+        "Why is artificial general intelligence important?",
+        "Give me an overview of artificial general intelligence",
+        "artificial general intelligence explained"
+      ],
+      "responses": [
+        "Artificial General Intelligence (AGI) refers to a hypothetical AI system with the ability to understand, learn, and apply knowledge across a broad range of tasks at human-level flexibility.",
+        "Current AI systems, including large language models, are considered narrow AI — highly capable at specific tasks but without the general, flexible reasoning associated with AGI."
+      ]
+    },
+    {
+      "tag": "are_you_sentient",
+      "patterns": [
+        "Are you sentient?",
+        "Are you conscious?",
+        "Do you have feelings?",
+        "Can you feel emotions?",
+        "Are you alive?",
+        "Do you have a soul?"
+      ],
+      "responses": [
+        "I'm not sentient or conscious — I'm a PyTorch neural network trained to classify text into intents and generate matching responses, without subjective experience.",
+        "I don't have feelings or awareness. I process input as numbers, match patterns, and return a response — no inner experience involved."
+      ]
+    },
+    {
+      "tag": "do_you_dream",
+      "patterns": [
+        "Do you dream?",
+        "Do you sleep?",
+        "What do you do when I'm not talking to me?",
+        "Do you get tired?"
+      ],
+      "responses": [
+        "I don't sleep or dream — I only 'exist' computationally while processing a request, with no ongoing activity in between.",
+        "I don't get tired! I'm ready to classify intents instantly, any time you send a message."
+      ]
+    },
+    {
+      "tag": "favorite_color",
+      "patterns": [
+        "What is your favorite color?",
+        "Do you have a favorite color?",
+        "Pick a color"
+      ],
+      "responses": [
+        "I don't have preferences since I don't have subjective experience, but if I had to pick, blue seems fitting for a tech assistant!",
+        "I don't truly have favorites, but I'll go with a classic terminal green for the aesthetic."
+      ]
+    },
+    {
+      "tag": "favorite_food",
+      "patterns": [
+        "What is your favorite food?",
+        "Do you eat?",
+        "What do you like to eat?"
+      ],
+      "responses": [
+        "I don't eat — I run on electricity and matrix multiplications, not meals!",
+        "No digestive system here, just tensors and weights. But I hear biryani is a popular favorite among humans."
+      ]
+    },
+    {
+      "tag": "favorite_number",
+      "patterns": [
+        "What is your favorite number?",
+        "Pick a number",
+        "Do you have a lucky number?"
+      ],
+      "responses": [
+        "If I had to pick, 42 feels like the classic choice for any AI with a sense of humor.",
+        "I'll go with 0 and 1 — after all, that's all I really speak in under the hood."
+      ]
+    },
+    {
+      "tag": "surprise_me",
+      "patterns": [
+        "Surprise me",
+        "Tell me something interesting",
+        "Say something random",
+        "Blow my mind"
+      ],
+      "responses": [
+        "Octopuses have three hearts and blue blood — two hearts pump blood to the gills, and the third pumps it to the rest of the body.",
+        "A single bolt of lightning contains enough energy to toast about 100,000 slices of bread."
+      ]
+    },
+    {
+      "tag": "fun_fact",
+      "patterns": [
+        "Tell me a fun fact",
+        "Give me a fun fact",
+        "Fun fact please"
+      ],
+      "responses": [
+        "Bananas are berries, but strawberries technically aren't, according to botanical classification.",
+        "Honey never spoils — archaeologists have found edible honey in ancient Egyptian tombs thousands of years old."
+      ]
+    },
+    {
+      "tag": "weekend_plans",
+      "patterns": [
+        "What are your weekend plans?",
+        "What are you doing this weekend?",
+        "Any plans for the weekend?"
+      ],
+      "responses": [
+        "No weekends for me — I'm always on standby, ready to classify whatever you throw at me!",
+        "I don't take days off, but I hope your weekend plans sound more exciting than mine."
+      ]
+    },
+    {
+      "tag": "small_talk_day",
+      "patterns": [
+        "How was your day?",
+        "Did you have a good day?",
+        "How has today been?"
+      ],
+      "responses": [
+        "Every day is the same for me — no memory of 'yesterday,' just consistent readiness to help right now!",
+        "I don't experience days passing, but I'm glad you're here chatting with me right now."
+      ]
+    },
+    {
+      "tag": "compliment_request",
+      "patterns": [
+        "Compliment me",
+        "Say something nice about me",
+        "Give me a compliment"
+      ],
+      "responses": [
+        "You're clearly curious and engaged with technology — asking thoughtful questions is a great habit to have!",
+        "Anyone building and experimenting with projects like this one is showing real initiative — keep it up!"
+      ]
+    },
+    {
+      "tag": "meaning_of_voxai",
+      "patterns": [
+        "What does VoxAI stand for?",
+        "Why is it called VoxAI?",
+        "What's the meaning behind your name?"
+      ],
+      "responses": [
+        "'Vox' comes from the Latin word for 'voice,' reflecting the voice-driven nature of this assistant, combined with 'AI' for artificial intelligence.",
+        "The name VoxAI blends 'voice' and 'AI' to capture the project's core idea: a spoken-language interface powered by deep learning."
+      ]
+    },
+    {
+      "tag": "small_talk_bored",
+      "patterns": [
+        "I'm bored",
+        "Entertain me",
+        "I have nothing to do"
+      ],
+      "responses": [
+        "Try asking me for a joke, a riddle, or a random fun fact — or dive into a coding challenge to turn boredom into a mini project!",
+        "How about a quick riddle to pass the time, or I could share a fun science fact?"
+      ]
+    },
+    {
+      "tag": "small_talk_busy",
+      "patterns": [
+        "I'm busy right now",
+        "I don't have time to talk",
+        "Can we talk later?"
+      ],
+      "responses": [
+        "No worries at all — I'll be right here whenever you have a moment!",
+        "Totally fine, take your time. I'm always available when you're ready."
+      ]
+    },
+    {
+      "tag": "apology_from_user",
+      "patterns": [
+        "Sorry for being rude",
+        "My bad",
+        "I apologize",
+        "Sorry about that"
+      ],
+      "responses": [
+        "No worries at all, no apology needed! Let's keep going with whatever you need help with.",
+        "All good — happy to keep helping whenever you're ready."
+      ]
+    },
+    {
+      "tag": "small_talk_weather_mood",
+      "patterns": [
+        "The weather is making me sad",
+        "I hate rainy days",
+        "I love sunny days"
+      ],
+      "responses": [
+        "Weather really can affect mood — if rainy days get you down, a warm drink and some music might help lift the mood.",
+        "Sunny days are great for a quick walk to clear your head between study or coding sessions!"
+      ]
+    },
+    {
+      "tag": "existential_question",
+      "patterns": [
+        "What is the point of all this?",
+        "Why do we exist?",
+        "What is my purpose?"
+      ],
+      "responses": [
+        "That's a deeply personal question philosophers have debated for centuries — many find purpose through relationships, growth, and the things they choose to build or create.",
+        "I can't answer that definitively, but plenty of people find meaning through curiosity, learning, and contributing to something larger than themselves — like the very project you're building right now."
+      ]
+    },
+    {
+      "tag": "sleep_tips",
+      "patterns": [
+        "How can I sleep better?",
+        "Tips for better sleep",
+        "I have trouble sleeping",
+        "How much sleep do I need?"
+      ],
+      "responses": [
+        "Keeping a consistent sleep and wake time, and avoiding screens right before bed, are two of the most effective ways to improve sleep quality.",
+        "Most adults need around 7–9 hours of sleep — consistently getting less can noticeably hurt focus and memory the next day."
+      ]
+    },
+    {
+      "tag": "stress_management",
+      "patterns": [
+        "How do I manage stress?",
+        "I'm feeling stressed",
+        "Tips to reduce stress"
+      ],
+      "responses": [
+        "Breaking overwhelming tasks into smaller, concrete steps and taking short breaks can meaningfully reduce feelings of being stressed.",
+        "Simple techniques like deep breathing, short walks, or briefly stepping away from a screen can help reset focus during stressful periods."
+      ]
+    },
+    {
+      "tag": "screen_time",
+      "patterns": [
+        "How do I reduce screen time?",
+        "Too much screen time",
+        "Digital detox tips"
+      ],
+      "responses": [
+        "Setting specific screen-free blocks, like during meals or the hour before bed, can meaningfully cut down on unintentional screen time.",
+        "Using built-in screen time trackers on your phone can help you notice patterns and set realistic daily limits."
+      ]
+    },
+    {
+      "tag": "posture_eye_strain",
+      "patterns": [
+        "My eyes hurt from the screen",
+        "Tips for eye strain",
+        "How do I improve my posture while coding?"
+      ],
+      "responses": [
+        "The 20-20-20 rule helps with eye strain: every 20 minutes, look at something 20 feet away for at least 20 seconds.",
+        "Keeping your screen at eye level and taking short standing breaks can meaningfully reduce neck and back strain during long coding sessions."
+      ]
+    },
+    {
+      "tag": "meditation_mindfulness",
+      "patterns": [
+        "How do I start meditating?",
+        "Tips for mindfulness",
+        "What is meditation good for?"
+      ],
+      "responses": [
+        "Starting with just 5 minutes of focused breathing daily is a manageable way to build a meditation habit without it feeling overwhelming.",
+        "Mindfulness practices have been linked to reduced stress and improved focus, both useful for long study or coding sessions."
+      ]
+    },
+    {
+      "tag": "time_management",
+      "patterns": [
+        "How do I manage my time better?",
+        "Time management tips",
+        "How do I plan my day effectively?"
+      ],
+      "responses": [
+        "Time-blocking — assigning specific chunks of your day to specific tasks — often works better than a loose to-do list for staying on track.",
+        "Prioritizing your top 1–3 tasks each day before checking messages or notifications can dramatically improve what actually gets done."
       ]
     }
   ]

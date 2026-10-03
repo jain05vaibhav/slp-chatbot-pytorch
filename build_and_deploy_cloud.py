@@ -207,6 +207,19 @@ def main():
             break
         elif status in ("FAILED", "FAULT", "TIMED_OUT", "STOPPED"):
             print(f"[!] CodeBuild failed with status: {status}")
+            logs_info = build_info.get("logs", {})
+            group = logs_info.get("groupName")
+            stream = logs_info.get("streamName")
+            if group and stream:
+                try:
+                    logs_client = session.client("logs")
+                    events = logs_client.get_log_events(logGroupName=group, logStreamName=stream, limit=50)
+                    print("\n--- Recent CodeBuild Logs ---")
+                    for ev in events.get("events", []):
+                        print(ev.get("message", "").rstrip())
+                    print("-----------------------------\n")
+                except Exception as log_err:
+                    print(f"Could not fetch logs: {log_err}")
             sys.exit(1)
 
     # 6. Deploy / Update Lambda Function
@@ -232,6 +245,8 @@ def main():
             MemorySize=1536,
             Environment=env_config
         )
+        print("[*] Waiting for function configuration update...")
+        waiter.wait(FunctionName=FUNCTION_NAME)
     except ClientError:
         print(f"[*] Creating new Lambda function '{FUNCTION_NAME}'...")
         lam.create_function(

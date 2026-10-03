@@ -5,6 +5,7 @@
 ## 1. Executive Summary & Application Overview
 
 - **Project Title:** Voice-Enabled AI Chatbot & Real-Time Intent Classifier (VoxAI)
+- **Live Deployment Link:** [https://sla6q4v5rh7mixy5oenwarhvly0noiip.lambda-url.ap-south-1.on.aws/](https://sla6q4v5rh7mixy5oenwarhvly0noiip.lambda-url.ap-south-1.on.aws/)
 - **Local Application URL:** [http://127.0.0.1:8000](http://127.0.0.1:8000)
 - **Primary Frameworks:** PyTorch 2.x, Groq LLM API, FastAPI, Web Speech API (STT & TTS), HTML5/CSS3 (Glassmorphic Design)
 
@@ -24,30 +25,32 @@ This project delivers a complete, production-ready, voice-enabled interactive ch
 ## 3. Dataset Description & NLP Methodology
 
 ### 3.1 Dataset Structure (`data/intents.json`)
-The chatbot is trained on an expanded multi-domain conversational dataset containing **25 intent classes** across 150+ pattern variations:
-- `greeting`, `goodbye`, `thanks`, `about_bot`, `creator`, `capabilities`, `speech_help`
-- `deep_learning`, `machine_learning`, `artificial_intelligence`, `neural_network`
-- `technology`, `python_info`, `weather`, `time_date`, `jokes`, `riddles`
-- `hobbies_interests`, `music_audio`, `math_calc`, `sentiment_positive`, `sentiment_negative`
-- `status_check`, `clear_reset`, `location`
+The chatbot is trained on a massive, comprehensive multi-domain conversational dataset containing **267 unique intent classes** across **1,884 pattern variations** and **562 responses**:
+- **Core Conversational**: `greeting`, `goodbye`, `thanks`, `about_bot`, `creator`, `capabilities`, `speech_help`, `small_talk_day`, `compliment_request`, `status_check`, `clear_reset`
+- **AI, ML & Data Science**: `deep_learning`, `machine_learning`, `artificial_intelligence`, `neural_network`, `computer_vision`, `nlp`, `reinforcement_learning`, `data_science`, `big_data`
+- **Software Engineering & Web**: `python_info`, `javascript_info`, `java_info`, `cpp_info`, `c`, `c_2`, `go`, `rust`, `kotlin`, `swift`, `web_development`, `app_development`, `api_info`, `github_info`
+- **Infrastructure & Systems**: `cloud_computing`, `cybersecurity`, `blockchain`, `operating_systems`, `linux_info`, `networking`, `docker_kubernetes`, `iot`, `robotics`, `quantum_computing`
+- **Computer Science Fundamentals**: `algorithms`, `data_structures`, `competitive_programming`, `database_info`, `sql_info`
+- **Career & Productivity**: `career_advice`, `interview_prep`, `resume_tips`, `college_life`, `exam_stress`, `motivation`, `productivity_tips`, `time_management`
+- **Lifestyle & General Knowledge**: `math_calc`, `time_date`, `weather`, `jokes`, `riddles`, `health_tips`, `fitness`, `nutrition`, `travel`, `book_recommendation`, `movie_recommendation`, `space_facts`, `history_facts`, `science_facts`
 
 ### 3.2 NLP Preprocessing & Vectorization Pipeline
 1. **Contraction Expansion:** Normalizes common English contractions (`what's` $\rightarrow$ `what is`, `i've` $\rightarrow$ `i have`, `can't` $\rightarrow$ `can not`).
 2. **Tokenization:** Regex-based word extraction converting raw text strings into lowercase token sequences.
 3. **Stemming:** Pure-Python Porter-style suffix stripping algorithm normalizing inflected forms while handling doubled consonants (`running` $\rightarrow$ `run`, `clearing` $\rightarrow$ `clear`).
 4. **N-gram Extraction:** Generates unigrams and adjacent bigrams (`['deep', 'learning']` $\rightarrow$ `['deep', 'learning', 'deep_learning']`).
-5. **Vocabulary Extraction:** Constructs a unique vocabulary vector of $N = 597$ stemmed n-gram features.
-6. **Bag-of-Words Encoding:** Transforms each query into a binary $1 \times 597$ numerical tensor.
+5. **Vocabulary Extraction:** Constructs a unique vocabulary vector of $N = 3,451$ stemmed n-gram features.
+6. **Bag-of-Words Encoding:** Transforms each query into a binary $1 \times 3,451$ numerical tensor.
 
 ---
 
 ## 4. Deep Learning Model Architecture & Training
 
 ### 4.1 Model Architecture (`model/neural_net.py`)
-- **Input Layer:** $597$-dimensional N-gram Feature Tensor
-- **Hidden Layer 1:** Linear(597, 128) $\rightarrow$ LayerNorm(128) $\rightarrow$ GELU $\rightarrow$ Dropout(0.3)
-- **Hidden Layer 2:** Linear(128, 64) $\rightarrow$ LayerNorm(64) $\rightarrow$ GELU $\rightarrow$ Dropout(0.2)
-- **Output Layer:** Linear(64, 25) $\rightarrow$ Softmax Activation
+- **Input Layer:** $3,451$-dimensional N-gram Feature Tensor
+- **Hidden Layer 1:** Linear(3451, 256) $\rightarrow$ LayerNorm(256) $\rightarrow$ GELU $\rightarrow$ Dropout(0.3)
+- **Hidden Layer 2:** Linear(256, 128) $\rightarrow$ LayerNorm(128) $\rightarrow$ GELU $\rightarrow$ Dropout(0.2)
+- **Output Layer:** Linear(128, 267) $\rightarrow$ Softmax Activation (Peak Accuracy: 99.15%)
 
 ### 4.2 Architectural Advantages
 - **LayerNorm:** Ensures stable normalization across batch sizes, including batch=1 during real-time single query inference.
