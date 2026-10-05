@@ -5,7 +5,7 @@
 ## 1. Executive Summary & Application Overview
 
 - **Project Title:** Voice-Enabled AI Chatbot & Real-Time Intent Classifier (VoxAI)
-- **Live Deployment Link:** [https://sla6q4v5rh7mixy5oenwarhvly0noiip.lambda-url.ap-south-1.on.aws/](https://sla6q4v5rh7mixy5oenwarhvly0noiip.lambda-url.ap-south-1.on.aws/)
+- **Live Deployment Link:** [https://chatbot.vaibhavjain.click](https://chatbot.vaibhavjain.click) (AWS Lambda: `https://sla6q4v5rh7mixy5oenwarhvly0noiip.lambda-url.ap-south-1.on.aws/`)
 - **Local Application URL:** [http://127.0.0.1:8000](http://127.0.0.1:8000)
 - **Primary Frameworks:** PyTorch 2.x, Groq LLM API, FastAPI, Web Speech API (STT & TTS), HTML5/CSS3 (Glassmorphic Design)
 

@@ -2,7 +2,7 @@
 
 An interactive, voice-enabled AI Chatbot featuring real-time Speech-to-Text (STT), a custom PyTorch Deep Learning Intent Classifier (with LayerNorm, GELU, and N-gram feature extraction), an offline safe AST-based math and dynamic time engine, optional Groq LLM vocalization, and Text-to-Speech (TTS) synthesis.
 
-🌐 **Live Deployment Link:** [https://sla6q4v5rh7mixy5oenwarhvly0noiip.lambda-url.ap-south-1.on.aws/](https://sla6q4v5rh7mixy5oenwarhvly0noiip.lambda-url.ap-south-1.on.aws/)
+🌐 **Live Deployment Link:** [https://chatbot.vaibhavjain.click](https://chatbot.vaibhavjain.click)
 
 ---
 
