@@ -40,7 +40,7 @@ def create_s3_bucket_if_needed(s3_client, bucket_name):
 
 def create_source_zip(zip_filename="source.zip"):
     print("[*] Creating source.zip package...")
-    exclude_dirs = {".git", "__pycache__", "scratch", ".pytest_cache", ".idea", ".vscode"}
+    exclude_dirs = {".git", "__pycache__", "scratch", ".pytest_cache", ".idea", ".vscode", "node_modules", "static_legacy_backup"}
     exclude_files = {".env", "source.zip", "test_verification.py"}
 
     with zipfile.ZipFile(zip_filename, "w", zipfile.ZIP_DEFLATED) as zf:
@@ -226,10 +226,12 @@ def main():
     ecr_image_uri = f"{account_id}.dkr.ecr.{REGION}.amazonaws.com/{REPO_NAME}:latest"
     print(f"[*] Deploying to AWS Lambda: {FUNCTION_NAME} ({ecr_image_uri})...")
 
-    env_config = {"Variables": {"GROQ_API_KEY": groq_key}} if groq_key else {"Variables": {}}
-
     try:
-        lam.get_function(FunctionName=FUNCTION_NAME)
+        fn_info = lam.get_function(FunctionName=FUNCTION_NAME)
+        current_env = fn_info["Configuration"].get("Environment", {}).get("Variables", {})
+        if groq_key:
+            current_env["GROQ_API_KEY"] = groq_key
+        env_config = {"Variables": current_env}
         print(f"[+] Lambda function '{FUNCTION_NAME}' exists. Updating image...")
         lam.update_function_code(
             FunctionName=FUNCTION_NAME,

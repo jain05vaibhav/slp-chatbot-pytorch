@@ -112,6 +112,21 @@ export default function AdminHeader({
           >
             <Ban size={14} /> Device Blacklist
           </button>
+
+          <button
+            onClick={() => setActiveTab('moderation')}
+            className="btn-ghost"
+            style={{
+              padding: '6px 12px',
+              fontSize: '12px',
+              fontWeight: '600',
+              background: activeTab === 'moderation' ? 'rgba(244, 63, 94, 0.2)' : 'transparent',
+              color: activeTab === 'moderation' ? '#FDA4AF' : 'var(--text-muted)',
+              borderColor: activeTab === 'moderation' ? 'rgba(244, 63, 94, 0.4)' : 'transparent'
+            }}
+          >
+            <ShieldAlert size={14} /> AI Moderation & Filter
+          </button>
         </div>
       </div>
 

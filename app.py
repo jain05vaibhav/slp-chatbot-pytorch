@@ -31,6 +31,7 @@ except ImportError:
 from model.inference import get_engine, GROQ_AVAILABLE
 from model.admin_security import get_admin_manager
 from routes.admin_routes import admin_router
+from routes.moderation_routes import moderation_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -350,10 +351,63 @@ async def chat_endpoint(
             }
         )
 
+    # 4. Automated Content Moderation & Profanity / Toxic Filter
+    if not is_admin:
+        from model.moderation import get_moderation_manager
+        mod_mgr = get_moderation_manager()
+        eval_result = mod_mgr.evaluate_query(
+            text=request.text.strip(),
+            client_id=request.client_id,
+            client_ip=client_ip,
+            device_fingerprint=request.device_fingerprint
+        )
+        if eval_result.get("is_violation"):
+            action = eval_result.get("action")
+            if action == "ban":
+                ban_entry = admin_mgr.ban_user(
+                    client_id=request.client_id,
+                    client_ip=client_ip,
+                    device_fingerprint=request.device_fingerprint,
+                    reason=eval_result.get("reason", "Automated Policy Violation: Repeated prohibited words")
+                )
+                return JSONResponse(
+                    status_code=403,
+                    content={
+                        "intent": "banned",
+                        "confidence": 100.0,
+                        "response": f"Access Restricted: Your device has been permanently suspended for policy violation. ({eval_result['reason']})",
+                        "pytorch_base_response": "Access permanently restricted.",
+                        "query": request.text.strip(),
+                        "engine": "Automated Content Shield",
+                        "latency_ms": 0.5,
+                        "is_banned": True,
+                        "ban_reason": eval_result["reason"],
+                        "client_ip": client_ip,
+                        "device_fingerprint": request.device_fingerprint,
+                        "ban_details": ban_entry
+                    }
+                )
+            elif action == "warn":
+                return JSONResponse(
+                    status_code=200,
+                    content={
+                        "intent": "moderation_warning",
+                        "confidence": 100.0,
+                        "response": eval_result["warning_message"],
+                        "pytorch_base_response": eval_result["warning_message"],
+                        "query": request.text.strip(),
+                        "engine": "Automated Content Shield",
+                        "latency_ms": 0.5,
+                        "is_warning": True,
+                        "strike_count": eval_result.get("strike_count", 1),
+                        "detected_words": eval_result.get("detected_words", [])
+                    }
+                )
+
     threshold = config.get("confidence_threshold", 0.50)
     custom_prompt = config.get("custom_system_prompt")
 
-    # 4. Check if Groq is globally enabled by admin
+    # 5. Check if Groq is globally enabled by admin
     is_groq_globally_enabled = bool(config.get("groq_enabled", True))
     use_groq = request.use_groq and is_groq_globally_enabled
 
@@ -392,9 +446,10 @@ async def chat_endpoint(
 
 
 # -----------------------------------------------------------------------------
-# Mount Encrypted Admin Command Center Router
+# Mount Encrypted Admin Command Center Routers
 # -----------------------------------------------------------------------------
 app.include_router(admin_router)
+app.include_router(moderation_router)
 
 # AWS Lambda Mangum handler
 try:

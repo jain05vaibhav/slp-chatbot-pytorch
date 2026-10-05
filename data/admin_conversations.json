@@ -596,5 +596,223 @@
         ]
       }
     ]
+  },
+  "guest_182_66_218_113": {
+    "client_id": "guest_182_66_218_113",
+    "display_name": "User #18_113",
+    "client_ip": "182.66.218.113",
+    "user_agent": "Web Browser",
+    "device_fingerprint": null,
+    "known_ips": [
+      "182.66.218.113"
+    ],
+    "known_fingerprints": [],
+    "first_seen": "2026-10-04 08:25:04",
+    "last_seen": "2026-10-04 08:25:04",
+    "total_visits": 1,
+    "total_messages": 1,
+    "current_session_id": "sess_20b826ab",
+    "sessions": [
+      {
+        "session_id": "sess_20b826ab",
+        "visit_number": 1,
+        "started_at": "2026-10-04 08:25:04",
+        "messages": [
+          {
+            "id": "6cda5776",
+            "timestamp": "08:25:04",
+            "query": "hello",
+            "intent": "greeting",
+            "confidence": 100.0,
+            "latency_ms": 312.52,
+            "engine": "PyTorch DNN (Offline)",
+            "response": "Hi there! How can I help you today?"
+          }
+        ]
+      }
+    ]
+  },
+  "client_a6c3rpvaln": {
+    "client_id": "client_a6c3rpvaln",
+    "display_name": "User #RPVALN",
+    "client_ip": "182.66.218.113",
+    "user_agent": "Web Browser",
+    "device_fingerprint": "FP-5D2C55868F197194FA8B3A4692E0B166",
+    "known_ips": [
+      "182.66.218.113"
+    ],
+    "known_fingerprints": [
+      "FP-5D2C55868F197194FA8B3A4692E0B166"
+    ],
+    "first_seen": "2026-10-04 08:25:20",
+    "last_seen": "2026-10-04 08:25:20",
+    "total_visits": 1,
+    "total_messages": 1,
+    "current_session_id": "sess_1791102286070",
+    "sessions": [
+      {
+        "session_id": "sess_1791102286070",
+        "visit_number": 1,
+        "started_at": "2026-10-04 08:25:20",
+        "messages": [
+          {
+            "id": "60f3e183",
+            "timestamp": "08:25:20",
+            "query": "Hi",
+            "intent": "greeting",
+            "confidence": 100.0,
+            "latency_ms": 394.41,
+            "engine": "PyTorch DNN + Groq Voice",
+            "response": "Hi there! How can I help you today?"
+          }
+        ]
+      }
+    ]
+  },
+  "client_uiurog3zch": {
+    "client_id": "client_uiurog3zch",
+    "display_name": "User #OG3ZCH",
+    "client_ip": "2401:4900:627b:2243:97bb:161a:f9d:6208",
+    "user_agent": "Web Browser",
+    "device_fingerprint": "FP-D12A01B8ED6B63CED13D48609F01CB39",
+    "known_ips": [
+      "2401:4900:627b:2243:97bb:161a:f9d:6208"
+    ],
+    "known_fingerprints": [
+      "FP-D12A01B8ED6B63CED13D48609F01CB39"
+    ],
+    "first_seen": "2026-10-04 08:26:38",
+    "last_seen": "2026-10-04 08:33:33",
+    "total_visits": 1,
+    "total_messages": 8,
+    "current_session_id": "sess_1791102364872",
+    "sessions": [
+      {
+        "session_id": "sess_1791102364872",
+        "visit_number": 1,
+        "started_at": "2026-10-04 08:26:38",
+        "messages": [
+          {
+            "id": "b606053d",
+            "timestamp": "08:26:38",
+            "query": "fghfhhk",
+            "intent": "fallback",
+            "confidence": 0.0,
+            "latency_ms": 0.4,
+            "engine": "PyTorch DNN (Offline)",
+            "response": "I didn't recognize any keywords in that query. As an offline Deep Learning model, I'm trained on topics like AI, deep learning, tech stack, weather, time, jokes, and voice capabilities. Try asking one of those!"
+          },
+          {
+            "id": "ff320d9a",
+            "timestamp": "08:27:17",
+            "query": "hello",
+            "intent": "greeting",
+            "confidence": 100.0,
+            "latency_ms": 188.4,
+            "engine": "PyTorch DNN + Groq Voice",
+            "response": "Hello! I am VoxAI, your voice-enabled AI assistant. How can I assist you today?"
+          },
+          {
+            "id": "f81fee29",
+            "timestamp": "08:27:39",
+            "query": "[ADMIN INTERCOM NOTICE]",
+            "intent": "admin_notice",
+            "confidence": 100.0,
+            "latency_ms": 0.0,
+            "engine": "Master Admin Console",
+            "response": "Fuck u bitch",
+            "is_admin_direct": true
+          },
+          {
+            "id": "8d0a8bca",
+            "timestamp": "08:28:18",
+            "query": "[ADMIN INTERCOM NOTICE]",
+            "intent": "admin_notice",
+            "confidence": 100.0,
+            "latency_ms": 0.0,
+            "engine": "Master Admin Console",
+            "response": "i am supeme hereby my order u are banned",
+            "is_admin_direct": true
+          },
+          {
+            "id": "febdcd93",
+            "timestamp": "08:30:53",
+            "query": "mat",
+            "intent": "fallback",
+            "confidence": 0.0,
+            "latency_ms": 1.93,
+            "engine": "PyTorch DNN (Offline)",
+            "response": "I didn't recognize any keywords in that query. As an offline Deep Learning model, I'm trained on topics like AI, deep learning, tech stack, weather, time, jokes, and voice capabilities. Try asking one of those!"
+          },
+          {
+            "id": "72eb77b6",
+            "timestamp": "08:33:08",
+            "query": "hi what 2*3",
+            "intent": "math_calc",
+            "confidence": 95.14,
+            "latency_ms": 2.32,
+            "engine": "PyTorch DNN (Offline)",
+            "response": "I can solve arithmetic expressions! For example, try asking 'What is 25 * 4?' or 'What is 100 divided by 5?'"
+          },
+          {
+            "id": "8e892563",
+            "timestamp": "08:33:25",
+            "query": "2*3=",
+            "intent": "math_calc",
+            "confidence": 99.68,
+            "latency_ms": 1.83,
+            "engine": "PyTorch DNN (Offline)",
+            "response": "The result of 2*3 is 6."
+          },
+          {
+            "id": "b4f31b50",
+            "timestamp": "08:33:33",
+            "query": "5*5",
+            "intent": "math_calc",
+            "confidence": 100.0,
+            "latency_ms": 1.77,
+            "engine": "PyTorch DNN (Offline)",
+            "response": "The result of 5*5 is 25."
+          }
+        ]
+      }
+    ]
+  },
+  "c_test_user": {
+    "client_id": "c_test_user",
+    "display_name": "User #T_USER",
+    "client_ip": "testclient",
+    "user_agent": "Web Browser",
+    "device_fingerprint": "FP_MOD_TEST_100",
+    "known_ips": [
+      "testclient"
+    ],
+    "known_fingerprints": [
+      "FP_MOD_TEST_100"
+    ],
+    "first_seen": "2026-10-04 08:58:25",
+    "last_seen": "2026-10-04 08:58:25",
+    "total_visits": 1,
+    "total_messages": 1,
+    "current_session_id": "sess_356a7b8d",
+    "sessions": [
+      {
+        "session_id": "sess_356a7b8d",
+        "visit_number": 1,
+        "started_at": "2026-10-04 08:58:25",
+        "messages": [
+          {
+            "id": "03e88bff",
+            "timestamp": "08:58:25",
+            "query": "Hello there",
+            "intent": "greeting",
+            "confidence": 100.0,
+            "latency_ms": 110.3,
+            "engine": "PyTorch DNN (Offline)",
+            "response": "Hello! Great to hear from you. What would you like to explore today?"
+          }
+        ]
+      }
+    ]
   }
 }

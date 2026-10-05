@@ -421,7 +421,11 @@ class AdminManager:
         """
         session_id = secrets.token_hex(16)
         now = time.time()
-        expires_at = now + ttl_seconds
+        try:
+            ttl_val = float(ttl_seconds)
+        except (ValueError, TypeError):
+            ttl_val = 86400.0
+        expires_at = now + ttl_val
 
         payload = {
             "sub": "voxai_master_admin",

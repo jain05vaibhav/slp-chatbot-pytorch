@@ -34,11 +34,8 @@ export default function App() {
   });
 
   const [sessionId, setSessionId] = useState(() => {
-    let id = sessionStorage.getItem('voxai_session_id');
-    if (!id) {
-      id = 'sess_' + Date.now();
-      sessionStorage.setItem('voxai_session_id', id);
-    }
+    let id = sessionStorage.getItem('voxai_session_id') || ('sess_' + Date.now());
+    sessionStorage.setItem('voxai_session_id', id);
     return id;
   });
 
@@ -47,9 +44,7 @@ export default function App() {
     try {
       const stored = localStorage.getItem('voxai_active_chat');
       return stored ? JSON.parse(stored) : [];
-    } catch (e) {
-      return [];
-    }
+    } catch (e) { return []; }
   });
 
   // Telemetry state
@@ -161,7 +156,7 @@ export default function App() {
 
     const handleKeyDown = (e) => {
       if ((e.ctrlKey && e.altKey && e.code === 'KeyA') ||
-          (e.ctrlKey && e.shiftKey && e.code === 'KeyA')) {
+        (e.ctrlKey && e.shiftKey && e.code === 'KeyA')) {
         e.preventDefault();
         if (adminToken) {
           setShowAdminDashboard(true);
@@ -178,7 +173,7 @@ export default function App() {
   useEffect(() => {
     try {
       localStorage.setItem('voxai_active_chat', JSON.stringify(messages));
-    } catch (e) {}
+    } catch (e) { }
   }, [messages]);
 
   // Speech Recognition Setup
@@ -189,30 +184,16 @@ export default function App() {
       recognition.continuous = false;
       recognition.interimResults = true;
       recognition.lang = 'en-US';
-
-      recognition.onstart = () => {
-        setIsRecording(true);
-        setInterimTranscript('');
-      };
-
+      recognition.onstart = () => { setIsRecording(true); setInterimTranscript(''); };
       recognition.onresult = (event) => {
-        let interim = '';
-        let final = '';
+        let interim = '', final = '';
         for (let i = event.resultIndex; i < event.results.length; ++i) {
-          if (event.results[i].isFinal) {
-            final += event.results[i][0].transcript;
-          } else {
-            interim += event.results[i][0].transcript;
-          }
+          if (event.results[i].isFinal) final += event.results[i][0].transcript;
+          else interim += event.results[i][0].transcript;
         }
         setInterimTranscript(final || interim);
       };
-
-      recognition.onerror = (event) => {
-        console.warn('Speech error:', event.error);
-        setIsRecording(false);
-      };
-
+      recognition.onerror = (e) => { console.warn('Speech error:', e.error); setIsRecording(false); };
       recognition.onend = () => {
         setIsRecording(false);
         if (interimTranscript.trim()) {
@@ -220,7 +201,6 @@ export default function App() {
           setInterimTranscript('');
         }
       };
-
       recognitionRef.current = recognition;
     }
   }, [interimTranscript]);
@@ -443,13 +423,7 @@ export default function App() {
         isTtsEnabled={isTtsEnabled}
         setIsTtsEnabled={setIsTtsEnabled}
         isAdminActive={Boolean(adminToken)}
-        onOpenAdmin={() => {
-          if (adminToken) {
-            setShowAdminDashboard(true);
-          } else {
-            setShowAdminLogin(true);
-          }
-        }}
+        onOpenAdmin={() => (adminToken ? setShowAdminDashboard(true) : setShowAdminLogin(true))}
       />
 
       {/* Main Body */}
@@ -498,6 +472,7 @@ export default function App() {
       <MaintenanceOverlay
         isMaintenance={isMaintenance && !adminToken}
         customMessage={maintenanceMessage}
+        onTriggerAdmin={() => setShowAdminLogin(true)}
       />
 
       {/* Temporary Public Session Lockout Overlay with Live Countdown Clock */}
@@ -505,6 +480,7 @@ export default function App() {
         isLockout={isPublicLockout && !adminToken}
         remainingSeconds={lockoutRemaining}
         lockoutReason={lockoutReason}
+        onTriggerAdmin={() => setShowAdminLogin(true)}
       />
 
       {/* Admin Master Password Clearance Modal */}
@@ -516,11 +492,7 @@ export default function App() {
 
       {/* Admin Full-Screen Command Deck */}
       {showAdminDashboard && (
-        <AdminDashboard
-          token={adminToken}
-          onLogout={handleAdminLogout}
-          onClose={() => setShowAdminDashboard(false)}
-        />
+        <AdminDashboard token={adminToken} onLogout={handleAdminLogout} onClose={() => setShowAdminDashboard(false)} />
       )}
     </div>
   );

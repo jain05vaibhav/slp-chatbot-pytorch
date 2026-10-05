@@ -473,16 +473,10 @@ async def admin_unban_self_endpoint(body: AdminEmergencyUnbanRequest, req: Reque
     forwarded = req.headers.get("x-forwarded-for")
     client_ip = forwarded.split(",")[0].strip() if forwarded else (req.client.host if req.client else "127.0.0.1")
     admin_mgr = get_admin_manager()
-    success, msg = admin_mgr.unban_self(
-        password=body.password,
-        client_id=body.client_id,
-        client_ip=client_ip,
-        device_fingerprint=body.device_fingerprint
-    )
+    success, msg = admin_mgr.unban_self(password=body.password, client_id=body.client_id, client_ip=client_ip, device_fingerprint=body.device_fingerprint)
     if not success:
         raise HTTPException(status_code=401, detail=msg)
-    token = admin_mgr.create_session_token()
-    return {"status": "unbanned", "message": msg, "token": token}
+    return {"status": "unbanned", "message": msg, "token": admin_mgr.create_session_token()}
 
 @admin_router.post("/conversations/{client_id}/intercom")
 async def admin_send_client_intercom(client_id: str, body: AdminIntercomRequest, token: str = Depends(verify_admin_token)):
@@ -491,3 +485,10 @@ async def admin_send_client_intercom(client_id: str, body: AdminIntercomRequest,
     if not entry:
         raise HTTPException(status_code=404, detail="User session not found to dispatch intercom message.")
     return {"status": "sent", "entry": entry}
+
+@admin_router.post("/sync")
+async def admin_force_s3_sync(token: str = Depends(verify_admin_token)):
+    get_admin_manager()._save_conversations_to_disk()
+    from model.moderation import get_moderation_manager
+    get_moderation_manager().force_s3_sync()
+    return {"status": "synced", "message": "All data and moderation configurations synced to S3."}

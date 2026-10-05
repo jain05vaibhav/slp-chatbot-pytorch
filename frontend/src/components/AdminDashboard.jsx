@@ -5,6 +5,7 @@ import AdminGovernanceTab from './admin/AdminGovernanceTab';
 import AdminConversationsTab from './admin/AdminConversationsTab';
 import AdminPlaygroundTab from './admin/AdminPlaygroundTab';
 import AdminBlacklistTab from './admin/AdminBlacklistTab';
+import AdminModerationTab from './admin/AdminModerationTab';
 
 export default function AdminDashboard({
   token,
@@ -263,6 +264,8 @@ export default function AdminDashboard({
             onRefresh={fetchBannedList}
           />
         )}
+
+        {activeTab === 'moderation' && <AdminModerationTab token={token} />}
       </div>
     </div>
   );

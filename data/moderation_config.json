@@ -1,0 +1,154 @@
+{
+  "enabled": true,
+  "warning_threshold": 1,
+  "prohibited_words": [
+    "asshole",
+    "bastard",
+    "behenchod",
+    "bhadwa",
+    "bhenchod",
+    "bhosadike",
+    "bhosdike",
+    "bitch",
+    "bitches",
+    "bullshit",
+    "chutiya",
+    "chutya",
+    "cock",
+    "cunt",
+    "dick",
+    "dickhead",
+    "dipshit",
+    "dumbass",
+    "fag",
+    "faggot",
+    "fuck",
+    "fucked",
+    "fucker",
+    "fucking",
+    "gaand",
+    "gandu",
+    "harami",
+    "jackass",
+    "kamina",
+    "kill yourself",
+    "kutta",
+    "kys",
+    "lauda",
+    "lodu",
+    "madarchod",
+    "motherfucker",
+    "nigga",
+    "nigger",
+    "pussy",
+    "randi",
+    "retard",
+    "retarded",
+    "saala",
+    "shit",
+    "slut",
+    "whore"
+  ],
+  "strikes": {},
+  "incidents": [
+    {
+      "incident_id": "inc_1791103678463",
+      "timestamp": "2026-10-04T08:47:58.463505+00:00",
+      "ident_key": "FP_STRIKE_TEST",
+      "client_id": "test_user_strike",
+      "client_ip": "9.8.7.6",
+      "device_fingerprint": "FP_STRIKE_TEST",
+      "detected_words": [
+        "fucking"
+      ],
+      "query_snippet": "you are a fucking idiot",
+      "strike_number": 1,
+      "action": "warn"
+    },
+    {
+      "incident_id": "inc_1791103686705",
+      "timestamp": "2026-10-04T08:48:06.705687+00:00",
+      "ident_key": "FP_STRIKE_TEST",
+      "client_id": "test_user_strike",
+      "client_ip": "9.8.7.6",
+      "device_fingerprint": "FP_STRIKE_TEST",
+      "detected_words": [
+        "fucking"
+      ],
+      "query_snippet": "you are a fucking idiot",
+      "strike_number": 2,
+      "action": "ban"
+    },
+    {
+      "incident_id": "inc_1791103694867",
+      "timestamp": "2026-10-04T08:48:14.867795+00:00",
+      "ident_key": "FP_STRIKE_TEST",
+      "client_id": "test_user_strike",
+      "client_ip": "9.8.7.6",
+      "device_fingerprint": "FP_STRIKE_TEST",
+      "detected_words": [
+        "fucking"
+      ],
+      "query_snippet": "you are a fucking idiot",
+      "strike_number": 1,
+      "action": "warn"
+    },
+    {
+      "incident_id": "inc_1791103704367",
+      "timestamp": "2026-10-04T08:48:24.367564+00:00",
+      "ident_key": "FP_STRIKE_TEST",
+      "client_id": "test_user_strike",
+      "client_ip": "9.8.7.6",
+      "device_fingerprint": "FP_STRIKE_TEST",
+      "detected_words": [
+        "fucking"
+      ],
+      "query_snippet": "you are a fucking idiot",
+      "strike_number": 1,
+      "action": "warn"
+    },
+    {
+      "incident_id": "inc_1791103704369",
+      "timestamp": "2026-10-04T08:48:24.369753+00:00",
+      "ident_key": "FP_STRIKE_TEST",
+      "client_id": "test_user_strike",
+      "client_ip": "9.8.7.6",
+      "device_fingerprint": "FP_STRIKE_TEST",
+      "detected_words": [
+        "bitch"
+      ],
+      "query_snippet": "shut up bitch",
+      "strike_number": 2,
+      "action": "ban"
+    },
+    {
+      "incident_id": "inc_1791104305740",
+      "timestamp": "2026-10-04T08:58:25.740434+00:00",
+      "ident_key": "FP_MOD_TEST_100",
+      "client_id": "c_test_user",
+      "client_ip": "testclient",
+      "device_fingerprint": "FP_MOD_TEST_100",
+      "detected_words": [
+        "fucking"
+      ],
+      "query_snippet": "You are a fucking bot",
+      "strike_number": 1,
+      "action": "warn"
+    },
+    {
+      "incident_id": "inc_1791104305750",
+      "timestamp": "2026-10-04T08:58:25.750887+00:00",
+      "ident_key": "FP_MOD_TEST_100",
+      "client_id": "c_test_user",
+      "client_ip": "testclient",
+      "device_fingerprint": "FP_MOD_TEST_100",
+      "detected_words": [
+        "bitch"
+      ],
+      "query_snippet": "Shut up bitch",
+      "strike_number": 2,
+      "action": "ban"
+    }
+  ],
+  "updated_at": "2026-10-04T09:06:05.492278+00:00"
+}

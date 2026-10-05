@@ -16,6 +16,7 @@ RUN pip install --no-cache-dir -r ${LAMBDA_TASK_ROOT}/requirements.txt
 # Copy application source code, model weights, and static assets
 COPY data/ ${LAMBDA_TASK_ROOT}/data/
 COPY model/ ${LAMBDA_TASK_ROOT}/model/
+COPY routes/ ${LAMBDA_TASK_ROOT}/routes/
 COPY static/ ${LAMBDA_TASK_ROOT}/static/
 COPY app.py ${LAMBDA_TASK_ROOT}/
 

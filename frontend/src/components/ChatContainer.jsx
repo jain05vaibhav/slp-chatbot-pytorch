@@ -154,11 +154,17 @@ export default function ChatContainer({
 
                 {/* Message Body */}
                 <div style={{
-                  background: isUser ? 'rgba(99, 102, 241, 0.15)' : 'rgba(30, 41, 59, 0.5)',
-                  border: `1px solid ${isUser ? 'rgba(99, 102, 241, 0.35)' : 'var(--border-glass)'}`,
+                  background: isUser
+                    ? 'rgba(99, 102, 241, 0.15)'
+                    : (msg.intent === 'moderation_warning' ? 'rgba(245, 158, 11, 0.16)' : 'rgba(30, 41, 59, 0.5)'),
+                  border: `1px solid ${
+                    isUser
+                      ? 'rgba(99, 102, 241, 0.35)'
+                      : (msg.intent === 'moderation_warning' ? 'rgba(245, 158, 11, 0.45)' : 'var(--border-glass)')
+                  }`,
                   borderRadius: '16px',
                   padding: '12px 16px',
-                  boxShadow: '0 4px 12px rgba(0,0,0,0.2)'
+                  boxShadow: msg.intent === 'moderation_warning' ? '0 0 20px rgba(245, 158, 11, 0.2)' : '0 4px 12px rgba(0,0,0,0.2)'
                 }}>
                   <div style={{
                     display: 'flex',
