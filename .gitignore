@@ -117,3 +117,4 @@ static_legacy_backup/
 *.tmp
 *.bak
 *.swp
+record_chatbot_demo.py
