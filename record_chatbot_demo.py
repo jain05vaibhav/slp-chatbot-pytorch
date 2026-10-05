@@ -101,12 +101,14 @@ def record_demo():
         driver.execute_script("window.scrollTo({ top: 0, behavior: 'smooth' });")
         capture_frames(count=8, delay=0.25)
 
-        print(f"[✓] Captured {frame_idx} frames successfully!")
+        print(f"[OK] Captured {frame_idx} frames successfully!")
 
     finally:
         driver.quit()
 
-    # Compile frames using FFmpeg
+    encode_frames()
+
+def encode_frames():
     print("[*] Encoding frames into MP4 and WebP animations via FFmpeg...")
     input_pattern = os.path.join(FRAMES_DIR, "frame_%05d.png")
 
@@ -122,7 +124,7 @@ def record_demo():
     ]
     subprocess.run(cmd_mp4, check=True)
     shutil.copy2(OUTPUT_MP4, LOCAL_MP4)
-    print(f"[✓] MP4 video saved: {OUTPUT_MP4} and {LOCAL_MP4}")
+    print(f"[OK] MP4 video saved: {OUTPUT_MP4} and {LOCAL_MP4}")
 
     # 2. Animated WebP (lossless/quality 85, loop 0)
     cmd_webp = [
@@ -138,11 +140,15 @@ def record_demo():
     ]
     subprocess.run(cmd_webp, check=True)
     shutil.copy2(OUTPUT_WEBP, LOCAL_WEBP)
-    print(f"[✓] WebP animation saved: {OUTPUT_WEBP} and {LOCAL_WEBP}")
+    print(f"[OK] WebP animation saved: {OUTPUT_WEBP} and {LOCAL_WEBP}")
 
     # Cleanup raw frames to save disk space
     shutil.rmtree(FRAMES_DIR, ignore_errors=True)
-    print("[✓] Screen recording generation complete!")
+    print("[OK] Screen recording generation complete!")
 
 if __name__ == "__main__":
-    record_demo()
+    import sys
+    if len(sys.argv) > 1 and sys.argv[1] == "--encode-only":
+        encode_frames()
+    else:
+        record_demo()
