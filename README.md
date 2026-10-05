@@ -99,24 +99,5 @@ ai_chatbot/
 
 ## 🧪 Model Architecture
 
-```
-User Query ──> Contraction Normalization ──> Tokenize & Stem ──> N-gram Bag-of-Words (597 dims)
-                                                                            │
-                                                                            ▼
-                                                               Linear(597, 128)
-                                                                      │
-                                                              LayerNorm(128) + GELU
-                                                                      │
-                                                                 Dropout(0.3)
-                                                                      │
-                                                                Linear(128, 64)
-                                                                      │
-                                                              LayerNorm(64) + GELU
-                                                                      │
-                                                                 Dropout(0.2)
-                                                                      │
-                                                                Linear(64, 25)
-                                                                      │
-                                                                      ▼
-                                                            Predicted Intent Tag
-```
+(mermaid-diagram.png)
+
