@@ -99,5 +99,6 @@ ai_chatbot/
 
 ## 🧪 Model Architecture
 
-(mermaid-diagram.png)
+![Alt text](mermaid-diagram.png)
+
 
